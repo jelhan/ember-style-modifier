@@ -1,3 +1,12 @@
 <h2 id="title">Welcome to Ember</h2>
 
+<p
+  {{style "border" "1px solid black"}}
+  {{style "background-color" "yellow"}}
+  {{style "padding" "1em"}}
+>
+  Custom styles are attached to this element using style modifier.
+  Therefor they don't violate Content Security Policy style-src: "none".
+</p>
+
 {{outlet}}
