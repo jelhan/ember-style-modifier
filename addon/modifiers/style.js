@@ -16,10 +16,6 @@ export default makeFunctionalModifier((element, positionalArguments, options = {
       value = value.replace("!important", "");
     }
 
-    // Support EmberString
-    property = property.toString();
-    value = value ? value.toString() : undefined;
-
     // support camelCase property name
     property = dasherize(property);
 

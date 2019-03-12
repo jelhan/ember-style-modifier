@@ -56,6 +56,23 @@ module('Integration | Modifiers | style', function(hooks) {
     assert.dom('p').hasStyle({ fontSize: "6px" });
   });
 
+  test('it supports String object', async function(assert) {
+    this.set('display', new String("none"));
+    await render(hbs`<p {{style display=display}}></p>`);
+
+    assert.dom('p').hasStyle({ display: "none" });
+  });
+
+  test('it observers values for changes', async function(assert) {
+    this.set('display', 'none');
+    await render(hbs`<p {{style display=display}}></p>`);
+
+    assert.dom('p').hasStyle({ display: "none" });
+
+    this.set('display', 'inline');
+    assert.dom('p').hasStyle({ display: "inline" });
+  });
+
   module('assertions', function(hooks) {
     // Can't use assert.rejects() to assert that modifier throws
     // cause render does not reject:
