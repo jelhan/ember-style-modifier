@@ -22,16 +22,14 @@ Usage
 ------------------------------------------------------------------------------
 
 ```hbs
-<p {{style "border" "1px"}} {{style "padding" "1em" "important"}}></p>
+<p {{style border="1px" padding="1em !important"}}></p>
 ```
 
-Public API is designed after [`CSSStyleDeclaration.setProperty()`](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/setProperty) method.
-It expects a property name as first and value as second positional argument.
-Style is removed if value is `undefined`.
-You may pass a priority as third argument, which must be `"important"` if provided.
+It expects CSS declarations as named arguments. Property names are supported
+in dasherized as well as in camelCase spelling. Value must be a string or
+`undefined`. You may set a priority by adding an `"!important"` suffix.
 
-**Warning**: You should not pass a dynamic property name as it doesn't remove
-existing style rules if property name changes.
+Adding styles to pseudo-elements is not supported so far.
 
 Contributing
 ------------------------------------------------------------------------------

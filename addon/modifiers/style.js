@@ -1,22 +1,24 @@
 import makeFunctionalModifier from 'ember-functional-modifiers';
 import { dasherize } from '@ember/string';
 import { assert } from '@ember/debug';
-import { isPresent, typeOf } from '@ember/utils';
+import { typeOf } from '@ember/utils';
 
-export default makeFunctionalModifier((element, [property, value, priority]) => {
-  assert('must pass a property name as first argument', isPresent(property));
-  assert('property name must be a string', typeOf(property) === 'string');
-  assert('value must be a string if provided', value === undefined || typeOf(value) === 'string');
-  assert('value must not contain "!important", pass a priority argument instead', typeOf(value) !== 'string' || value.indexOf('!important') === -1);
-  assert('priority must be "important" if provided', priority === undefined || priority.toString() === 'important');
+export default makeFunctionalModifier((element, positionalArguments, options = {}) => {
+  for (let property in options) {
+    let value = options[property];
+    assert(`Value must be a string or undefined, ${typeOf(value)} given`, value === undefined || typeOf(value) === "string");
 
-  // Support EmberString
-  property = property.toString();
-  value = value ? value.toString() : undefined;
-  priority = priority ? 'important' : undefined;
+    // priorty must be specified as separate argument
+    // value must not contain "!important"
+    let priority = "";
+    if (value && value.includes("!important")) {
+      priority = "important";
+      value = value.replace("!important", "");
+    }
 
-  // support camelCase property name
-  property = dasherize(property);
+    // support camelCase property name
+    property = dasherize(property);
 
-  element.style.setProperty(property, value, priority);
+    element.style.setProperty(property, value, priority);
+  }
 });
