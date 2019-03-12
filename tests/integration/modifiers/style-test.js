@@ -13,45 +13,45 @@ module('Integration | Modifiers | style', function(hooks) {
   });
 
   test('it sets style on element', async function(assert) {
-    await render(hbs`<p {{style "display" "none"}}></p>`);
+    await render(hbs`<p {{style display="none"}}></p>`);
 
     assert.dom('p').hasStyle({ display: "none" });
   });
 
   test('it allows to set priority', async function(assert) {
-    await render(hbs`<p {{style "display" "none" "important"}}></p>`);
+    await render(hbs`<p {{style display="none !important"}}></p>`);
 
     assert.dom('p').hasAttribute("style", "display: none !important;");
   });
 
   test('it does not set custom style if value is undefined', async function(assert) {
-    await render(hbs`<p {{style "display" undefined}}></p>`);
+    await render(hbs`<p {{style display=undefined}}></p>`);
 
     assert.dom('p').hasNoAttribute("style");
   });
 
   test('it could be used multiple times on same element', async function(assert) {
     await render(hbs`
-      <p {{style "margin" "1px"}} {{style "padding" "1px"}}></p>
+      <p {{style margin="1px"}} {{style padding="1px"}}></p>
     `);
 
     assert.dom('p').hasStyle({ margin: "1px", padding: "1px" });
   });
 
   test('last modifier wins if used multiple times with same property on same element', async function(assert) {
-    await render(hbs`<p {{style "display" "none"}} {{style "display" "inline"}}></p>`);
+    await render(hbs`<p {{style display="none"}} {{style display="inline"}}></p>`);
 
     assert.dom('p').hasStyle({ display: "inline" });
   });
 
   test('it supports dasherized property name', async function(assert) {
-    await render(hbs`<p {{style "font-size" "6px"}}></p>`);
+    await render(hbs`<p {{style font-size="6px"}}></p>`);
 
     assert.dom('p').hasStyle({ fontSize: "6px" });
   });
 
   test('it supports camelCase property name', async function(assert) {
-    await render(hbs`<p {{style "fontSize" "6px"}}></p>`);
+    await render(hbs`<p {{style fontSize="6px"}}></p>`);
 
     assert.dom('p').hasStyle({ fontSize: "6px" });
   });
@@ -71,16 +71,6 @@ module('Integration | Modifiers | style', function(hooks) {
       Ember.onerror = orgOnError;
     });
 
-    test('it throws if property name is undefined', async function(assert) {
-      assert.expect(1);
-
-      Ember.onerror = function() {
-        assert.ok(true);
-      };
-
-      await render(hbs`<p {{style undefined "none"}}></p>`)
-    });
-
     test('it throws if value is not a string', async function(assert) {
       assert.expect(1);
 
@@ -88,17 +78,7 @@ module('Integration | Modifiers | style', function(hooks) {
         assert.ok(true);
       };
 
-      await render(hbs`<p {{style "padding" 1}}></p>`)
-    });
-
-    test('it throws if priority is set but isn\'t "important"', async function(assert) {
-      assert.expect(1);
-
-      Ember.onerror = function() {
-        assert.ok(true);
-      };
-
-      await render(hbs`<p {{style "display" "none" "some-invalid-string"}}></p>`)
+      await render(hbs`<p {{style padding=1}}></p>`)
     });
   });
 });
