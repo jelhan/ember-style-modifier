@@ -1,9 +1,14 @@
 import makeFunctionalModifier from 'ember-functional-modifiers';
+import { assign } from '@ember/polyfills';
 import { dasherize } from '@ember/string';
 import { assert } from '@ember/debug';
 import { typeOf } from '@ember/utils';
 
-export default makeFunctionalModifier((element, positionalArguments, options = {}) => {
+const affectedStylesStore = new Map();
+
+export default makeFunctionalModifier((element, [optionsHash = {}], namedOptions = {}) => {
+  let options = assign({}, optionsHash, namedOptions);
+
   for (let property in options) {
     let value = options[property];
     assert(`Value must be a string or undefined, ${typeOf(value)} given`, value === undefined || typeOf(value) === "string");
@@ -21,4 +26,24 @@ export default makeFunctionalModifier((element, positionalArguments, options = {
 
     element.style.setProperty(property, value, priority);
   }
+
+  // remove styles that were set in last run but aren't present in this run anymore
+  // this only affects properties assigned by optionsHash by design cause named
+  // arguments can't disappear
+  let propertiesSetByHash = Object.keys(optionsHash).map((_) => dasherize(_));
+  if (affectedStylesStore.has(element)) {
+    let previousProps = affectedStylesStore.get(element);
+    let removedProps = previousProps.filter((_) => !propertiesSetByHash.includes(_));
+
+    removedProps.forEach((prop) => {
+      element.style.removeProperty(prop);
+    });
+  }
+
+  // store styles set via optionsHash for next run
+  affectedStylesStore.set(element, propertiesSetByHash);
+
+  // remove reference to element from affectedStylesStore
+  // if element is removed from DOM to avoid a memory leak
+  return () => affectedStylesStore.delete(element);
 });

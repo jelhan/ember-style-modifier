@@ -73,6 +73,30 @@ module('Integration | Modifiers | style', function(hooks) {
     assert.dom('p').hasStyle({ display: "inline" });
   });
 
+  module('options hash', function() {
+    test('it accepts an option hash as alternative to named arguments', async function(assert) {
+      await render(hbs`<p {{style (hash display="none")}}></p>`);
+
+      assert.dom('p').hasStyle({ display: "none" });
+    });
+
+    test('named arguments overrule option hash', async function(assert) {
+      await render(hbs`<p {{style (hash display="none") display="inline"}}></p>`);
+
+      assert.dom('p').hasStyle({ display: "inline" });
+    });
+
+    test('it supports dynamic properties', async function(assert) {
+      this.set('styles', { display: "none" });
+
+      await render(hbs`<p {{style styles}}></p>`);
+      assert.dom('p').hasStyle({ display: "none" });
+
+      this.set('styles', {});
+      assert.dom('p').hasNoAttribute("style");
+    });
+  });
+
   module('assertions', function(hooks) {
     // Can't use assert.rejects() to assert that modifier throws
     // cause render does not reject:
