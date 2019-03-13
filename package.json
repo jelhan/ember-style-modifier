@@ -5,7 +5,7 @@
   "keywords": [
     "ember-addon"
   ],
-  "repository": "",
+  "repository": "https://github.com/jelhan/ember-style-modifier",
   "license": "MIT",
   "author": "",
   "directories": {
