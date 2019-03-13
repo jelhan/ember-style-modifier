@@ -30,20 +30,6 @@ module('Integration | Modifiers | style', function(hooks) {
     assert.dom('p').hasNoAttribute("style");
   });
 
-  test('it could be used multiple times on same element', async function(assert) {
-    await render(hbs`
-      <p {{style margin="1px"}} {{style padding="1px"}}></p>
-    `);
-
-    assert.dom('p').hasStyle({ margin: "1px", padding: "1px" });
-  });
-
-  test('last modifier wins if used multiple times with same property on same element', async function(assert) {
-    await render(hbs`<p {{style display="none"}} {{style display="inline"}}></p>`);
-
-    assert.dom('p').hasStyle({ display: "inline" });
-  });
-
   test('it supports dasherized property name', async function(assert) {
     await render(hbs`<p {{style font-size="6px"}}></p>`);
 
@@ -71,6 +57,36 @@ module('Integration | Modifiers | style', function(hooks) {
 
     this.set('display', 'inline');
     assert.dom('p').hasStyle({ display: "inline" });
+  });
+
+  module('options hash', function() {
+    test('it accepts an option hash as alternative to named arguments', async function(assert) {
+      await render(hbs`<p {{style (hash display="none")}}></p>`);
+
+      assert.dom('p').hasStyle({ display: "none" });
+    });
+
+    test('options hash and named arguments could be used together', async function(assert) {
+      await render(hbs`<p {{style (hash padding="6px") margin="12px"}}></p>`);
+
+      assert.dom('p').hasStyle({ padding: "6px", margin: "12px" });
+    });
+
+    test('named arguments overrule option hash', async function(assert) {
+      await render(hbs`<p {{style (hash display="none") display="inline"}}></p>`);
+
+      assert.dom('p').hasStyle({ display: "inline" });
+    });
+
+    test('it supports dynamic property names', async function(assert) {
+      this.set('styles', { display: "none" });
+
+      await render(hbs`<p {{style styles}}></p>`);
+      assert.dom('p').hasStyle({ display: "none" });
+
+      this.set('styles', {});
+      assert.dom('p').hasAttribute("style", "");
+    });
   });
 
   module('assertions', function(hooks) {
