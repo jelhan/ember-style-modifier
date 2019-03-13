@@ -3,6 +3,7 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import StyleModifier from 'dummy/modifiers/style';
+import { affectedStylesStore } from 'ember-style-modifier/modifiers/style';
 /* global Ember */
 
 module('Integration | Modifiers | style', function(hooks) {
@@ -86,14 +87,25 @@ module('Integration | Modifiers | style', function(hooks) {
       assert.dom('p').hasStyle({ display: "inline" });
     });
 
-    test('it supports dynamic properties', async function(assert) {
+    test('it supports dynamic property names', async function(assert) {
       this.set('styles', { display: "none" });
 
       await render(hbs`<p {{style styles}}></p>`);
       assert.dom('p').hasStyle({ display: "none" });
 
       this.set('styles', {});
-      assert.dom('p').hasNoAttribute("style");
+      assert.dom('p').hasAttribute("style", "");
+    });
+
+    test('it removes element from store if it\'s removed from DOM', async function(assert) {
+      this.set('show', true);
+      await render(hbs`{{#if show}}<p {{style display="none"}}></p>{{/if}}`);
+
+      let element = this.element.querySelector('p');
+      assert.ok(affectedStylesStore.has(element), 'assumption');
+
+      this.set('show', false);
+      assert.notOk(affectedStylesStore.has(element), 'assumption');
     });
   });
 

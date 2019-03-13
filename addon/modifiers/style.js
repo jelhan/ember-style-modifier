@@ -4,7 +4,10 @@ import { dasherize } from '@ember/string';
 import { assert } from '@ember/debug';
 import { typeOf } from '@ember/utils';
 
-const affectedStylesStore = new Map();
+const affectedStylesStore = new WeakMap();
+
+// store is only exported for testing and should be considered private API
+export { affectedStylesStore };
 
 export default makeFunctionalModifier((element, [optionsHash = {}], namedOptions = {}) => {
   let options = assign({}, optionsHash, namedOptions);
@@ -45,5 +48,10 @@ export default makeFunctionalModifier((element, [optionsHash = {}], namedOptions
 
   // remove reference to element from affectedStylesStore
   // if element is removed from DOM to avoid a memory leak
-  return () => affectedStylesStore.delete(element);
+  // TODO: This might not be needed at all for a WeakMap.
+  return (isRemoving) => {
+    if (isRemoving) {
+      affectedStylesStore.delete(element);
+    }
+  };
 });
