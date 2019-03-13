@@ -21,15 +21,33 @@ ember install ember-style-modifier
 Usage
 ------------------------------------------------------------------------------
 
+It expects CSS declarations as named arguments or as a hash as first positional
+argument. Property names are supported in dasherized as well as in camelCase
+spelling. Value must be a string or `undefined`. You may set a priority by
+adding an `"!important"` suffix.
+
 ```hbs
-<p {{style border="1px" padding="1em !important"}}></p>
+<p
+  {{style
+    border="1px"
+    padding="1em !important"
+  }}
+></p>
+
+<p
+  {{style
+    (hash border="1px" padding="1em !important")
+  }}
+>
+</p>
 ```
 
-It expects CSS declarations as named arguments. Property names are supported
-in dasherized as well as in camelCase spelling. Value must be a string or
-`undefined`. You may set a priority by adding an `"!important"` suffix.
+If option hash and named arguments contain CSS declarations for the same
+property, named argument wins.
 
-Adding styles to pseudo-elements is not supported so far.
+Attaching style modifier multiple times to the same element is not supported.
+
+Adding styles to pseudo-elements is not supported.
 
 Contributing
 ------------------------------------------------------------------------------

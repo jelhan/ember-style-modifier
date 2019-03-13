@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "ember-cli-babel": "^7.1.2",
-    "ember-functional-modifiers": "spencer516/ember-functional-modifiers#pull/9/head"
+    "ember-functional-modifiers": "^0.2.0"
   },
   "devDependencies": {
     "@ember/optional-features": "^0.6.3",

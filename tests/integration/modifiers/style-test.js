@@ -3,7 +3,6 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import StyleModifier from 'dummy/modifiers/style';
-import { affectedStylesStore } from 'ember-style-modifier/modifiers/style';
 /* global Ember */
 
 module('Integration | Modifiers | style', function(hooks) {
@@ -29,20 +28,6 @@ module('Integration | Modifiers | style', function(hooks) {
     await render(hbs`<p {{style display=undefined}}></p>`);
 
     assert.dom('p').hasNoAttribute("style");
-  });
-
-  test('it could be used multiple times on same element', async function(assert) {
-    await render(hbs`
-      <p {{style margin="1px"}} {{style padding="1px"}}></p>
-    `);
-
-    assert.dom('p').hasStyle({ margin: "1px", padding: "1px" });
-  });
-
-  test('last modifier wins if used multiple times with same property on same element', async function(assert) {
-    await render(hbs`<p {{style display="none"}} {{style display="inline"}}></p>`);
-
-    assert.dom('p').hasStyle({ display: "inline" });
   });
 
   test('it supports dasherized property name', async function(assert) {
@@ -81,6 +66,12 @@ module('Integration | Modifiers | style', function(hooks) {
       assert.dom('p').hasStyle({ display: "none" });
     });
 
+    test('options hash and named arguments could be used together', async function(assert) {
+      await render(hbs`<p {{style (hash padding="6px") margin="12px"}}></p>`);
+
+      assert.dom('p').hasStyle({ padding: "6px", margin: "12px" });
+    });
+
     test('named arguments overrule option hash', async function(assert) {
       await render(hbs`<p {{style (hash display="none") display="inline"}}></p>`);
 
@@ -95,17 +86,6 @@ module('Integration | Modifiers | style', function(hooks) {
 
       this.set('styles', {});
       assert.dom('p').hasAttribute("style", "");
-    });
-
-    test('it removes element from store if it\'s removed from DOM', async function(assert) {
-      this.set('show', true);
-      await render(hbs`{{#if show}}<p {{style display="none"}}></p>{{/if}}`);
-
-      let element = this.element.querySelector('p');
-      assert.ok(affectedStylesStore.has(element), 'assumption');
-
-      this.set('show', false);
-      assert.notOk(affectedStylesStore.has(element), 'assumption');
     });
   });
 

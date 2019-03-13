@@ -3539,9 +3539,10 @@ ember-export-application-global@^2.0.0:
   dependencies:
     ember-cli-babel "^6.0.0-beta.7"
 
-ember-functional-modifiers@spencer516/ember-functional-modifiers#pull/9/head:
+ember-functional-modifiers@^0.2.0:
   version "0.2.0"
-  resolved "https://codeload.github.com/spencer516/ember-functional-modifiers/tar.gz/a713c42f6404736866044ee2f1e8ef0bc916e814"
+  resolved "https://registry.yarnpkg.com/ember-functional-modifiers/-/ember-functional-modifiers-0.2.0.tgz#c82f29e49fbfeac50db11082b59494a86698ae84"
+  integrity sha512-jvI4dcdog9ApP8fq9QvYqdk6cQJFPGtmh6MKE75BcfzlCxUxFwgarMPdMcvy/kAoPDY8LXnvjl2AzjxZ2MjSZQ==
   dependencies:
     "@ember-decorators/babel-transforms" "^3.1.5"
     ember-cli-babel "^7.1.2"

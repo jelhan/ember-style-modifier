@@ -4,13 +4,15 @@ import { dasherize } from '@ember/string';
 import { assert } from '@ember/debug';
 import { typeOf } from '@ember/utils';
 
-const affectedStylesStore = new WeakMap();
-
-// store is only exported for testing and should be considered private API
-export { affectedStylesStore };
+// Store holds information which properties were set
+// for an element (key) in last run. This allows us
+// to clean up properties that were set but aren't
+// present in options hash anymore.
+const STORE = new WeakMap();
 
 export default makeFunctionalModifier((element, [optionsHash = {}], namedOptions = {}) => {
   let options = assign({}, optionsHash, namedOptions);
+  let properties = [];
 
   for (let property in options) {
     let value = options[property];
@@ -28,30 +30,20 @@ export default makeFunctionalModifier((element, [optionsHash = {}], namedOptions
     property = dasherize(property);
 
     element.style.setProperty(property, value, priority);
+
+    properties.push(property);
   }
 
   // remove styles that were set in last run but aren't present in this run anymore
-  // this only affects properties assigned by optionsHash by design cause named
-  // arguments can't disappear
-  let propertiesSetByHash = Object.keys(optionsHash).map((_) => dasherize(_));
-  if (affectedStylesStore.has(element)) {
-    let previousProps = affectedStylesStore.get(element);
-    let removedProps = previousProps.filter((_) => !propertiesSetByHash.includes(_));
+  if (STORE.has(element)) {
+    let previousProps = STORE.get(element);
+    let removedProps = previousProps.filter((_) => !properties.includes(_));
 
     removedProps.forEach((prop) => {
       element.style.removeProperty(prop);
     });
   }
 
-  // store styles set via optionsHash for next run
-  affectedStylesStore.set(element, propertiesSetByHash);
-
-  // remove reference to element from affectedStylesStore
-  // if element is removed from DOM to avoid a memory leak
-  // TODO: This might not be needed at all for a WeakMap.
-  return (isRemoving) => {
-    if (isRemoving) {
-      affectedStylesStore.delete(element);
-    }
-  };
+  // store properties set on element for next run
+  STORE.set(element, properties);
 });
