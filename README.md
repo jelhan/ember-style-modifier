@@ -1,25 +1,21 @@
-ember-style-modifier
-==============================================================================
+# ember-style-modifier
 
 [![Build Status](https://travis-ci.org/jelhan/ember-style-modifier.svg?branch=master)](https://travis-ci.org/jelhan/ember-style-modifier)
 
 This addon provides a `{{style}}` element modifier to set element's style.
 This allows to set custom CSS of an element without requiring a [Content Security Policy](https://content-security-policy.com/) `style-src-attr: "unsafe-inline"`.
 
-Compatibility
-------------------------------------------------------------------------------
+## Compatibility
 
-It supports the same versions as [`ember-functional-modifiers`](https://github.com/spencer516/ember-functional-modifiers#compatibility) does.
+It supports the same versions as [`ember-modifier-manager-polyfill`](https://github.com/rwjblue/ember-modifier-manager-polyfill#compatibility) does.
 
-Installation
-------------------------------------------------------------------------------
+## Installation
 
 ```sh
 ember install ember-style-modifier
 ```
 
-Usage
-------------------------------------------------------------------------------
+## Usage
 
 It expects CSS declarations as named arguments or as a hash as first positional
 argument. Property names are supported in dasherized as well as in camelCase
@@ -45,16 +41,12 @@ adding an `"!important"` suffix.
 If option hash and named arguments contain CSS declarations for the same
 property, named argument wins.
 
-Attaching style modifier multiple times to the same element is not supported.
-
 Adding styles to pseudo-elements is not supported.
 
-Contributing
-------------------------------------------------------------------------------
+## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
 
-License
-------------------------------------------------------------------------------
+## License
 
 This project is licensed under the [MIT License](LICENSE.md).
