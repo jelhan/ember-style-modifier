@@ -1,7 +1,7 @@
 {
   "name": "ember-style-modifier",
   "version": "0.3.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "{{style}} modifier to set an element's style using the CSSStyleDeclaration API.",
   "keywords": [
     "ember-addon"
   ],
@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "ember-cli-babel": "^7.1.2",
-    "ember-functional-modifiers": "^0.2.0"
+    "ember-modifier-manager-polyfill": "^1.0.3"
   },
   "devDependencies": {
     "@ember/optional-features": "^0.6.3",

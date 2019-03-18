@@ -1,29 +1,46 @@
-import makeFunctionalModifier from 'ember-functional-modifiers';
-import { assign } from '@ember/polyfills';
+import Ember from 'ember';
 import { dasherize } from '@ember/string';
 import { assert } from '@ember/debug';
 import { typeOf } from '@ember/utils';
 
-// Store holds information which properties were set
-// for an element (key) in last run. This allows us
-// to clean up properties that were set but aren't
-// present in options hash anymore.
-const STORE = new WeakMap();
+const isObject = o => typeof o === 'object' && Boolean(o);
 
-export default makeFunctionalModifier((element, [optionsHash = {}], namedOptions = {}) => {
-  let options = assign({}, optionsHash, namedOptions);
-  let properties = [];
+/**
+ * Returns a two-dimensional array, like:
+ *
+ * ```js
+ * [
+ *   ['font-size', '16px'],
+ *   ['text-align', 'center'],
+ *   ['color', 'red']
+ * ]
+ * ```
+ *
+ * This data structure is slightly faster to process than an object / dictionary.
+ */
+const getStylesFromOptions = (positional, named) =>
+  // This is a workaround for the missing `Array#flat` in IE11.
+  [].concat(
+    ...[...positional.filter(isObject), named].map(obj =>
+      Object.entries(obj).map(([k, v]) => [dasherize(k), v])
+    )
+  );
 
-  for (let property in options) {
-    let value = options[property];
-    assert(`Value must be a string or undefined, ${typeOf(value)} given`, value === undefined || typeOf(value) === "string");
+function setStyles(element, newStyles, oldStyles) {
+  const rulesToRemove = oldStyles ? new Set(oldStyles.map(e => e[0])) : null;
 
-    // priorty must be specified as separate argument
+  newStyles.forEach(([property, value]) => {
+    assert(
+      `Value must be a string or undefined, ${typeOf(value)} given`,
+      typeof value === 'undefined' || typeOf(value) === 'string'
+    );
+
+    // priority must be specified as separate argument
     // value must not contain "!important"
-    let priority = "";
-    if (value && value.includes("!important")) {
-      priority = "important";
-      value = value.replace("!important", "");
+    let priority = '';
+    if (value && value.includes('!important')) {
+      priority = 'important';
+      value = value.replace('!important', '');
     }
 
     // support camelCase property name
@@ -31,19 +48,40 @@ export default makeFunctionalModifier((element, [optionsHash = {}], namedOptions
 
     element.style.setProperty(property, value, priority);
 
-    properties.push(property);
+    if (rulesToRemove) {
+      rulesToRemove.delete(property);
+    }
+  });
+
+  if (rulesToRemove) {
+    rulesToRemove.forEach(rule => element.style.removeProperty(rule));
   }
+}
 
-  // remove styles that were set in last run but aren't present in this run anymore
-  if (STORE.has(element)) {
-    let previousProps = STORE.get(element);
-    let removedProps = previousProps.filter((_) => !properties.includes(_));
+export default Ember._setModifierManager(
+  () => ({
+    createModifier() {
+      return {
+        element: null,
+        styles: {}
+      };
+    },
 
-    removedProps.forEach((prop) => {
-      element.style.removeProperty(prop);
-    });
-  }
+    installModifier(state, element, { positional, named }) {
+      state.element = element;
+      state.styles = getStylesFromOptions(positional, named);
+      setStyles(element, state.styles);
+    },
 
-  // store properties set on element for next run
-  STORE.set(element, properties);
-});
+    updateModifier(state, { positional, named }) {
+      const newStyles = getStylesFromOptions(positional, named);
+      setStyles(state.element, newStyles, state.styles);
+      state.styles = newStyles;
+    },
+
+    destroyModifier({ element, styles }) {
+      setStyles(element, [], styles);
+    }
+  }),
+  class OnModifier {}
+);
