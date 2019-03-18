@@ -1,18 +1,35 @@
 import Ember from 'ember';
-import { assign } from '@ember/polyfills';
 import { dasherize } from '@ember/string';
 import { assert } from '@ember/debug';
 import { typeOf } from '@ember/utils';
 
 const isObject = o => typeof o === 'object' && Boolean(o);
 
+/**
+ * Returns a two-dimensional array, like:
+ *
+ * ```js
+ * [
+ *   ['font-size', '16px'],
+ *   ['text-align', 'center'],
+ *   ['color', 'red']
+ * ]
+ * ```
+ *
+ * This data structure is slightly faster to process than an object / dictionary.
+ */
 const getStylesFromOptions = (positional, named) =>
-  assign({}, ...positional.filter(isObject), named);
+  // This is a workaround for the missing `Array#flat` in IE11.
+  [].concat(
+    ...[...positional.filter(isObject), named].map(obj =>
+      Object.entries(obj).map(([k, v]) => [dasherize(k), v])
+    )
+  );
 
 function setStyles(element, newStyles, oldStyles) {
-  const rulesToRemove = oldStyles ? new Set(Object.keys(oldStyles)) : null;
+  const rulesToRemove = oldStyles ? new Set(oldStyles.map(e => e[0])) : null;
 
-  Object.entries(newStyles).forEach(([property, value]) => {
+  newStyles.forEach(([property, value]) => {
     assert(
       `Value must be a string or undefined, ${typeOf(value)} given`,
       typeof value === 'undefined' || typeOf(value) === 'string'
@@ -63,7 +80,7 @@ export default Ember._setModifierManager(
     },
 
     destroyModifier({ element, styles }) {
-      setStyles(element, {}, styles);
+      setStyles(element, [], styles);
     }
   }),
   class OnModifier {}
