@@ -90,10 +90,10 @@ module('Integration | Modifiers | style', function(hooks) {
 
     test('supports multiple hashes', async function(assert) {
       await render(
-        hbs`<p {{style (hash color="red" font-size="12px") (hash color="green")}}></p>`
+        hbs`<p {{style (hash display="inline" font-size="12px") (hash display="inline-block")}}></p>`
       );
 
-      assert.dom('p').hasStyle({ color: 'green', fontSize: '12px' });
+      assert.dom('p').hasStyle({ display: 'inline-block', fontSize: '12px' });
     });
 
     test('it supports dynamic property names', async function(assert) {
