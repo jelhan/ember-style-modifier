@@ -17,7 +17,7 @@ ember install ember-style-modifier
 
 ## Usage
 
-It expects CSS declarations as named arguments or as a hash as first positional
+It expects CSS declarations as named arguments or as a hash as positional
 argument. Property names are supported in dasherized as well as in camelCase
 spelling. Value must be a string or `undefined`. You may set a priority by
 adding an `"!important"` suffix.
@@ -28,7 +28,8 @@ adding an `"!important"` suffix.
     border="1px"
     padding="1em !important"
   }}
-></p>
+>
+</p>
 
 <p
   {{style
@@ -38,8 +39,10 @@ adding an `"!important"` suffix.
 </p>
 ```
 
-If option hash and named arguments contain CSS declarations for the same
-property, named argument wins.
+You may pass multiple hashes as positional arguments and combine hashes
+with named arguments. If multiple hashes are passed and contain CSS
+declarations for the same property, last one wins. If hashes and named
+arguments declare same property, named argument wins.
 
 Adding styles to pseudo-elements is not supported.
 
