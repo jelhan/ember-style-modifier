@@ -12,7 +12,7 @@ const getStylesFromOptions = (positional, named) =>
 function setStyles(element, newStyles, oldStyles) {
   const rulesToRemove = oldStyles ? new Set(Object.keys(oldStyles)) : null;
 
-  for (let [property, value] of Object.entries(newStyles)) {
+  Object.entries(newStyles).forEach(([property, value]) => {
     assert(
       `Value must be a string or undefined, ${typeOf(value)} given`,
       typeof value === 'undefined' || typeOf(value) === 'string'
@@ -34,12 +34,10 @@ function setStyles(element, newStyles, oldStyles) {
     if (rulesToRemove) {
       rulesToRemove.delete(property);
     }
-  }
+  });
 
   if (rulesToRemove) {
-    for (const rule of rulesToRemove) {
-      element.style.removeProperty(rule);
-    }
+    rulesToRemove.forEach(rule => element.style.removeProperty(rule));
   }
 }
 
