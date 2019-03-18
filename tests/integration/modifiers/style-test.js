@@ -88,6 +88,14 @@ module('Integration | Modifiers | style', function(hooks) {
       assert.dom('p').hasStyle({ fontSize: '12px', textAlign: 'right' });
     });
 
+    test('supports multiple hashes', async function(assert) {
+      await render(
+        hbs`<p {{style (hash color="red" font-size="12px") (hash color="green")}}></p>`
+      );
+
+      assert.dom('p').hasStyle({ color: 'green', fontSize: '12px' });
+    });
+
     test('it supports dynamic property names', async function(assert) {
       this.set('styles', { display: 'none' });
 
