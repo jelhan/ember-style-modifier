@@ -31,7 +31,7 @@ function setStyles(element, newStyles, oldStyles) {
 
   newStyles.forEach(([property, value]) => {
     assert(
-      `Value must be a string or undefined, ${typeOf(value)} given`,
+      `Value must be a string or undefined. ${typeOf(value)} ("${value}") given for ${property}`,
       typeof value === 'undefined' || typeOf(value) === 'string'
     );
 
