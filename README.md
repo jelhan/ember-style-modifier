@@ -1,6 +1,8 @@
 # ember-style-modifier
 
 [![Build Status](https://travis-ci.org/jelhan/ember-style-modifier.svg?branch=master)](https://travis-ci.org/jelhan/ember-style-modifier)
+[![Ember Observer Score](http://emberobserver.com/badges/ember-style-modifier.svg)](http://emberobserver.com/addons/ember-style-modifier)
+[![npm version](https://badge.fury.io/js/ember-style-modifier.svg)](https://badge.fury.io/js/ember-style-modifier)
 
 This addon provides a `{{style}}` element modifier to set element's style.
 This allows to set custom CSS of an element without requiring a [Content Security Policy](https://content-security-policy.com/) `style-src-attr: "unsafe-inline"`.
