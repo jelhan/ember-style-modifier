@@ -136,13 +136,14 @@ module('Integration | Modifiers | style', function(hooks) {
     });
 
     test('it throws if value is not a string', async function(assert) {
-      assert.expect(1);
-
-      Ember.onerror = function() {
-        assert.ok(true);
+      Ember.onerror = function({ message }) {
+        assert.step('assertion thrown');
+        assert.ok(message.includes('number'), 'message includes type of value');
+        assert.ok(message.includes('1'), 'message includes value');
       };
 
       await render(hbs`<p {{style padding=1}}></p>`);
+      assert.verifySteps(['assertion thrown']);
     });
   });
 });
