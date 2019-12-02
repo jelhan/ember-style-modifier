@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import { setModifierManager, capabilities } from '@ember/modifier';
 import { dasherize } from '@ember/string';
 import { assert } from '@ember/debug';
 import { typeOf } from '@ember/utils';
@@ -59,8 +59,10 @@ function setStyles(element, newStyles, oldStyles) {
   }
 }
 
-export default Ember._setModifierManager(
+export default setModifierManager(
   () => ({
+    capabilities: capabilities('3.13'),
+
     createModifier() {
       return {
         element: null,
@@ -84,5 +86,5 @@ export default Ember._setModifierManager(
       setStyles(element, [], styles);
     }
   }),
-  class OnModifier {}
+  class StyleModifier {}
 );
