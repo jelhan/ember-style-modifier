@@ -1,4 +1,16 @@
-Must provide GITHUB_AUTH
+## v0.5.0 (2019-12-04)
+
+#### :boom: Breaking Change
+* [#12](https://github.com/jelhan/ember-style-modifier/pull/12) use public APIs through ember-modifier and upgrade dependencies ([@andreyfel](https://github.com/andreyfel))
+
+#### :house: Internal
+* [#14](https://github.com/jelhan/ember-style-modifier/pull/14) automate releases with release-it and lerna-changelog ([@jelhan](https://github.com/jelhan))
+* [#12](https://github.com/jelhan/ember-style-modifier/pull/12) use public APIs through ember-modifier and upgrade dependencies ([@andreyfel](https://github.com/andreyfel))
+
+#### Committers: 2
+- Andrey Fel ([@andreyfel](https://github.com/andreyfel))
+- Jeldrik Hanschke ([@jelhan](https://github.com/jelhan))
+
 
 ## v0.4.1 (2019-03-28)
 
