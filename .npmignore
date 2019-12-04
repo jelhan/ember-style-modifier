@@ -18,12 +18,17 @@
 /.travis.yml
 /.watchmanconfig
 /bower.json
+/CHANGELOG.md
 /config/ember-try.js
 /CONTRIBUTING.md
 /ember-cli-build.js
+/jsconfig.json
+/RELEASE.md
 /testem.js
+/testem.log
 /tests/
 /yarn.lock
+/yarn-error.log
 .gitkeep
 
 # ember-try
