@@ -1,0 +1,14 @@
+{
+  "git": {
+    "tagName": "v${version}"
+  },
+  "github": {
+    "release": true,
+    "tokenRef": "GITHUB_AUTH"
+  },
+  "plugins": {
+    "release-it-lerna-changelog": {
+      "infile": "CHANGELOG.md"
+    }
+  }
+}

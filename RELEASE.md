@@ -36,7 +36,14 @@ Once the prep work is completed, the actual release is straight forward:
 yarn install
 ```
 
-* Than do your release:
+* Second, provide a GitHub [personal access token](https://github.com/settings/tokens)
+  with repo access as `GITHUB_AUTH` environment variable:
+
+```
+export GITHUB_AUTH="f941e0..."
+```
+
+* And last (but not least :grin:) do your release:
 
 ```
 yarn release
@@ -45,3 +52,11 @@ yarn release
 [release-it](https://github.com/release-it/release-it/) manages the actual
 release process. It will prompt you through the process of choosing the version
 number, tagging, pushing the tag and commits, etc.
+
+The GitHub access token is required by [release-it](https://github.com/release-it/release-it#github-releases)
+as well as [lerna-changelog](https://github.com/lerna/lerna-changelog#github-token).
+It's needed by release-it in order to create a
+[GitHub release](https://help.github.com/en/github/administering-a-repository/creating-releases)
+and by lerna-changelog to avoid rate limiting issues. Both are configured to
+use the same environment variable (`GITHUB_AUTH`), which is not the default
+one for release-it.
