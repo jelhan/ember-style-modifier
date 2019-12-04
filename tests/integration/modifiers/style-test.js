@@ -1,16 +1,11 @@
+import Ember from 'ember';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
-import hbs from 'htmlbars-inline-precompile';
-import StyleModifier from 'dummy/modifiers/style';
-/* global Ember */
+import { hbs } from 'ember-cli-htmlbars';
 
 module('Integration | Modifiers | style', function(hooks) {
   setupRenderingTest(hooks);
-
-  hooks.beforeEach(function() {
-    this.owner.register('modifier:style', StyleModifier);
-  });
 
   test('it sets style on element', async function(assert) {
     await render(hbs`<p {{style display="none"}}></p>`);
