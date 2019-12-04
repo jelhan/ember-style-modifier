@@ -23,6 +23,7 @@ export default class StyleModifier extends Modifier {
    */
   get styles() {
     const { positional, named } = this.args;
+
     // This is a workaround for the missing `Array#flat` in IE11.
     return [].concat(
       ...[...positional.filter(isObject), named].map(obj =>
@@ -32,9 +33,7 @@ export default class StyleModifier extends Modifier {
   }
 
   setStyles(newStyles) {
-    const oldStyles = this._oldStyles || [];
-    this._oldStyles = newStyles;
-    const rulesToRemove = oldStyles ? new Set(oldStyles.map(e => e[0])) : null;
+    const rulesToRemove = this._oldStyles || new Set();
 
     newStyles.forEach(([property, value]) => {
       assert(
@@ -54,16 +53,20 @@ export default class StyleModifier extends Modifier {
       // support camelCase property name
       property = dasherize(property);
 
+      // update CSSOM
       this.element.style.setProperty(property, value, priority);
 
-      if (rulesToRemove) {
-        rulesToRemove.delete(property);
-      }
+      // should not remove rules that have been updated in this cycle
+      rulesToRemove.delete(property);
     });
 
-    if (rulesToRemove) {
-      rulesToRemove.forEach(rule => this.element.style.removeProperty(rule));
-    }
+    // remove rules that were present in last cycle but aren't present in this one
+    rulesToRemove.forEach(rule => this.element.style.removeProperty(rule));
+
+    // cache styles that in this rendering cycle for the next one
+    this._oldStyles = new Set(
+      newStyles.map(e => e[0])
+    );
   }
 
   didReceiveArguments() {
