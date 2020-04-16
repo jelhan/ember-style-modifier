@@ -5,7 +5,6 @@ const getChannelURL = require('ember-source-channel-url');
 module.exports = async function() {
   return {
     useYarn: true,
-
     scenarios: [
       {
         name: 'ember-lts-2.18',
@@ -36,6 +35,22 @@ module.exports = async function() {
         }
       },
       {
+        name: 'ember-lts-3.12',
+        npm: {
+          devDependencies: {
+            'ember-source': '~3.12.0'
+          }
+        }
+      },
+      {
+        name: 'ember-lts-3.16',
+        npm: {
+          devDependencies: {
+            'ember-source': '~3.16.0'
+          }
+        }
+      },
+      {
         name: 'ember-release',
         npm: {
           devDependencies: {
@@ -59,7 +74,7 @@ module.exports = async function() {
           }
         }
       },
-      // The default `.travis.yml` runs this scenario via `npm test`,
+      // The default `.travis.yml` runs this scenario via `yarn test`,
       // not via `ember try`. It's still included here so that running
       // `ember try:each` manually or from a customized CI config will run it
       // along with all the other scenarios.
@@ -79,6 +94,21 @@ module.exports = async function() {
         npm: {
           devDependencies: {
             '@ember/jquery': '^0.5.1'
+          }
+        }
+      },
+      {
+        name: 'ember-classic',
+        env: {
+          EMBER_OPTIONAL_FEATURES: JSON.stringify({
+            'application-template-wrapper': true,
+            'default-async-observers': false,
+            'template-only-glimmer-components': false
+          })
+        },
+        npm: {
+          ember: {
+            edition: 'classic'
           }
         }
       }
