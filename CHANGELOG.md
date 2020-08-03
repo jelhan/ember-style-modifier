@@ -1,3 +1,12 @@
+## v0.6.0 (2020-08-03)
+
+#### :boom: Breaking Change
+* [#19](https://github.com/jelhan/ember-style-modifier/pull/19) Update ember-modifier to 2.1.0 and drop support for Ember < 3.4 ([@andreyfel](https://github.com/andreyfel))
+
+#### Committers: 2
+- Andrey Fel ([@andreyfel](https://github.com/andreyfel))
+- Jeldrik Hanschke ([@jelhan](https://github.com/jelhan))
+
 ## v0.5.0 (2019-12-04)
 
 #### :boom: Breaking Change
