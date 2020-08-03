@@ -9,7 +9,9 @@ This allows to set custom CSS of an element without requiring a [Content Securit
 
 ## Compatibility
 
-It supports the same versions as [`ember-modifier-manager-polyfill`](https://github.com/rwjblue/ember-modifier-manager-polyfill#compatibility) does.
+* Ember.js v3.4 or above
+* Ember CLI v2.13 or above
+* Node.js v10 or above
 
 ## Installation
 
