@@ -30,7 +30,7 @@ jobs:
       id: cache-dependencies
       uses: actions/cache@v2
       with:
-        path:
+        path: |
           ${{ steps.global-cache-dir-path.outputs.dir }}
           node_modules
         key: ${{ runner.os }}-${{ matrix.node-version }}-${{
@@ -75,7 +75,7 @@ jobs:
       id: cache-dependencies
       uses: actions/cache@v2
       with:
-        path:
+        path: |
           ${{ steps.global-cache-dir-path.outputs.dir }}
           node_modules
         key: ${{ runner.os }}-${{ matrix.node-version }}-${{
@@ -120,7 +120,7 @@ jobs:
       id: cache-dependencies
       uses: actions/cache@v2
       with:
-        path:
+        path: |
           ${{ steps.global-cache-dir-path.outputs.dir }}
           node_modules
         key: ${{ runner.os }}-${{ matrix.node-version }}-${{
@@ -180,7 +180,7 @@ jobs:
       id: cache-dependencies
       uses: actions/cache@v2
       with:
-        path:
+        path: |
           ${{ steps.global-cache-dir-path.outputs.dir }}
           node_modules
         key: ${{ runner.os }}-${{ matrix.node-version }}-${{
