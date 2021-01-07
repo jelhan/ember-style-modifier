@@ -13,7 +13,7 @@
 # not change them. Doing so could break upgrade flow.
 #
 #$ browsers:
-#$   - chrome
+#$   - Chrome
 #$ emberTryScenarios:
 #$   - scenario: ember-lts-3.4
 #$     allowedToFail: false
@@ -30,12 +30,12 @@
 #$   - scenario: ember-beta
 #$     allowedToFail: false
 #$   - scenario: ember-canary
-#$     allowedToFail: true
+#$     allowedToFail: false
 #$   - scenario: ember-default-with-jquery
 #$     allowedToFail: false
 #$   - scenario: ember-classic
 #$     allowedToFail: false
-#$ nodeVersion: 10.x
+#$ nodeVersion: '10'
 #$ packageManager: yarn
 #
 
@@ -48,7 +48,7 @@ on:
   pull_request:
 
 env:
-  NODE_VERSION: '10.x'
+  NODE_VERSION: '10'
 
 jobs:
   lint:
@@ -97,7 +97,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        browser: [chrome]
+        browser: [Chrome]
 
     steps:
     - uses: actions/checkout@v2
@@ -142,7 +142,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        browser: [chrome]
+        browser: [Chrome]
 
     steps:
     - uses: actions/checkout@v2
@@ -171,7 +171,7 @@ jobs:
           ${{ runner.os }}-${{ matrix.node-version }}-
 
     - name: Install Dependencies
-      run: yarn install --frozen-lockfile
+      run: yarn install --no-lockfile --non-interactive
       if: |
         steps.cache-dependencies.outputs.cache-hit != 'true'
 
@@ -196,13 +196,12 @@ jobs:
           ember-lts-3.20,
           ember-release,
           ember-beta,
+          ember-canary,
           ember-default-with-jquery,
           ember-classic
         ]
         allow-failure: [false]
         include:
-          - ember-try-scenario: ember-canary
-            allow-failure: true
 
     steps:
     - uses: actions/checkout@v2
