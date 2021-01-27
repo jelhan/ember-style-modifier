@@ -26,7 +26,7 @@ export default class StyleModifier extends Modifier {
 
     // This is a workaround for the missing `Array#flat` in IE11.
     return [].concat(
-      ...[...positional.filter(isObject), named].map(obj =>
+      ...[...positional.filter(isObject), named].map((obj) =>
         Object.entries(obj).map(([k, v]) => [dasherize(k), v])
       )
     );
@@ -37,8 +37,10 @@ export default class StyleModifier extends Modifier {
 
     newStyles.forEach(([property, value]) => {
       assert(
-        `Your given value for property '${property}' is ${value} (${typeOf(value)}). ` +
-        'Accepted types are string and undefined. Please change accordingly.',
+        `Your given value for property '${property}' is ${value} (${typeOf(
+          value
+        )}). ` +
+          'Accepted types are string and undefined. Please change accordingly.',
         typeof value === 'undefined' || typeOf(value) === 'string'
       );
 
@@ -61,12 +63,10 @@ export default class StyleModifier extends Modifier {
     });
 
     // remove rules that were present in last cycle but aren't present in this one
-    rulesToRemove.forEach(rule => this.element.style.removeProperty(rule));
+    rulesToRemove.forEach((rule) => this.element.style.removeProperty(rule));
 
     // cache styles that in this rendering cycle for the next one
-    this._oldStyles = new Set(
-      newStyles.map(e => e[0])
-    );
+    this._oldStyles = new Set(newStyles.map((e) => e[0]));
   }
 
   didReceiveArguments() {
