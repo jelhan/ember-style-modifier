@@ -35,6 +35,10 @@
 #$     allowedToFail: false
 #$   - scenario: ember-classic
 #$     allowedToFail: false
+#$   - scenario: no-deprecations
+#$     allowedToFail: false
+#$   - scenario: ember-release-no-deprecations
+#$     allowedToFail: true
 #$ nodeVersion: 10.x
 #$ packageManager: yarn
 #
@@ -178,7 +182,7 @@ jobs:
   try-scenarios:
     name: Tests - ${{ matrix.ember-try-scenario }}
     runs-on: ubuntu-latest
-    continue-on-error: ${{ matrix.allow-failure }}
+    continue-on-error: true
     needs: test
 
     strategy:
@@ -192,13 +196,12 @@ jobs:
           ember-lts-3.20,
           ember-release,
           ember-beta,
+          ember-canary,
           ember-default-with-jquery,
-          ember-classic
+          ember-classic,
+          no-deprecations,
+          ember-release-no-deprecations
         ]
-        allow-failure: [false]
-        include:
-          - ember-try-scenario: ember-canary
-            allow-failure: true
 
     steps:
     - uses: actions/checkout@v2
