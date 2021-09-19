@@ -39,14 +39,14 @@ module('Integration | Modifiers | style', function(hooks) {
 
   test('it supports String object', async function(assert) {
     this.set('display', new String('none'));
-    await render(hbs`<p {{style display=display}}></p>`);
+    await render(hbs`<p {{style display=this.display}}></p>`);
 
     assert.dom('p').hasStyle({ display: 'none' });
   });
 
   test('it observers values for changes', async function(assert) {
     this.set('display', 'none');
-    await render(hbs`<p {{style display=display}}></p>`);
+    await render(hbs`<p {{style display=this.display}}></p>`);
 
     assert.dom('p').hasStyle({ display: 'none' });
 
@@ -94,7 +94,7 @@ module('Integration | Modifiers | style', function(hooks) {
     test('it supports dynamic property names', async function(assert) {
       this.set('styles', { display: 'none' });
 
-      await render(hbs`<p {{style styles}}></p>`);
+      await render(hbs`<p {{style this.styles}}></p>`);
       assert.dom('p').hasStyle({ display: 'none' });
 
       this.set('styles', {});
@@ -104,7 +104,7 @@ module('Integration | Modifiers | style', function(hooks) {
     test('it correctly handles dasherization over time', async function(assert) {
       this.set('styles', { 'font-size': '12px' });
 
-      await render(hbs`<p {{style styles}}></p>`);
+      await render(hbs`<p {{style this.styles}}></p>`);
       assert.dom('p').hasStyle({ fontSize: '12px' });
 
       this.set('styles', { fontSize: '10px' });
