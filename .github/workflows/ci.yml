@@ -33,6 +33,10 @@
 #$     allowedToFail: false
 #$   - scenario: ember-classic
 #$     allowedToFail: false
+#$   - scenario: no-deprecations
+#$     allowedToFail: false
+#$   - scenario: ember-release-no-deprecations
+#$     allowedToFail: true
 #$ nodeVersion: 12.x
 #$ packageManager: yarn
 #
@@ -191,7 +195,9 @@ jobs:
           ember-beta,
           ember-canary,
           ember-default-with-jquery,
-          ember-classic
+          ember-classic,
+          no-deprecations,
+          ember-release-no-deprecations
         ]
 
     steps:
