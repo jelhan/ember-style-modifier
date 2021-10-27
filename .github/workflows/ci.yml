@@ -184,7 +184,9 @@ jobs:
           ember-default-with-jquery,
           ember-classic,
           no-deprecations,
-          ember-release-no-deprecations
+          ember-release-no-deprecations,
+          embroider-safe,
+          embroider-optimized
         ]
 
     steps:
