@@ -9,7 +9,7 @@ This allows to set custom CSS of an element without requiring a [Content Securit
 
 ## Compatibility
 
-* Ember.js v3.8 or above
+* Ember.js v3.24 or above
 * Ember CLI v2.13 or above
 * Node.js v12 or above
 
