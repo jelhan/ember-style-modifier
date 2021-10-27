@@ -16,23 +16,16 @@
 #$   - chrome
 #$ emberTryScenarios:
 #$   - scenario: ember-lts-3.24
-#$     allowedToFail: false
 #$   - scenario: ember-lts-3.28
-#$     allowedToFail: false
 #$   - scenario: ember-release
-#$     allowedToFail: false
 #$   - scenario: ember-beta
-#$     allowedToFail: false
 #$   - scenario: ember-canary
-#$     allowedToFail: true
 #$   - scenario: ember-default-with-jquery
-#$     allowedToFail: false
 #$   - scenario: ember-classic
-#$     allowedToFail: false
 #$   - scenario: no-deprecations
-#$     allowedToFail: false
 #$   - scenario: ember-release-no-deprecations
-#$     allowedToFail: true
+#$   - scenario: embroider-safe
+#$   - scenario: embroider-optimized
 #$ nodeVersion: 12.x
 #$ packageManager: yarn
 #
@@ -191,7 +184,9 @@ jobs:
           ember-default-with-jquery,
           ember-classic,
           no-deprecations,
-          ember-release-no-deprecations
+          ember-release-no-deprecations,
+          embroider-safe,
+          embroider-optimized
         ]
 
     steps:
