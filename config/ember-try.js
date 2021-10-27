@@ -86,9 +86,9 @@ module.exports = async function () {
         },
         npm: {
           ember: {
-            edition: 'classic'
-          }
-        }
+            edition: 'classic',
+          },
+        },
       },
       {
         name: 'no-deprecations',
@@ -107,6 +107,6 @@ module.exports = async function () {
           },
         },
       },
-    ]
+    ],
   };
 };
