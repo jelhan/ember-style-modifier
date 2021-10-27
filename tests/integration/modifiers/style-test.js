@@ -131,6 +131,8 @@ module('Integration | Modifiers | style', function (hooks) {
     });
 
     test('it throws if value is not a string', async function (assert) {
+      assert.expect(4);
+
       Ember.onerror = function ({ message }) {
         assert.step('assertion thrown');
         assert.ok(message.includes('number'), 'message includes type of value');
