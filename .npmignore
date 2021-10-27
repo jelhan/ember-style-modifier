@@ -15,6 +15,8 @@
 /.eslintrc.js
 /.git/
 /.gitignore
+/.prettierignore
+/.prettierrc.js
 /.template-lintrc.js
 /.travis.yml
 /.watchmanconfig
@@ -28,6 +30,7 @@
 /testem.js
 /testem.log
 /tests/
+/yarn-error.log
 /yarn.lock
 /yarn-error.log
 .gitkeep
