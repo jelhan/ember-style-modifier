@@ -1,3 +1,26 @@
+
+## v0.7.0 (2021-10-27)
+
+#### :boom: Breaking Change
+* [#71](https://github.com/jelhan/ember-style-modifier/pull/71) add Ember Auto Import v2 ([@jelhan](https://github.com/jelhan))
+* [#60](https://github.com/jelhan/ember-style-modifier/pull/60) Update dependency ember-modifier to v3 ([@renovate[bot]](https://github.com/apps/renovate))
+* [#67](https://github.com/jelhan/ember-style-modifier/pull/67) drop support for Ember < 3.24 ([@jelhan](https://github.com/jelhan))
+* [#57](https://github.com/jelhan/ember-style-modifier/pull/57) drop support for Ember 3.4 ([@jelhan](https://github.com/jelhan))
+* [#58](https://github.com/jelhan/ember-style-modifier/pull/58) drop support for node 10 ([@jelhan](https://github.com/jelhan))
+
+#### :house: Internal
+* [#72](https://github.com/jelhan/ember-style-modifier/pull/72) fix CSP for Embroider builds ([@jelhan](https://github.com/jelhan))
+* [#68](https://github.com/jelhan/ember-style-modifier/pull/68) upgrade addon blueprints to Ember CLI 3.28 ([@jelhan](https://github.com/jelhan))
+* [#51](https://github.com/jelhan/ember-style-modifier/pull/51) Create ember-try scenarios for `no-deprecations` ([@mansona](https://github.com/mansona))
+* [#39](https://github.com/jelhan/ember-style-modifier/pull/39) upgrade to Ember 3.24 ([@jelhan](https://github.com/jelhan))
+* [#64](https://github.com/jelhan/ember-style-modifier/pull/64) finish all scenarios in CI even if one fails ([@jelhan](https://github.com/jelhan))
+* [#28](https://github.com/jelhan/ember-style-modifier/pull/28) Upgrade Ember CLI to 3.21 ([@jelhan](https://github.com/jelhan))
+* [#20](https://github.com/jelhan/ember-style-modifier/pull/20) Configure Renovate ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 2
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Jeldrik Hanschke ([@jelhan](https://github.com/jelhan))
+
 ## v0.6.0 (2020-08-03)
 
 #### :boom: Breaking Change
