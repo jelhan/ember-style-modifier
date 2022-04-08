@@ -1,4 +1,13 @@
 
+
+## v0.8.0 (2022-04-08)
+
+#### :rocket: Enhancement
+* [#88](https://github.com/jelhan/ember-style-modifier/pull/88) Resolve `ember-modifier` deprecations ([@bertdeblock](https://github.com/bertdeblock))
+
+#### Committers: 1
+- Bert De Block ([@bertdeblock](https://github.com/bertdeblock))
+
 ## v0.7.0 (2021-10-27)
 
 #### :boom: Breaking Change
