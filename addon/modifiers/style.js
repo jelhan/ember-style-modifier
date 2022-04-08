@@ -21,9 +21,7 @@ export default class StyleModifier extends Modifier {
    *
    * This data structure is slightly faster to process than an object / dictionary.
    */
-  get styles() {
-    const { positional, named } = this.args;
-
+  getStyles(positional, named) {
     // This is a workaround for the missing `Array#flat` in IE11.
     return [].concat(
       ...[...positional.filter(isObject), named].map((obj) =>
@@ -32,7 +30,7 @@ export default class StyleModifier extends Modifier {
     );
   }
 
-  setStyles(newStyles) {
+  setStyles(element, newStyles) {
     const rulesToRemove = this._oldStyles || new Set();
 
     newStyles.forEach(([property, value]) => {
@@ -56,20 +54,20 @@ export default class StyleModifier extends Modifier {
       property = dasherize(property);
 
       // update CSSOM
-      this.element.style.setProperty(property, value, priority);
+      element.style.setProperty(property, value, priority);
 
       // should not remove rules that have been updated in this cycle
       rulesToRemove.delete(property);
     });
 
     // remove rules that were present in last cycle but aren't present in this one
-    rulesToRemove.forEach((rule) => this.element.style.removeProperty(rule));
+    rulesToRemove.forEach((rule) => element.style.removeProperty(rule));
 
     // cache styles that in this rendering cycle for the next one
     this._oldStyles = new Set(newStyles.map((e) => e[0]));
   }
 
-  didReceiveArguments() {
-    this.setStyles(this.styles);
+  modify(element, positional, named) {
+    this.setStyles(element, this.getStyles(positional, named));
   }
 }
