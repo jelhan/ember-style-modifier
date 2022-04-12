@@ -1,6 +1,9 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:base",
+    ":maintainLockFilesWeekly",
+    ":preserveSemverRanges"
   ],
-  "rangeStrategy": "replace"
+  "postUpdateOptions": ["yarnDedupeHighest"]
 }
