@@ -1,6 +1,6 @@
 # ember-style-modifier
 
-[![Build Status](https://travis-ci.org/jelhan/ember-style-modifier.svg?branch=master)](https://travis-ci.org/jelhan/ember-style-modifier)
+[![CI](https://github.com/jelhan/ember-style-modifier/workflows/CI/badge.svg)](https://github.com/jelhan/ember-style-modifier/actions?query=workflow%3ACI)
 [![Ember Observer Score](http://emberobserver.com/badges/ember-style-modifier.svg)](http://emberobserver.com/addons/ember-style-modifier)
 [![npm version](https://badge.fury.io/js/ember-style-modifier.svg)](https://badge.fury.io/js/ember-style-modifier)
 
