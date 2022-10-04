@@ -68,7 +68,7 @@
     "qunit": "^2.18.0",
     "qunit-dom": "^2.0.0",
     "release-it": "^15.0.0",
-    "release-it-lerna-changelog": "^4.0.0",
+    "release-it-lerna-changelog": "^5.0.0",
     "webpack": "^5.70.0"
   },
   "engines": {
