@@ -1,5 +1,23 @@
 
 
+
+## v1.0.0 (2022-10-14)
+
+#### :boom: Breaking Change
+* [#112](https://github.com/jelhan/ember-style-modifier/pull/112) drop support for Ember 3.24 ([@jelhan](https://github.com/jelhan))
+* [#111](https://github.com/jelhan/ember-style-modifier/pull/111) drop support for node 12 ([@jelhan](https://github.com/jelhan))
+
+#### :house: Internal
+* [#117](https://github.com/jelhan/ember-style-modifier/pull/117) document known limitations ([@jelhan](https://github.com/jelhan))
+* [#114](https://github.com/jelhan/ember-style-modifier/pull/114) update blueprints to Ember CLI 4.7 ([@jelhan](https://github.com/jelhan))
+* [#94](https://github.com/jelhan/ember-style-modifier/pull/94) Update Ember to v4.3 ([@bertdeblock](https://github.com/bertdeblock))
+* [#93](https://github.com/jelhan/ember-style-modifier/pull/93) Update `.npmignore` file ([@bertdeblock](https://github.com/bertdeblock))
+* [#92](https://github.com/jelhan/ember-style-modifier/pull/92) Update CI badge in README ([@bertdeblock](https://github.com/bertdeblock))
+
+#### Committers: 2
+- Bert De Block ([@bertdeblock](https://github.com/bertdeblock))
+- Jeldrik Hanschke ([@jelhan](https://github.com/jelhan))
+
 ## v0.8.0 (2022-04-08)
 
 #### :rocket: Enhancement

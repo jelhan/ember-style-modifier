@@ -1,6 +1,6 @@
 {
   "name": "ember-style-modifier",
-  "version": "0.8.0",
+  "version": "1.0.0",
   "description": "{{style}} modifier to set an element's style using the CSSStyleDeclaration API.",
   "keywords": [
     "ember-addon"
