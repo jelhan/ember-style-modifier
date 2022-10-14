@@ -50,6 +50,33 @@ arguments declare same property, named argument wins.
 
 Adding styles to pseudo-elements is not supported.
 
+## Known limitations
+
+Ember Style Modifier suffers from two known limitations of Modifiers
+in Ember. Both need to be addressed by extending modifiers capabilities.
+Doing so, is discussed in a [RFC issue](https://github.com/emberjs/rfcs/issues/652).
+
+### Server-side rendering is not supported
+
+Modifiers do not run in server-side rendering (SSR). Styles set using
+`ember-style-modifier` are therefore _not_ applied if application is
+run with [FastBoot](http://ember-fastboot.com/) or prerendered using
+[Prember](https://github.com/ef4/prember). This may lead to wrong
+layout _before_ rehydration and layout shifts on rehydration.
+
+### Browser may paint the element twice on initial render
+
+Modifiers run _after_ browser has printed the page. If styles are
+applied to an elements immediately, the browser first renders the
+element _without_ those styles applied and immediately afterwards
+with these styles applied.
+
+This may theoretically cause the experience of a flickering user
+interface. But such a case has not been noticed yet in practice.
+
+Rendering the element twice has a performance impact. But it should
+not have any noticeable impact in practice.
+
 ## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
