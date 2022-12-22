@@ -4,11 +4,21 @@
 
 ## v2.0.0 (2022-12-22)
 
+ember-style-modifier v2 requires consuming application to have an explicit
+dependency on ember-auto-import@v2. This is the only breaking change introduced.
+
+Addon authors are encouraged to support both v1 and v2 of ember-style-modifier
+in parallel. Instead of replacing ember-style-modifier@^1.0.0 dependency with a
+dependency on ember-style-modifier@^2.0.0 widening the version range to
+`^1.0.0 || ^2.0.0` is recommended. Widening the version range is _not_ a
+change. Doing so allows applications to upgrade to ember-style-modifer@^2.0.0
+as soon as all their direct and indirect addons support both.
+
 #### :boom: Breaking Change
-* [#133](https://github.com/jelhan/ember-style-modifier/pull/133) Widen ember-modifier versions to support v4 (and add ember-auto-import v2 dependency) ([@SergeAstapov](https://github.com/SergeAstapov))
+* [#133](https://github.com/jelhan/ember-style-modifier/pull/133) Add ember-auto-import v2 dependency ([@SergeAstapov](https://github.com/SergeAstapov))
 
 #### :rocket: Enhancement
-* [#133](https://github.com/jelhan/ember-style-modifier/pull/133) Widen ember-modifier versions to support v4 (and add ember-auto-import v2 dependency) ([@SergeAstapov](https://github.com/SergeAstapov))
+* [#133](https://github.com/jelhan/ember-style-modifier/pull/133) Widen ember-modifier versions to support v4 ([@SergeAstapov](https://github.com/SergeAstapov))
 
 #### Committers: 1
 - Sergey Astapov ([@SergeAstapov](https://github.com/SergeAstapov))
