@@ -67,6 +67,7 @@ jobs:
           - ember-release-no-deprecations
           - embroider-safe
           - embroider-optimized
+          - ember-modifier-3.2.7
 
     steps:
       - uses: actions/checkout@v3
