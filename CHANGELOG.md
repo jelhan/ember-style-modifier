@@ -1,6 +1,18 @@
 
 
 
+
+## v2.0.0 (2022-12-22)
+
+#### :boom: Breaking Change
+* [#133](https://github.com/jelhan/ember-style-modifier/pull/133) Widen ember-modifier versions to support v4 (and add ember-auto-import v2 dependency) ([@SergeAstapov](https://github.com/SergeAstapov))
+
+#### :rocket: Enhancement
+* [#133](https://github.com/jelhan/ember-style-modifier/pull/133) Widen ember-modifier versions to support v4 (and add ember-auto-import v2 dependency) ([@SergeAstapov](https://github.com/SergeAstapov))
+
+#### Committers: 1
+- Sergey Astapov ([@SergeAstapov](https://github.com/SergeAstapov))
+
 ## v1.0.0 (2022-10-14)
 
 #### :boom: Breaking Change
