@@ -8,6 +8,8 @@ function isObject(o) {
 }
 
 export default class StyleModifier extends Modifier {
+  existingStyles = new Set();
+
   /**
    * Returns a two-dimensional array, like:
    *
@@ -31,7 +33,11 @@ export default class StyleModifier extends Modifier {
   }
 
   setStyles(element, newStyles) {
-    const rulesToRemove = this._oldStyles || new Set();
+    const { existingStyles } = this;
+    const rulesToRemove = new Set(existingStyles);
+
+    // clear cache of existing styles
+    existingStyles.clear();
 
     newStyles.forEach(([property, value]) => {
       assert(
@@ -58,13 +64,13 @@ export default class StyleModifier extends Modifier {
 
       // should not remove rules that have been updated in this cycle
       rulesToRemove.delete(property);
+
+      // cache styles that have been set for potential clean-up when argument changes
+      existingStyles.add(property);
     });
 
     // remove rules that were present in last cycle but aren't present in this one
     rulesToRemove.forEach((rule) => element.style.removeProperty(rule));
-
-    // cache styles that in this rendering cycle for the next one
-    this._oldStyles = new Set(newStyles.map((e) => e[0]));
   }
 
   modify(element, positional, named) {
