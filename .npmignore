@@ -24,7 +24,6 @@
 /.watchmanconfig
 /bower.json
 /CHANGELOG.md
-/config/ember-try.js
 /CONTRIBUTING.md
 /ember-cli-build.js
 /jsconfig.json
