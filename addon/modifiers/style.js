@@ -7,27 +7,27 @@ function isObject(o) {
   return typeof o === 'object' && Boolean(o);
 }
 
+/**
+ * Returns a two-dimensional array, like:
+ *
+ * ```js
+ * [
+ *   ['font-size', '16px'],
+ *   ['text-align', 'center'],
+ *   ['color', 'red']
+ * ]
+ * ```
+ *
+ * This data structure is slightly faster to process than an object / dictionary.
+ */
+function compileStyles(positional, named) {
+  return [...positional.filter(isObject), named]
+    .map((obj) => Object.entries(obj).map(([k, v]) => [dasherize(k), v]))
+    .flat();
+}
+
 export default class StyleModifier extends Modifier {
   existingStyles = new Set();
-
-  /**
-   * Returns a two-dimensional array, like:
-   *
-   * ```js
-   * [
-   *   ['font-size', '16px'],
-   *   ['text-align', 'center'],
-   *   ['color', 'red']
-   * ]
-   * ```
-   *
-   * This data structure is slightly faster to process than an object / dictionary.
-   */
-  getStyles(positional, named) {
-    return [...positional.filter(isObject), named]
-      .map((obj) => Object.entries(obj).map(([k, v]) => [dasherize(k), v]))
-      .flat();
-  }
 
   setStyles(element, newStyles) {
     const { existingStyles } = this;
@@ -71,6 +71,6 @@ export default class StyleModifier extends Modifier {
   }
 
   modify(element, positional, named) {
-    this.setStyles(element, this.getStyles(positional, named));
+    this.setStyles(element, compileStyles(positional, named));
   }
 }
