@@ -2,6 +2,18 @@
 
 
 
+
+## v2.1.0 (2023-01-13)
+
+#### :house: Internal
+* [#143](https://github.com/jelhan/ember-style-modifier/pull/143) upgrade files created by Ember CLI blueprints to 4.9 ([@jelhan](https://github.com/jelhan))
+* [#142](https://github.com/jelhan/ember-style-modifier/pull/142) refactor pure method to pure function for readability ([@jelhan](https://github.com/jelhan))
+* [#141](https://github.com/jelhan/ember-style-modifier/pull/141) use Array.flat() instead of complex workaround ([@jelhan](https://github.com/jelhan))
+* [#140](https://github.com/jelhan/ember-style-modifier/pull/140) only loop once over styles ([@jelhan](https://github.com/jelhan))
+
+#### Committers: 1
+- Jeldrik Hanschke ([@jelhan](https://github.com/jelhan))
+
 ## v2.0.0 (2022-12-22)
 
 ember-style-modifier v2 requires consuming application to have an explicit
