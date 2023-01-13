@@ -22,12 +22,9 @@ export default class StyleModifier extends Modifier {
    * This data structure is slightly faster to process than an object / dictionary.
    */
   getStyles(positional, named) {
-    // This is a workaround for the missing `Array#flat` in IE11.
-    return [].concat(
-      ...[...positional.filter(isObject), named].map((obj) =>
-        Object.entries(obj).map(([k, v]) => [dasherize(k), v])
-      )
-    );
+    return [...positional.filter(isObject), named]
+      .map((obj) => Object.entries(obj).map(([k, v]) => [dasherize(k), v]))
+      .flat();
   }
 
   setStyles(element, newStyles) {
