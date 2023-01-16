@@ -3,6 +3,15 @@
 
 
 
+
+## v3.0.0 (2023-01-16)
+
+#### :boom: Breaking Change
+* [#139](https://github.com/jelhan/ember-style-modifier/pull/139) Add `@ember/string` as a dependency ([@boris-petrov](https://github.com/boris-petrov))
+
+#### Committers: 1
+- Boris Petrov ([@boris-petrov](https://github.com/boris-petrov))
+
 ## v2.1.0 (2023-01-13)
 
 #### :house: Internal

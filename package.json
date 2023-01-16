@@ -1,6 +1,6 @@
 {
   "name": "ember-style-modifier",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "{{style}} modifier to set an element's style using the CSSStyleDeclaration API.",
   "keywords": [
     "ember-addon"
@@ -69,9 +69,6 @@
     "release-it": "^15.0.0",
     "release-it-lerna-changelog": "^5.0.0",
     "webpack": "^5.75.0"
-  },
-  "peerDependencies": {
-    "ember-source": "^3.28.0 || ^4.0.0"
   },
   "peerDependencies": {
     "@ember/string": "^3.0.1"
