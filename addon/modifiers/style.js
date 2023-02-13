@@ -53,9 +53,6 @@ export default class StyleModifier extends Modifier {
         value = value.replace('!important', '');
       }
 
-      // support camelCase property name
-      property = dasherize(property);
-
       // update CSSOM
       element.style.setProperty(property, value, priority);
 
