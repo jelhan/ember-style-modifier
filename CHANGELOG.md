@@ -4,6 +4,19 @@
 
 
 
+
+## v3.0.1 (2023-02-15)
+
+#### :bug: Bug Fix
+* [#148](https://github.com/jelhan/ember-style-modifier/pull/148) Don't dasherize property names twice ([@drewpereli](https://github.com/drewpereli))
+
+#### :house: Internal
+* [#149](https://github.com/jelhan/ember-style-modifier/pull/149) ember-cli-update to v4.10 ([@jelhan](https://github.com/jelhan))
+
+#### Committers: 2
+- Drew Pereli ([@drewpereli](https://github.com/drewpereli))
+- Jeldrik Hanschke ([@jelhan](https://github.com/jelhan))
+
 ## v3.0.0 (2023-01-16)
 
 #### :boom: Breaking Change
