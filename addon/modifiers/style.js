@@ -39,10 +39,10 @@ export default class StyleModifier extends Modifier {
     newStyles.forEach(([property, value]) => {
       assert(
         `Your given value for property '${property}' is ${value} (${typeOf(
-          value
+          value,
         )}). ` +
           'Accepted types are string and undefined. Please change accordingly.',
-        typeof value === 'undefined' || typeOf(value) === 'string'
+        typeof value === 'undefined' || typeOf(value) === 'string',
       );
 
       // priority must be specified as separate argument
