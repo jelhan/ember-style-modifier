@@ -74,7 +74,7 @@
     "@ember/string": "^3.0.1"
   },
   "engines": {
-    "node": "14.* || 16.* || >= 18"
+    "node": "18.* || >= 20"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
