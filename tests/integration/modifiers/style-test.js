@@ -69,7 +69,7 @@ module('Integration | Modifiers | style', function (hooks) {
 
     test('named arguments overrule option hash', async function (assert) {
       await render(
-        hbs`<p {{style (hash display="none") display="inline"}}></p>`
+        hbs`<p {{style (hash display="none") display="inline"}}></p>`,
       );
 
       assert.dom('p').hasStyle({ display: 'inline' });
@@ -77,7 +77,7 @@ module('Integration | Modifiers | style', function (hooks) {
 
     test('differently dasherized named arguments overrule option hash', async function (assert) {
       await render(
-        hbs`<p {{style (hash font-size="10px" textAlign="left") fontSize="12px" text-align="right"}}></p>`
+        hbs`<p {{style (hash font-size="10px" textAlign="left") fontSize="12px" text-align="right"}}></p>`,
       );
 
       assert.dom('p').hasStyle({ fontSize: '12px', textAlign: 'right' });
@@ -85,7 +85,7 @@ module('Integration | Modifiers | style', function (hooks) {
 
     test('supports multiple hashes', async function (assert) {
       await render(
-        hbs`<p {{style (hash display="inline" font-size="12px") (hash display="inline-block")}}></p>`
+        hbs`<p {{style (hash display="inline" font-size="12px") (hash display="inline-block")}}></p>`,
       );
 
       assert.dom('p').hasStyle({ display: 'inline-block', fontSize: '12px' });
@@ -131,8 +131,6 @@ module('Integration | Modifiers | style', function (hooks) {
     });
 
     test('it throws if value is not a string', async function (assert) {
-      assert.expect(4);
-
       Ember.onerror = function ({ message }) {
         assert.step('assertion thrown');
         assert.ok(message.includes('number'), 'message includes type of value');
