@@ -58,7 +58,7 @@
     eslint-visitor-keys "^2.1.0"
     semver "^6.3.1"
 
-"@babel/generator@^7.23.0":
+"@babel/generator@7.23.0", "@babel/generator@^7.23.0":
   version "7.23.0"
   resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.23.0.tgz#df5c386e2218be505b34837acbcb874d7a983420"
   integrity sha512-lN85QRR+5IbYrMWM6Y4pE/noaQtg4pNiqeNGX60eqOfo6gtEj6uw/JagelB8vVztSd7R6M5n1+PQkDbHbBRU4g==
@@ -1028,6 +1028,22 @@
     "@babel/parser" "^7.22.15"
     "@babel/types" "^7.22.15"
 
+"@babel/traverse@7.23.0":
+  version "7.23.0"
+  resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.23.0.tgz#18196ddfbcf4ccea324b7f6d3ada00d8c5a99c53"
+  integrity sha512-t/QaEvyIoIkwzpiZ7aoSKK8kObQYeF7T2v+dazAYCb8SXtp58zEVkWW7zAnju8FNKNdr4ScAOEDmMItbyOmEYw==
+  dependencies:
+    "@babel/code-frame" "^7.22.13"
+    "@babel/generator" "^7.23.0"
+    "@babel/helper-environment-visitor" "^7.22.20"
+    "@babel/helper-function-name" "^7.23.0"
+    "@babel/helper-hoist-variables" "^7.22.5"
+    "@babel/helper-split-export-declaration" "^7.22.6"
+    "@babel/parser" "^7.23.0"
+    "@babel/types" "^7.23.0"
+    debug "^4.1.0"
+    globals "^11.1.0"
+
 "@babel/traverse@^7.23.2", "@babel/traverse@^7.4.5":
   version "7.23.2"
   resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.23.2.tgz#329c7a06735e144a506bdb2cad0268b7f46f4ad8"
@@ -1044,7 +1060,7 @@
     debug "^4.1.0"
     globals "^11.1.0"
 
-"@babel/types@^7.22.15", "@babel/types@^7.22.19", "@babel/types@^7.22.5", "@babel/types@^7.23.0", "@babel/types@^7.4.4", "@babel/types@^7.7.2":
+"@babel/types@7.23.0", "@babel/types@^7.22.15", "@babel/types@^7.22.19", "@babel/types@^7.22.5", "@babel/types@^7.23.0", "@babel/types@^7.4.4", "@babel/types@^7.7.2":
   version "7.23.0"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.23.0.tgz#8c1f020c9df0e737e4e247c0619f58c68458aaeb"
   integrity sha512-0oIyUfKoI3mSqMvsxBdclDwxXKXAUA8v/apZbc+iSyARYou1o8ZGDxbUYyLFoW2arqS2jDGqJuZvv1d/io1axg==
@@ -4710,10 +4726,10 @@ ember-cli-version-checker@^5.0.2, ember-cli-version-checker@^5.1.1, ember-cli-ve
     semver "^7.3.4"
     silent-error "^1.1.1"
 
-ember-cli@~5.4.0:
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-5.4.0.tgz#180cb5b83a1ed65f43d43ec592dcea2634e3df85"
-  integrity sha512-00RfyeDGTo9OtsmxbIqJIKM0wZvvOGAn1w4A9hFrENcuE7I3HKCb3QYKLHLXywG91fTsWbmXRfCL1kQ5pOva4A==
+ember-cli@~5.5.0:
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-5.5.0.tgz#ebfa383a82f437dfb30b421cf4f6e52eb3581ddd"
+  integrity sha512-D3Q+mq5yOpZB1pJu4aOnVj5+LTwXmd5sJhXqZxc9Y0JFRYinl4h0HHGUMUvtV7obo811gf13ObDAaUmSfVPQbQ==
   dependencies:
     "@pnpm/find-workspace-dir" "^6.0.2"
     broccoli "^3.5.2"
@@ -4745,6 +4761,7 @@ ember-cli@~5.4.0:
     ember-cli-normalize-entity-name "^1.0.0"
     ember-cli-preprocess-registry "^5.0.1"
     ember-cli-string-utils "^1.1.0"
+    ember-template-tag "^2.3.8"
     ensure-posix-path "^1.1.1"
     execa "^5.1.1"
     exit "^0.1.2"
@@ -4984,6 +5001,16 @@ ember-template-recast@^6.1.4:
     slash "^3.0.0"
     tmp "^0.2.1"
     workerpool "^6.4.0"
+
+ember-template-tag@^2.3.8:
+  version "2.3.15"
+  resolved "https://registry.yarnpkg.com/ember-template-tag/-/ember-template-tag-2.3.15.tgz#8d04d976ff3978b62806142ed0d2a18b246bac53"
+  integrity sha512-uvFt+eIE4788Yr3X1wYLrh+PYYmasmREh2IoShIrZvOW2dOfC+elSZeqeEacNhbKJUX3tT9XUKlbpYFVwvSvyA==
+  dependencies:
+    "@babel/generator" "7.23.0"
+    "@babel/traverse" "7.23.0"
+    "@babel/types" "7.23.0"
+    "@glimmer/syntax" "^0.84.3"
 
 ember-try-config@^4.0.0:
   version "4.0.0"
