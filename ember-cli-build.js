@@ -7,6 +7,7 @@ module.exports = function (defaults) {
     autoImport: {
       forbidEval: true,
     },
+    'ember-cli-babel': { enableTypeScriptTransform: true },
   });
 
   /*

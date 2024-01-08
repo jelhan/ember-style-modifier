@@ -3,7 +3,7 @@ import { dasherize } from '@ember/string';
 import { assert } from '@ember/debug';
 import { typeOf } from '@ember/utils';
 
-function isObject(o) {
+function isObject(o: unknown): boolean {
   return typeof o === 'object' && Boolean(o);
 }
 
@@ -20,18 +20,33 @@ function isObject(o) {
  *
  * This data structure is slightly faster to process than an object / dictionary.
  */
-function compileStyles(positional, named) {
+function compileStyles(
+  positional: CSSStyleDeclaration[],
+  named: CSSStyleDeclaration,
+): [string, string][] {
   return [...positional.filter(isObject), named]
-    .map((obj) => Object.entries(obj).map(([k, v]) => [dasherize(k), v]))
+    .map((obj) =>
+      Object.entries(obj).map(
+        ([k, v]) => [dasherize(k), v] as [string, string],
+      ),
+    )
     .flat();
 }
 
-export default class StyleModifier extends Modifier {
-  existingStyles = new Set();
+export interface StyleModifierSignature {
+  Element: HTMLElement;
+  Args: {
+    Positional: CSSStyleDeclaration[];
+    Named: CSSStyleDeclaration;
+  };
+}
 
-  setStyles(element, newStyles) {
+export default class StyleModifier extends Modifier<StyleModifierSignature> {
+  existingStyles: Set<string> = new Set();
+
+  setStyles(element: HTMLElement, newStyles: [string, string][]) {
     const { existingStyles } = this;
-    const rulesToRemove = new Set(existingStyles);
+    const rulesToRemove: Set<string> = new Set(existingStyles);
 
     // clear cache of existing styles
     existingStyles.clear();
@@ -67,7 +82,11 @@ export default class StyleModifier extends Modifier {
     rulesToRemove.forEach((rule) => element.style.removeProperty(rule));
   }
 
-  modify(element, positional, named) {
+  modify(
+    element: HTMLElement,
+    positional: [CSSStyleDeclaration] | [],
+    named: CSSStyleDeclaration,
+  ) {
     this.setStyles(element, compileStyles(positional, named));
   }
 }

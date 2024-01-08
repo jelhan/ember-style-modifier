@@ -122,7 +122,7 @@ module('Integration | Modifiers | style', function (hooks) {
     // Using work-a-round recommended by rwjblue instead:
     // https://discuss.emberjs.com/t/how-to-catch-errors-in-component-rendering-test/14854
 
-    let orgOnError;
+    let orgOnError: typeof Ember.onerror;
     hooks.beforeEach(function () {
       orgOnError = Ember.onerror;
     });
