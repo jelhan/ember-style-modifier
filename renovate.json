@@ -5,5 +5,5 @@
     ":maintainLockFilesWeekly",
     ":preserveSemverRanges"
   ],
-  "postUpdateOptions": ["yarnDedupeHighest"]
+  "postUpdateOptions": ["pnpmDedupe"]
 }

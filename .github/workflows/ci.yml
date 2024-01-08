@@ -18,18 +18,14 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v4
-      - name: Install Node
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v3
+      - uses: wyvox/action-setup-pnpm@v2
         with:
-          node-version: 18.x
-          cache: yarn
-      - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+          node-version: 18
       - name: Lint
-        run: yarn lint
+        run: pnpm lint
       - name: Run Tests
-        run: yarn test:ember
+        run: pnpm test:ember
 
   floating:
     name: "Floating Dependencies"
@@ -37,15 +33,13 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v3
+      - uses: wyvox/action-setup-pnpm@v2
         with:
-          node-version: 18.x
-          cache: yarn
-      - name: Install Dependencies
-        run: yarn install --no-lockfile
+          node-version: 18
+          no-lockfile: true
       - name: Run Tests
-        run: yarn test:ember
+        run: pnpm test:ember
 
   try-scenarios:
     name: ${{ matrix.try-scenario }}
@@ -68,13 +62,9 @@ jobs:
           - ember-modifier-3.2.7
 
     steps:
-      - uses: actions/checkout@v4
-      - name: Install Node
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v3
+      - uses: wyvox/action-setup-pnpm@v2
         with:
-          node-version: 18.x
-          cache: yarn
-      - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+          node-version: 18
       - name: Run Tests
         run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }}
