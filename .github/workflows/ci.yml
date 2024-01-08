@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: wyvox/action-setup-pnpm@v2
+      - uses: wyvox/action-setup-pnpm@v3
         with:
           node-version: 18
       - name: Lint
@@ -34,7 +34,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: wyvox/action-setup-pnpm@v2
+      - uses: wyvox/action-setup-pnpm@v3
         with:
           node-version: 18
           args: '--no-lockfile'
@@ -63,7 +63,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: wyvox/action-setup-pnpm@v2
+      - uses: wyvox/action-setup-pnpm@v3
         with:
           node-version: 18
       - name: Run Tests
