@@ -33,7 +33,7 @@ Once the prep work is completed, the actual release is straight forward:
 * Firste ensure that you have installed the projects dependencies:
 
 ```
-yarn install
+pnpm install
 ```
 
 * Second, provide a GitHub [personal access token](https://github.com/settings/tokens)
@@ -46,7 +46,7 @@ export GITHUB_AUTH="f941e0..."
 * And last (but not least :grin:) do your release:
 
 ```
-yarn release
+pnpm release
 ```
 
 [release-it](https://github.com/release-it/release-it/) manages the actual
