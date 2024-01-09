@@ -14,5 +14,8 @@
       "ember-style-modifier/test-support/*": ["addon-test-support/*"],
       "*": ["types/*"]
     }
+  },
+  "glint": {
+    "environment": ["ember-loose", "ember-template-imports"]
   }
 }

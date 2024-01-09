@@ -26,6 +26,11 @@ module.exports = {
       ],
       rules: {},
     },
+    // Glimmer TS and JS
+    {
+      files: ['**/*.gts', '**/*.gjs'],
+      parser: 'ember-eslint-parser',
+    },
     // node files
     {
       files: [

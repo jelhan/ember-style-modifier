@@ -3,6 +3,11 @@ import { dasherize } from '@ember/string';
 import { assert } from '@ember/debug';
 import { typeOf } from '@ember/utils';
 
+// Typing as `Partial<CSSStyleDeclaration>` does not work as some CSS property
+// names used in our tests (e.g. `font-size`) does not exist on CSStyleDeclaration.
+// Should investigate later why that's the case.
+type CSSStyles = { [key: string]: string | undefined };
+
 function isObject(o: unknown): boolean {
   return typeof o === 'object' && Boolean(o);
 }
@@ -21,8 +26,8 @@ function isObject(o: unknown): boolean {
  * This data structure is slightly faster to process than an object / dictionary.
  */
 function compileStyles(
-  positional: CSSStyleDeclaration[],
-  named: CSSStyleDeclaration,
+  positional: CSSStyles[],
+  named: CSSStyles,
 ): [string, string][] {
   return [...positional.filter(isObject), named]
     .map((obj) =>
@@ -36,8 +41,8 @@ function compileStyles(
 export interface StyleModifierSignature {
   Element: HTMLElement;
   Args: {
-    Positional: CSSStyleDeclaration[];
-    Named: CSSStyleDeclaration;
+    Positional: CSSStyles[];
+    Named: CSSStyles;
   };
 }
 
@@ -82,11 +87,7 @@ export default class StyleModifier extends Modifier<StyleModifierSignature> {
     rulesToRemove.forEach((rule) => element.style.removeProperty(rule));
   }
 
-  modify(
-    element: HTMLElement,
-    positional: [CSSStyleDeclaration] | [],
-    named: CSSStyleDeclaration,
-  ) {
+  modify(element: HTMLElement, positional: [CSSStyles] | [], named: CSSStyles) {
     this.setStyles(element, compileStyles(positional, named));
   }
 }

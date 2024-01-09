@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
+import { render, type TestContext } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
 module('Integration | Modifiers | style', function (hooks) {
@@ -37,22 +37,40 @@ module('Integration | Modifiers | style', function (hooks) {
     assert.dom('p').hasStyle({ fontSize: '6px' });
   });
 
-  test('it supports String object', async function (assert) {
-    this.set('display', new String('none'));
-    await render(hbs`<p {{style display=this.display}}></p>`);
+  {
+    interface Context extends TestContext {
+      // eslint-disable-next-line @typescript-eslint/ban-types
+      display: String;
+    }
 
-    assert.dom('p').hasStyle({ display: 'none' });
-  });
+    test('it supports String object', async function (this: Context, assert) {
+      this.set('display', new String('none'));
+      await render<Context>(hbs`
+        <p
+          {{! @glint-expect-error: String wrapper object is not a valid CSS value type }}
+          {{style display=this.display}}
+        ></p>
+      `);
 
-  test('it observers values for changes', async function (assert) {
-    this.set('display', 'none');
-    await render(hbs`<p {{style display=this.display}}></p>`);
+      assert.dom('p').hasStyle({ display: 'none' });
+    });
+  }
 
-    assert.dom('p').hasStyle({ display: 'none' });
+  {
+    interface Context extends TestContext {
+      display: string;
+    }
 
-    this.set('display', 'inline');
-    assert.dom('p').hasStyle({ display: 'inline' });
-  });
+    test('it observers values for changes', async function (this: Context, assert) {
+      this.set('display', 'none');
+      await render<Context>(hbs`<p {{style display=this.display}}></p>`);
+
+      assert.dom('p').hasStyle({ display: 'none' });
+
+      this.set('display', 'inline');
+      assert.dom('p').hasStyle({ display: 'inline' });
+    });
+  }
 
   module('options hash', function () {
     test('it accepts an option hash as alternative to named arguments', async function (assert) {
@@ -91,28 +109,34 @@ module('Integration | Modifiers | style', function (hooks) {
       assert.dom('p').hasStyle({ display: 'inline-block', fontSize: '12px' });
     });
 
-    test('it supports dynamic property names', async function (assert) {
-      this.set('styles', { display: 'none' });
+    {
+      interface Context extends TestContext {
+        styles: { [key: string]: string };
+      }
 
-      await render(hbs`<p {{style this.styles}}></p>`);
-      assert.dom('p').hasStyle({ display: 'none' });
+      test('it supports dynamic property names', async function (this: Context, assert) {
+        this.set('styles', { display: 'none' });
 
-      this.set('styles', {});
-      assert.dom('p').hasAttribute('style', '');
-    });
+        await render<Context>(hbs`<p {{style this.styles}}></p>`);
+        assert.dom('p').hasStyle({ display: 'none' });
 
-    test('it correctly handles dasherization over time', async function (assert) {
-      this.set('styles', { 'font-size': '12px' });
+        this.set('styles', {});
+        assert.dom('p').hasAttribute('style', '');
+      });
 
-      await render(hbs`<p {{style this.styles}}></p>`);
-      assert.dom('p').hasStyle({ fontSize: '12px' });
+      test('it correctly handles dasherization over time', async function (this: Context, assert) {
+        this.set('styles', { 'font-size': '12px' });
 
-      this.set('styles', { fontSize: '10px' });
-      assert.dom('p').hasStyle({ fontSize: '10px' });
+        await render<Context>(hbs`<p {{style this.styles}}></p>`);
+        assert.dom('p').hasStyle({ fontSize: '12px' });
 
-      this.set('styles', {});
-      assert.dom('p').hasAttribute('style', '');
-    });
+        this.set('styles', { fontSize: '10px' });
+        assert.dom('p').hasStyle({ fontSize: '10px' });
+
+        this.set('styles', {});
+        assert.dom('p').hasAttribute('style', '');
+      });
+    }
   });
 
   module('assertions', function (hooks) {
@@ -137,7 +161,11 @@ module('Integration | Modifiers | style', function (hooks) {
         assert.ok(message.includes('1'), 'message includes value');
       };
 
-      await render(hbs`<p {{style padding=1}}></p>`);
+      await render(hbs`
+        <p
+          {{! @glint-expect-error: CSS values are (corretly) types as string or undefined }}
+          {{style padding=1}}
+        ></p>`);
       assert.verifySteps(['assertion thrown']);
     });
   });
