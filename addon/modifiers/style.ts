@@ -3,7 +3,13 @@ import { dasherize } from '@ember/string';
 import { assert } from '@ember/debug';
 import { typeOf } from '@ember/utils';
 
-function isObject(o) {
+// Cannot be typed as `Partial<CSSStyleDeclaration>` because `CSSStyleDeclaration`
+// interface does _not_ included dashed CSS property names. It only includes the
+// camelCase version of a CSS property.
+// https://github.com/microsoft/TypeScript-DOM-lib-generator/issues/1672
+type CSSStyles = { [key: string]: string | undefined };
+
+function isObject(o: unknown): boolean {
   return typeof o === 'object' && Boolean(o);
 }
 
@@ -20,18 +26,33 @@ function isObject(o) {
  *
  * This data structure is slightly faster to process than an object / dictionary.
  */
-function compileStyles(positional, named) {
+function compileStyles(
+  positional: CSSStyles[],
+  named: CSSStyles,
+): [string, string][] {
   return [...positional.filter(isObject), named]
-    .map((obj) => Object.entries(obj).map(([k, v]) => [dasherize(k), v]))
+    .map((obj) =>
+      Object.entries(obj).map(
+        ([k, v]) => [dasherize(k), v] as [string, string],
+      ),
+    )
     .flat();
 }
 
-export default class StyleModifier extends Modifier {
-  existingStyles = new Set();
+export interface StyleModifierSignature {
+  Element: HTMLElement;
+  Args: {
+    Positional: CSSStyles[];
+    Named: CSSStyles;
+  };
+}
 
-  setStyles(element, newStyles) {
+export default class StyleModifier extends Modifier<StyleModifierSignature> {
+  existingStyles: Set<string> = new Set();
+
+  setStyles(element: HTMLElement, newStyles: [string, string][]) {
     const { existingStyles } = this;
-    const rulesToRemove = new Set(existingStyles);
+    const rulesToRemove: Set<string> = new Set(existingStyles);
 
     // clear cache of existing styles
     existingStyles.clear();
@@ -67,7 +88,7 @@ export default class StyleModifier extends Modifier {
     rulesToRemove.forEach((rule) => element.style.removeProperty(rule));
   }
 
-  modify(element, positional, named) {
+  modify(element: HTMLElement, positional: [CSSStyles] | [], named: CSSStyles) {
     this.setStyles(element, compileStyles(positional, named));
   }
 }
