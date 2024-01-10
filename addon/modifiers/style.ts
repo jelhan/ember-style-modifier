@@ -3,9 +3,10 @@ import { dasherize } from '@ember/string';
 import { assert } from '@ember/debug';
 import { typeOf } from '@ember/utils';
 
-// Typing as `Partial<CSSStyleDeclaration>` does not work as some CSS property
-// names used in our tests (e.g. `font-size`) does not exist on CSStyleDeclaration.
-// Should investigate later why that's the case.
+// Cannot be typed as `Partial<CSSStyleDeclaration>` because `CSSStyleDeclaration`
+// interface does _not_ included dashed CSS property names. It only includes the
+// camelCase version of a CSS property.
+// https://github.com/microsoft/TypeScript-DOM-lib-generator/issues/1672
 type CSSStyles = { [key: string]: string | undefined };
 
 function isObject(o: unknown): boolean {
