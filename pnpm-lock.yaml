@@ -49,6 +49,9 @@ devDependencies:
   '@glint/template':
     specifier: ^1.2.2
     version: 1.2.2
+  '@release-it-plugins/lerna-changelog':
+    specifier: ^6.0.0
+    version: 6.0.0(release-it@16.3.0)
   '@tsconfig/ember':
     specifier: ^3.0.2
     version: 3.0.3
@@ -226,9 +229,6 @@ devDependencies:
   release-it:
     specifier: ^16.0.0
     version: 16.3.0(typescript@5.3.3)
-  release-it-lerna-changelog:
-    specifier: ^5.0.0
-    version: 5.0.0(release-it@16.3.0)
   rimraf:
     specifier: ^5.0.1
     version: 5.0.5
@@ -2335,6 +2335,25 @@ packages:
       '@pnpm/config.env-replace': 1.1.0
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
+    dev: true
+
+  /@release-it-plugins/lerna-changelog@6.0.0(release-it@16.3.0):
+    resolution: {integrity: sha512-/1xNLriHKKTdM+/LSQIng5V25gipw0brAXtWVQcOBR63NmW/Ftnd2IJpnM5WzFkOCcL9hoqc8rcIMMv1EOcaIg==}
+    engines: {node: '>= 16'}
+    peerDependencies:
+      release-it: ^14.0.0 || ^15.1.3 || ^16.0.0
+    dependencies:
+      execa: 5.1.1
+      lerna-changelog: 2.2.0
+      lodash.template: 4.5.0
+      mdast-util-from-markdown: 1.3.1
+      release-it: 16.3.0(typescript@5.3.3)
+      tmp: 0.2.1
+      validate-peer-dependencies: 2.2.0
+      which: 2.0.2
+    transitivePeerDependencies:
+      - bluebird
+      - supports-color
     dev: true
 
   /@simple-dom/document@1.4.0:
@@ -10867,26 +10886,6 @@ packages:
     hasBin: true
     dependencies:
       jsesc: 0.5.0
-
-  /release-it-lerna-changelog@5.0.0(release-it@16.3.0):
-    resolution: {integrity: sha512-s/rHzwAwp878bivWKsJKNya9SRVKYZjgpyyGzg5ddBKZY5u5lhTWhxHtld7mHTRg4azIN7YypPH3rGaOfVmNVw==}
-    engines: {node: ^14.13.1 || >= 16}
-    deprecated: This package has been renamed to @release-it-plugins/lerna-changelog
-    peerDependencies:
-      release-it: ^14.0.0 || ^15.1.3
-    dependencies:
-      execa: 5.1.1
-      lerna-changelog: 2.2.0
-      lodash.template: 4.5.0
-      mdast-util-from-markdown: 1.3.1
-      release-it: 16.3.0(typescript@5.3.3)
-      tmp: 0.2.1
-      validate-peer-dependencies: 2.2.0
-      which: 2.0.2
-    transitivePeerDependencies:
-      - bluebird
-      - supports-color
-    dev: true
 
   /release-it@16.3.0(typescript@5.3.3):
     resolution: {integrity: sha512-CP+WwKbgEvXreq6Iz9po3BtcyELtTxrt5RXRGnazQ0eCphPxFZR29+8sEZRCsJq2IKvlwb5mFUbf92u426oQog==}
