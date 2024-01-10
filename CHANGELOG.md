@@ -6,6 +6,25 @@
 
 
 
+## v4.0.0 (2024-01-10)
+
+#### :boom: Breaking Change
+* [#181](https://github.com/jelhan/ember-style-modifier/pull/181) drop support for Ember < 4.12 ([@jelhan](https://github.com/jelhan))
+* [#180](https://github.com/jelhan/ember-style-modifier/pull/180) drop support for node 14 and 16 ([@jelhan](https://github.com/jelhan))
+
+#### :rocket: Enhancement
+* [#213](https://github.com/jelhan/ember-style-modifier/pull/213) document Ember compatibility adding a peer dep on ember-source ([@jelhan](https://github.com/jelhan))
+* [#211](https://github.com/jelhan/ember-style-modifier/pull/211) better import path for apps using template tag ([@jelhan](https://github.com/jelhan))
+* [#210](https://github.com/jelhan/ember-style-modifier/pull/210) Convert to TypeScript and publish types (including Glint) ([@jelhan](https://github.com/jelhan))
+
+#### :house: Internal
+* [#208](https://github.com/jelhan/ember-style-modifier/pull/208) upgrade with Ember CLI v5.5 blueprints ([@jelhan](https://github.com/jelhan))
+* [#207](https://github.com/jelhan/ember-style-modifier/pull/207) migrate from yarn v1 to pnpm ([@jelhan](https://github.com/jelhan))
+
+#### Committers: 1
+- Jeldrik Hanschke ([@jelhan](https://github.com/jelhan))
+
+
 ## v3.1.1 (2024-01-10)
 
 Published `v3.0.1` again to shadow `v3.1.0` release, which includes breaking changes.
