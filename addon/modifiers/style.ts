@@ -2,12 +2,13 @@ import Modifier from 'ember-modifier';
 import { dasherize } from '@ember/string';
 import { assert } from '@ember/debug';
 import { typeOf } from '@ember/utils';
+import type * as CSS from 'csstype';
 
 // Cannot be typed as `Partial<CSSStyleDeclaration>` because `CSSStyleDeclaration`
 // interface does _not_ included dashed CSS property names. It only includes the
 // camelCase version of a CSS property.
 // https://github.com/microsoft/TypeScript-DOM-lib-generator/issues/1672
-type CSSStyles = { [key: string]: string | undefined };
+type CSSStyles = Partial<CSS.Properties> | Partial<CSS.PropertiesHyphen>;
 
 function isObject(o: unknown): boolean {
   return typeof o === 'object' && Boolean(o);

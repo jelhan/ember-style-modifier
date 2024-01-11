@@ -13,6 +13,12 @@ module('Integration | Modifiers | style', function (hooks) {
     assert.dom('p').hasStyle({ display: 'none' });
   });
 
+  test('it supports multiple styles', async function (assert) {
+    await render(hbs`<p {{style display="none" float="left"}}></p>`);
+
+    assert.dom('p').hasStyle({ display: 'none', float: 'left' });
+  });
+
   test('it allows to set priority', async function (assert) {
     await render(hbs`<p {{style display="none !important"}}></p>`);
 
@@ -35,6 +41,15 @@ module('Integration | Modifiers | style', function (hooks) {
     await render(hbs`<p {{style fontSize="6px"}}></p>`);
 
     assert.dom('p').hasStyle({ fontSize: '6px' });
+  });
+
+  test('it supports dasherized and camelCase property names in same declaration', async function (assert) {
+    await render(hbs`<p {{style font-size="6px" fontStyle="italic"}}></p>`);
+
+    assert
+      .dom('p')
+      .hasStyle({ fontSize: '6px' })
+      .hasStyle({ fontStyle: 'italic' });
   });
 
   {
