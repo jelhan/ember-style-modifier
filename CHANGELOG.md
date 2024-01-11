@@ -6,6 +6,15 @@
 
 
 
+
+## v4.1.0 (2024-01-11)
+
+#### :rocket: Enhancement
+* [#216](https://github.com/jelhan/ember-style-modifier/pull/216) improve typing of CSS styles using csstype package ([@jelhan](https://github.com/jelhan))
+
+#### Committers: 1
+- Jeldrik Hanschke ([@jelhan](https://github.com/jelhan))
+
 ## v4.0.0 (2024-01-10)
 
 #### :boom: Breaking Change
