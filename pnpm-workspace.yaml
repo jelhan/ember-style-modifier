@@ -1,0 +1,3 @@
+packages:
+  - 'ember-style-modifier'
+  - 'test-app'
