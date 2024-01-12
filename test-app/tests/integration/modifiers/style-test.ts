@@ -52,6 +52,14 @@ module('Integration | Modifiers | style', function (hooks) {
       .hasStyle({ fontStyle: 'italic' });
   });
 
+  test('it supports CSS variables', async function (assert) {
+    await render(
+      hbs`<p {{style --some-property="6px" font-size="var(--some-property)"}}></p>`,
+    );
+
+    assert.dom('p').hasStyle({ fontSize: '6px' });
+  });
+
   {
     interface Context extends TestContext {
       // eslint-disable-next-line @typescript-eslint/ban-types
