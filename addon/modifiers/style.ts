@@ -8,7 +8,10 @@ import type * as CSS from 'csstype';
 // interface does _not_ included dashed CSS property names. It only includes the
 // camelCase version of a CSS property.
 // https://github.com/microsoft/TypeScript-DOM-lib-generator/issues/1672
-type CSSStyles = Partial<CSS.Properties> | Partial<CSS.PropertiesHyphen>;
+type CSSStyles =
+  | Partial<CSS.Properties>
+  | Partial<CSS.PropertiesHyphen>
+  | { readonly [key: `--${string}`]: string };
 
 function isObject(o: unknown): boolean {
   return typeof o === 'object' && Boolean(o);
