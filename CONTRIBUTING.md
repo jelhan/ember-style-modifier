@@ -13,7 +13,6 @@
 
 ## Building the addon
 
-- `cd ember-style-modifier`
 - `pnpm build`
 
 ## Running tests
