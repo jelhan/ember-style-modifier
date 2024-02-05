@@ -60,6 +60,12 @@ module('Integration | Modifiers | style', function (hooks) {
     assert.dom('p').hasStyle({ fontSize: '6px' });
   });
 
+  test('it supports usage on SVG elements', async function (assert) {
+    await render(hbs`<svg {{style display="none"}}></svg>`);
+
+    assert.dom('svg').hasStyle({ display: 'none' });
+  });
+
   {
     interface Context extends TestContext {
       // eslint-disable-next-line @typescript-eslint/ban-types
