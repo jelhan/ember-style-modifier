@@ -7,6 +7,21 @@
 
 
 
+
+## v4.2.0 (2024-02-05)
+
+#### :rocket: Enhancement
+* [#229](https://github.com/jelhan/ember-style-modifier/pull/229) Support Ember 3.28 and above (again) ([@jelhan](https://github.com/jelhan))
+* [#218](https://github.com/jelhan/ember-style-modifier/pull/218) Convert addon to V2 ([@mkszepp](https://github.com/mkszepp))
+
+#### :bug: Bug Fix
+* [#219](https://github.com/jelhan/ember-style-modifier/pull/219) Setting CSS variables using styles modifier ([@boris-petrov](https://github.com/boris-petrov))
+
+#### Committers: 3
+- Boris Petrov ([@boris-petrov](https://github.com/boris-petrov))
+- Jeldrik Hanschke ([@jelhan](https://github.com/jelhan))
+- [@mkszepp](https://github.com/mkszepp)
+
 ## v4.1.0 (2024-01-11)
 
 #### :rocket: Enhancement
