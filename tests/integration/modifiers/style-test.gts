@@ -104,6 +104,16 @@ module('Integration | Modifiers | style', function (hooks) {
     assert.dom('svg').hasStyle({ display: 'none' });
   });
 
+  test('it supports usage on math elements', async function (assert) {
+    await render(
+      <template>
+        <math {{style math-style="normal"}}></math>
+      </template>,
+    );
+
+    assert.dom('math').hasStyle({ 'math-style': 'normal' });
+  });
+
   {
     test('it supports String object', async function (this, assert) {
       const display = new String('none');
