@@ -44,7 +44,7 @@ function compileStyles(
 }
 
 export interface StyleModifierSignature {
-  Element: HTMLElement;
+  Element: Element & ElementCSSInlineStyle;
   Args: {
     Positional: CSSStyles[];
     Named: CSSStyles;
@@ -54,7 +54,10 @@ export interface StyleModifierSignature {
 export default class StyleModifier extends Modifier<StyleModifierSignature> {
   existingStyles: Set<string> = new Set();
 
-  setStyles(element: HTMLElement, newStyles: [string, string][]) {
+  setStyles(
+    element: StyleModifierSignature['Element'],
+    newStyles: [string, string][],
+  ) {
     const { existingStyles } = this;
     const rulesToRemove: Set<string> = new Set(existingStyles);
 
@@ -92,7 +95,11 @@ export default class StyleModifier extends Modifier<StyleModifierSignature> {
     rulesToRemove.forEach((rule) => element.style.removeProperty(rule));
   }
 
-  modify(element: HTMLElement, positional: [CSSStyles] | [], named: CSSStyles) {
+  modify(
+    element: StyleModifierSignature['Element'],
+    positional: [CSSStyles] | [],
+    named: CSSStyles,
+  ) {
     this.setStyles(element, compileStyles(positional, named));
   }
 }
