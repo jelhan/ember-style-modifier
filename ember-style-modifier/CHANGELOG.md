@@ -8,6 +8,15 @@
 
 
 
+
+## v4.3.0 (2024-02-13)
+
+#### :rocket: Enhancement
+* [#235](https://github.com/jelhan/ember-style-modifier/pull/235) Also allow using the modifier on SVG elements (types only) ([@boris-petrov](https://github.com/boris-petrov))
+
+#### Committers: 1
+- Boris Petrov ([@boris-petrov](https://github.com/boris-petrov))
+
 ## v4.2.0 (2024-02-05)
 
 #### :rocket: Enhancement
