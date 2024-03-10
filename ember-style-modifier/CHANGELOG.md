@@ -9,6 +9,15 @@
 
 
 
+
+## v4.3.1 (2024-03-10)
+
+#### :bug: Bug Fix
+* [#242](https://github.com/jelhan/ember-style-modifier/pull/242) @babel/core dependency is not needed ([@bertdeblock](https://github.com/bertdeblock))
+
+#### Committers: 1
+- Bert De Block ([@bertdeblock](https://github.com/bertdeblock))
+
 ## v4.3.0 (2024-02-13)
 
 #### :rocket: Enhancement
