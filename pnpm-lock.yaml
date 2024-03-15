@@ -337,8 +337,8 @@ importers:
         specifier: ^4.0.2
         version: 4.0.2
       ember-eslint-parser:
-        specifier: ^0.3.0
-        version: 0.3.8(@babel/core@7.24.0)(@typescript-eslint/parser@7.1.1)(eslint@8.57.0)(typescript@5.4.2)
+        specifier: ^0.4.0
+        version: 0.4.0(@babel/core@7.24.0)(@typescript-eslint/parser@7.1.1)(eslint@8.57.0)(typescript@5.4.2)
       ember-fetch:
         specifier: ^8.1.2
         version: 8.1.2
@@ -6636,6 +6636,27 @@ packages:
       '@glimmer/syntax': 0.88.1
       '@typescript-eslint/parser': 7.1.1(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/scope-manager': 6.21.0
+      content-tag: 1.2.2
+      eslint-scope: 7.2.2
+      html-tags: 3.3.1
+      typescript: 5.4.2
+    transitivePeerDependencies:
+      - eslint
+    dev: true
+
+  /ember-eslint-parser@0.4.0(@babel/core@7.24.0)(@typescript-eslint/parser@7.1.1)(eslint@8.57.0)(typescript@5.4.2):
+    resolution: {integrity: sha512-BWfULEslBoVKuURptQPsuAjIenUdKi1vh1qrveDsdBwerieGhOuwyHh16TSMabLkuCf3zJwBd/GXcAQzhkRHnA==}
+    engines: {node: '>=16.0.0'}
+    peerDependencies:
+      '@babel/core': ^7.23.6
+      '@typescript-eslint/parser': ^7.1.0
+      typescript: ^5.3.3
+    dependencies:
+      '@babel/core': 7.24.0
+      '@babel/eslint-parser': 7.23.10(@babel/core@7.24.0)(eslint@8.57.0)
+      '@glimmer/syntax': 0.88.1
+      '@typescript-eslint/parser': 7.1.1(eslint@8.57.0)(typescript@5.4.2)
+      '@typescript-eslint/scope-manager': 7.1.1
       content-tag: 1.2.2
       eslint-scope: 7.2.2
       html-tags: 3.3.1
