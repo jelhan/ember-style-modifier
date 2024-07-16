@@ -10,6 +10,16 @@
 
 
 
+
+## v4.4.0 (2024-07-16)
+
+#### :rocket: Enhancement
+* [#258](https://github.com/jelhan/ember-style-modifier/pull/258) Support @ember/string v4 ([@Techn1x](https://github.com/Techn1x))
+
+#### Committers: 1
+- Brad Overton ([@Techn1x](https://github.com/Techn1x))
+
+
 ## v4.3.1 (2024-03-10)
 
 #### :bug: Bug Fix
