@@ -16,12 +16,12 @@
     "release": "release-it"
   },
   "devDependencies": {
-    "@release-it-plugins/lerna-changelog": "^7.0.0",
-    "@release-it-plugins/workspaces": "^4.0.0",
-    "concurrently": "^9.0.0",
-    "prettier": "^3.0.3",
-    "prettier-plugin-ember-template-tag": "^2.0.0",
-    "release-it": "^17.0.0"
+    "@release-it-plugins/lerna-changelog": "7.0.0",
+    "@release-it-plugins/workspaces": "4.2.0",
+    "concurrently": "9.0.0",
+    "prettier": "3.2.5",
+    "prettier-plugin-ember-template-tag": "2.0.0",
+    "release-it": "17.1.1"
   },
   "pnpm": {
     "overrides": {
