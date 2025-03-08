@@ -66,6 +66,12 @@ module('Integration | Modifiers | style', function (hooks) {
     assert.dom('svg').hasStyle({ display: 'none' });
   });
 
+  test('it supports usage on math elements', async function (assert) {
+    await render(hbs`<math {{style display="none"}}></math>`);
+
+    assert.dom('math').hasStyle({ display: 'none' });
+  });
+
   {
     interface Context extends TestContext {
       // eslint-disable-next-line @typescript-eslint/ban-types
