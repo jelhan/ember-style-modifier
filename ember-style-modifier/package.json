@@ -99,7 +99,7 @@
     "eslint-plugin-prettier": "^5.0.1",
     "prettier": "^3.1.1",
     "prettier-plugin-ember-template-tag": "^2.0.0",
-    "rollup": "^4.9.1",
+    "rollup": "^4.22.4",
     "typescript": "^5.3.3"
   },
   "publishConfig": {
