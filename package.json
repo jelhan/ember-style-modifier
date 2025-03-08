@@ -52,5 +52,9 @@
     },
     "npm": false
   },
-  "version": "4.4.0"
+  "version": "4.4.0",
+  "volta": {
+    "node": "22.14.0",
+    "pnpm": "9.15.7"
+  }
 }
