@@ -201,18 +201,9 @@ importers:
       '@ember/test-helpers':
         specifier: ^5.0.0
         version: 5.0.0(@babel/core@7.24.7)(@glint/template@1.3.0)(ember-source@5.11.0(@glimmer/component@1.1.2(@babel/core@7.24.7))(@glint/template@1.3.0)(rsvp@4.8.5)(webpack@5.90.3))
-      '@embroider/compat':
-        specifier: ^3.8.3
-        version: 3.8.3(@embroider/core@3.5.2(@glint/template@1.3.0))(@glint/template@1.3.0)
-      '@embroider/core':
-        specifier: ^3.5.2
-        version: 3.5.2(@glint/template@1.3.0)
       '@embroider/test-setup':
         specifier: ^4.0.0
         version: 4.0.0(@embroider/compat@3.8.3(@embroider/core@3.5.2(@glint/template@1.3.0))(@glint/template@1.3.0))(@embroider/core@3.5.2(@glint/template@1.3.0))(@embroider/webpack@4.1.0(@embroider/core@3.5.2(@glint/template@1.3.0))(webpack@5.90.3))
-      '@embroider/webpack':
-        specifier: ^4.0.0
-        version: 4.1.0(@embroider/core@3.5.2(@glint/template@1.3.0))(webpack@5.90.3)
       '@glimmer/component':
         specifier: ^1.1.2
         version: 1.1.2(@babel/core@7.24.7)
@@ -7781,6 +7772,7 @@ snapshots:
       '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
       '@csstools/css-tokenizer': 3.0.3
       lru-cache: 10.4.3
+    optional: true
 
   '@babel/code-frame@7.24.7':
     dependencies:
@@ -7923,7 +7915,8 @@ snapshots:
 
   '@babel/helper-plugin-utils@7.24.0': {}
 
-  '@babel/helper-plugin-utils@7.26.5': {}
+  '@babel/helper-plugin-utils@7.26.5':
+    optional: true
 
   '@babel/helper-remap-async-to-generator@7.22.20(@babel/core@7.24.7)':
     dependencies:
@@ -8055,6 +8048,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.24.7(supports-color@8.1.1)
       '@babel/helper-plugin-utils': 7.26.5
+    optional: true
 
   '@babel/plugin-syntax-dynamic-import@7.8.3(@babel/core@7.24.7)':
     dependencies:
@@ -8135,6 +8129,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.24.7(supports-color@8.1.1)
       '@babel/helper-plugin-utils': 7.26.5
+    optional: true
 
   '@babel/plugin-syntax-unicode-sets-regex@7.18.6(@babel/core@7.24.7)':
     dependencies:
@@ -8620,12 +8615,14 @@ snapshots:
   '@colors/colors@1.5.0':
     optional: true
 
-  '@csstools/color-helpers@5.0.2': {}
+  '@csstools/color-helpers@5.0.2':
+    optional: true
 
   '@csstools/css-calc@2.1.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)':
     dependencies:
       '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
       '@csstools/css-tokenizer': 3.0.3
+    optional: true
 
   '@csstools/css-color-parser@3.0.8(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)':
     dependencies:
@@ -8633,6 +8630,7 @@ snapshots:
       '@csstools/css-calc': 2.1.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
       '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
       '@csstools/css-tokenizer': 3.0.3
+    optional: true
 
   '@csstools/css-parser-algorithms@2.6.0(@csstools/css-tokenizer@2.2.3)':
     dependencies:
@@ -8641,10 +8639,12 @@ snapshots:
   '@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3)':
     dependencies:
       '@csstools/css-tokenizer': 3.0.3
+    optional: true
 
   '@csstools/css-tokenizer@2.2.3': {}
 
-  '@csstools/css-tokenizer@3.0.3': {}
+  '@csstools/css-tokenizer@3.0.3':
+    optional: true
 
   '@csstools/media-query-list-parser@2.1.8(@csstools/css-parser-algorithms@2.6.0(@csstools/css-tokenizer@2.2.3))(@csstools/css-tokenizer@2.2.3)':
     dependencies:
@@ -8731,6 +8731,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - webpack
+    optional: true
 
   '@embroider/compat@3.8.3(@embroider/core@3.5.2(@glint/template@1.3.0))(@glint/template@1.3.0)':
     dependencies:
@@ -8784,6 +8785,7 @@ snapshots:
       - canvas
       - supports-color
       - utf-8-validate
+    optional: true
 
   '@embroider/core@3.4.14(@glint/template@1.3.0)':
     dependencies:
@@ -8851,11 +8853,13 @@ snapshots:
       - canvas
       - supports-color
       - utf-8-validate
+    optional: true
 
   '@embroider/hbs-loader@3.0.3(@embroider/core@3.5.2(@glint/template@1.3.0))(webpack@5.90.3)':
     dependencies:
       '@embroider/core': 3.5.2(@glint/template@1.3.0)
       webpack: 5.90.3
+    optional: true
 
   '@embroider/macros@1.16.11(@glint/template@1.3.0)':
     dependencies:
@@ -8871,6 +8875,7 @@ snapshots:
       '@glint/template': 1.3.0
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   '@embroider/macros@1.16.5(@glint/template@1.3.0)':
     dependencies:
@@ -8918,6 +8923,7 @@ snapshots:
       typescript-memoize: 1.1.1
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   '@embroider/test-setup@4.0.0(@embroider/compat@3.8.3(@embroider/core@3.5.2(@glint/template@1.3.0))(@glint/template@1.3.0))(@embroider/core@3.5.2(@glint/template@1.3.0))(@embroider/webpack@4.1.0(@embroider/core@3.5.2(@glint/template@1.3.0))(webpack@5.90.3))':
     dependencies:
@@ -8958,6 +8964,7 @@ snapshots:
       - bufferutil
       - canvas
       - utf-8-validate
+    optional: true
 
   '@eslint-community/eslint-utils@4.4.0(eslint@8.57.0)':
     dependencies:
@@ -9539,7 +9546,8 @@ snapshots:
     dependencies:
       '@types/estree': 1.0.5
 
-  '@types/babel__code-frame@7.0.6': {}
+  '@types/babel__code-frame@7.0.6':
+    optional: true
 
   '@types/body-parser@1.19.5':
     dependencies:
@@ -9821,17 +9829,20 @@ snapshots:
       '@types/mime': 3.0.4
       '@types/node': 20.11.25
 
-  '@types/supports-color@8.1.3': {}
+  '@types/supports-color@8.1.3':
+    optional: true
 
   '@types/symlink-or-copy@1.2.2': {}
 
   '@types/unist@2.0.10': {}
 
-  '@types/yargs-parser@21.0.3': {}
+  '@types/yargs-parser@21.0.3':
+    optional: true
 
   '@types/yargs@17.0.33':
     dependencies:
       '@types/yargs-parser': 21.0.3
+    optional: true
 
   '@typescript-eslint/eslint-plugin@7.1.1(@typescript-eslint/parser@7.1.1(eslint@8.57.0)(typescript@5.4.2))(eslint@8.57.0)(typescript@5.4.2)':
     dependencies:
@@ -10063,7 +10074,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  agent-base@7.1.3: {}
+  agent-base@7.1.3:
+    optional: true
 
   agentkeepalive@4.5.0:
     dependencies:
@@ -10297,6 +10309,7 @@ snapshots:
       find-cache-dir: 4.0.0
       schema-utils: 4.2.0
       webpack: 5.90.3
+    optional: true
 
   babel-plugin-debug-macros@0.2.0(@babel/core@7.24.7):
     dependencies:
@@ -10371,7 +10384,8 @@ snapshots:
 
   babel-plugin-syntax-dynamic-import@6.18.0: {}
 
-  babylon@6.18.0: {}
+  babylon@6.18.0:
+    optional: true
 
   backbone@1.6.0:
     dependencies:
@@ -10408,12 +10422,14 @@ snapshots:
   better-path-resolve@1.0.0:
     dependencies:
       is-windows: 1.0.2
+    optional: true
 
   big.js@5.2.2: {}
 
   binaryextensions@2.3.0: {}
 
-  bind-decorator@1.0.11: {}
+  bind-decorator@1.0.11:
+    optional: true
 
   bl@4.1.0:
     dependencies:
@@ -11004,6 +11020,7 @@ snapshots:
     dependencies:
       es-errors: 1.3.0
       function-bind: 1.1.2
+    optional: true
 
   call-bind@1.0.7:
     dependencies:
@@ -11183,7 +11200,8 @@ snapshots:
 
   commander@8.3.0: {}
 
-  common-path-prefix@3.0.0: {}
+  common-path-prefix@3.0.0:
+    optional: true
 
   common-tags@1.8.2: {}
 
@@ -11359,6 +11377,7 @@ snapshots:
     dependencies:
       mdn-data: 2.0.14
       source-map: 0.6.1
+    optional: true
 
   css-tree@2.3.1:
     dependencies:
@@ -11370,6 +11389,7 @@ snapshots:
   csso@4.2.0:
     dependencies:
       css-tree: 1.1.3
+    optional: true
 
   cssom@0.3.8: {}
 
@@ -11383,6 +11403,7 @@ snapshots:
     dependencies:
       '@asamuzakjp/css-color': 2.8.3
       rrweb-cssom: 0.8.0
+    optional: true
 
   csstype@3.1.3: {}
 
@@ -11402,6 +11423,7 @@ snapshots:
     dependencies:
       whatwg-mimetype: 4.0.0
       whatwg-url: 14.1.1
+    optional: true
 
   date-fns@3.6.0: {}
 
@@ -11563,6 +11585,7 @@ snapshots:
       call-bind-apply-helpers: 1.0.2
       es-errors: 1.3.0
       gopd: 1.2.0
+    optional: true
 
   duplexer3@0.1.5: {}
 
@@ -12338,7 +12361,8 @@ snapshots:
 
   entities@3.0.1: {}
 
-  entities@4.5.0: {}
+  entities@4.5.0:
+    optional: true
 
   env-paths@2.2.1: {}
 
@@ -12404,7 +12428,8 @@ snapshots:
     dependencies:
       get-intrinsic: 1.2.4
 
-  es-define-property@1.0.1: {}
+  es-define-property@1.0.1:
+    optional: true
 
   es-errors@1.3.0: {}
 
@@ -12425,6 +12450,7 @@ snapshots:
   es-object-atoms@1.1.1:
     dependencies:
       es-errors: 1.3.0
+    optional: true
 
   es-set-tostringtag@2.0.3:
     dependencies:
@@ -12438,6 +12464,7 @@ snapshots:
       get-intrinsic: 1.3.0
       has-tostringtag: 1.0.2
       hasown: 2.0.2
+    optional: true
 
   es-to-primitive@1.2.1:
     dependencies:
@@ -12897,6 +12924,7 @@ snapshots:
     dependencies:
       common-path-prefix: 3.0.0
       pkg-dir: 7.0.0
+    optional: true
 
   find-index@1.1.1: {}
 
@@ -12922,6 +12950,7 @@ snapshots:
     dependencies:
       locate-path: 7.2.0
       path-exists: 5.0.0
+    optional: true
 
   find-up@7.0.0:
     dependencies:
@@ -13018,6 +13047,7 @@ snapshots:
       combined-stream: 1.0.8
       es-set-tostringtag: 2.1.0
       mime-types: 2.1.35
+    optional: true
 
   formdata-polyfill@4.0.10:
     dependencies:
@@ -13185,11 +13215,13 @@ snapshots:
       has-symbols: 1.1.0
       hasown: 2.0.2
       math-intrinsics: 1.1.0
+    optional: true
 
   get-proto@1.0.1:
     dependencies:
       dunder-proto: 1.0.1
       es-object-atoms: 1.1.1
+    optional: true
 
   get-stdin@9.0.0: {}
 
@@ -13364,7 +13396,8 @@ snapshots:
     dependencies:
       get-intrinsic: 1.2.4
 
-  gopd@1.2.0: {}
+  gopd@1.2.0:
+    optional: true
 
   got@12.6.1:
     dependencies:
@@ -13445,7 +13478,8 @@ snapshots:
 
   has-symbols@1.0.3: {}
 
-  has-symbols@1.1.0: {}
+  has-symbols@1.1.0:
+    optional: true
 
   has-tostringtag@1.0.2:
     dependencies:
@@ -13531,6 +13565,7 @@ snapshots:
   html-encoding-sniffer@4.0.0:
     dependencies:
       whatwg-encoding: 3.1.1
+    optional: true
 
   html-tags@3.3.1: {}
 
@@ -13601,6 +13636,7 @@ snapshots:
       debug: 4.3.4(supports-color@8.1.1)
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   https@1.0.0: {}
 
@@ -13621,6 +13657,7 @@ snapshots:
   iconv-lite@0.6.3:
     dependencies:
       safer-buffer: 2.1.2
+    optional: true
 
   icss-utils@5.1.0(postcss@8.4.35):
     dependencies:
@@ -13909,6 +13946,7 @@ snapshots:
   is-subdir@1.2.0:
     dependencies:
       better-path-resolve: 1.0.0
+    optional: true
 
   is-symbol@1.0.4:
     dependencies:
@@ -14069,6 +14107,7 @@ snapshots:
       - bufferutil
       - supports-color
       - utf-8-validate
+    optional: true
 
   jsesc@0.5.0: {}
 
@@ -14078,7 +14117,8 @@ snapshots:
 
   json-buffer@3.0.1: {}
 
-  json-parse-better-errors@1.0.2: {}
+  json-parse-better-errors@1.0.2:
+    optional: true
 
   json-parse-even-better-errors@2.3.1: {}
 
@@ -14304,7 +14344,8 @@ snapshots:
 
   lowercase-keys@3.0.0: {}
 
-  lru-cache@10.4.3: {}
+  lru-cache@10.4.3:
+    optional: true
 
   lru-cache@5.1.1:
     dependencies:
@@ -14391,7 +14432,8 @@ snapshots:
       '@types/minimatch': 3.0.5
       minimatch: 3.1.2
 
-  math-intrinsics@1.1.0: {}
+  math-intrinsics@1.1.0:
+    optional: true
 
   mathml-tag-names@2.1.3: {}
 
@@ -14416,7 +14458,8 @@ snapshots:
     dependencies:
       '@types/mdast': 3.0.15
 
-  mdn-data@2.0.14: {}
+  mdn-data@2.0.14:
+    optional: true
 
   mdn-data@2.0.30: {}
 
@@ -14850,7 +14893,8 @@ snapshots:
       gauge: 4.0.4
       set-blocking: 2.0.0
 
-  nwsapi@2.2.18: {}
+  nwsapi@2.2.18:
+    optional: true
 
   nwsapi@2.2.7: {}
 
@@ -15101,6 +15145,7 @@ snapshots:
   parse5@7.2.1:
     dependencies:
       entities: 4.5.0
+    optional: true
 
   parseurl@1.3.3: {}
 
@@ -15147,8 +15192,10 @@ snapshots:
   pkg-dir@7.0.0:
     dependencies:
       find-up: 6.3.0
+    optional: true
 
-  pkg-entry-points@1.1.1: {}
+  pkg-entry-points@1.1.1:
+    optional: true
 
   pkg-up@2.0.0:
     dependencies:
@@ -15651,9 +15698,11 @@ snapshots:
       route-recognizer: 0.3.4
       rsvp: 4.8.5
 
-  rrweb-cssom@0.7.1: {}
+  rrweb-cssom@0.7.1:
+    optional: true
 
-  rrweb-cssom@0.8.0: {}
+  rrweb-cssom@0.8.0:
+    optional: true
 
   rsvp@3.2.1: {}
 
@@ -15743,6 +15792,7 @@ snapshots:
   saxes@6.0.0:
     dependencies:
       xmlchars: 2.2.0
+    optional: true
 
   schema-utils@2.7.1:
     dependencies:
@@ -16400,6 +16450,7 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 3.3.0
       webpack: 5.90.3
+    optional: true
 
   through2@3.0.2:
     dependencies:
@@ -16426,11 +16477,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  tldts-core@6.1.83: {}
+  tldts-core@6.1.83:
+    optional: true
 
   tldts@6.1.83:
     dependencies:
       tldts-core: 6.1.83
+    optional: true
 
   tmp@0.0.28:
     dependencies:
@@ -16484,6 +16537,7 @@ snapshots:
   tough-cookie@5.1.2:
     dependencies:
       tldts: 6.1.83
+    optional: true
 
   tr46@0.0.3: {}
 
@@ -16494,6 +16548,7 @@ snapshots:
   tr46@5.0.0:
     dependencies:
       punycode: 2.3.1
+    optional: true
 
   tracked-built-ins@3.3.0:
     dependencies:
@@ -16772,6 +16827,7 @@ snapshots:
   w3c-xmlserializer@5.0.0:
     dependencies:
       xml-name-validator: 5.0.0
+    optional: true
 
   walk-sync@0.2.7:
     dependencies:
@@ -16832,7 +16888,8 @@ snapshots:
 
   webidl-conversions@6.1.0: {}
 
-  webidl-conversions@7.0.0: {}
+  webidl-conversions@7.0.0:
+    optional: true
 
   webpack-sources@3.2.3: {}
 
@@ -16882,17 +16939,20 @@ snapshots:
   whatwg-encoding@3.1.1:
     dependencies:
       iconv-lite: 0.6.3
+    optional: true
 
   whatwg-fetch@3.6.20: {}
 
   whatwg-mimetype@2.3.0: {}
 
-  whatwg-mimetype@4.0.0: {}
+  whatwg-mimetype@4.0.0:
+    optional: true
 
   whatwg-url@14.1.1:
     dependencies:
       tr46: 5.0.0
       webidl-conversions: 7.0.0
+    optional: true
 
   whatwg-url@5.0.0:
     dependencies:
@@ -16991,7 +17051,8 @@ snapshots:
 
   ws@8.11.0: {}
 
-  ws@8.18.1: {}
+  ws@8.18.1:
+    optional: true
 
   xdg-basedir@4.0.0: {}
 
@@ -16999,7 +17060,8 @@ snapshots:
 
   xml-name-validator@3.0.0: {}
 
-  xml-name-validator@5.0.0: {}
+  xml-name-validator@5.0.0:
+    optional: true
 
   xmlchars@2.2.0: {}
 
