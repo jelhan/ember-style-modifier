@@ -78,7 +78,7 @@
     "ember-eslint-parser": "0.5.9",
     "ember-fetch": "8.1.2",
     "ember-load-initializers": "3.0.1",
-    "ember-modifier": "4.1.0",
+    "ember-modifier": "4.2.0",
     "ember-page-title": "8.2.4",
     "ember-qunit": "8.0.2",
     "ember-resolver": "13.1.0",
