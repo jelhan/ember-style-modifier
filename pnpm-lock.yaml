@@ -307,8 +307,8 @@ importers:
         specifier: 9.1.2
         version: 9.1.2
       ember-auto-import:
-        specifier: 2.7.4
-        version: 2.7.4(@glint/template@1.5.2)(webpack@5.94.0)
+        specifier: 2.10.0
+        version: 2.10.0(@glint/template@1.5.2)(webpack@5.94.0)
       ember-cli:
         specifier: 5.12.0
         version: 5.12.0(handlebars@4.7.8)(underscore@1.13.6)
@@ -3366,8 +3366,8 @@ packages:
   electron-to-chromium@1.5.113:
     resolution: {integrity: sha512-wjT2O4hX+wdWPJ76gWSkMhcHAV2PTMX+QetUCPYEdCIe+cxmgzzSSiGRCKW8nuh4mwKZlpv0xvoW7OF2X+wmHg==}
 
-  ember-auto-import@2.7.4:
-    resolution: {integrity: sha512-6CdXSegJJc8nwwK7+1lIcBUnMVrJRNd4ZdMgcKbCAwPvcGxMgRVBddSzrX/+q/UuflvTEO26Dk1g7Z6KHMXUhw==}
+  ember-auto-import@2.10.0:
+    resolution: {integrity: sha512-bcBFDYVTFHyqyq8BNvsj6UO3pE6Uqou/cNmee0WaqBgZ+1nQqFz0UE26usrtnFAT+YaFZSkqF2H36QW84k0/cg==}
     engines: {node: 12.* || 14.* || >= 16}
 
   ember-cli-app-version@7.0.0:
@@ -11193,7 +11193,7 @@ snapshots:
 
   electron-to-chromium@1.5.113: {}
 
-  ember-auto-import@2.7.4(@glint/template@1.5.2)(webpack@5.94.0):
+  ember-auto-import@2.10.0(@glint/template@1.5.2)(webpack@5.94.0):
     dependencies:
       '@babel/core': 7.26.10(supports-color@8.1.1)
       '@babel/plugin-proposal-class-properties': 7.18.6(@babel/core@7.26.10)
@@ -11218,11 +11218,13 @@ snapshots:
       fs-extra: 10.1.0
       fs-tree-diff: 2.0.1
       handlebars: 4.7.8
+      is-subdir: 1.2.0
       js-string-escape: 1.0.1
       lodash: 4.17.21
       mini-css-extract-plugin: 2.9.2(webpack@5.94.0)
       minimatch: 3.1.2
       parse5: 6.0.1
+      pkg-entry-points: 1.1.1
       resolve: 1.22.10
       resolve-package-path: 4.0.3
       semver: 7.7.1
@@ -11764,7 +11766,7 @@ snapshots:
       broccoli-funnel: 3.0.8
       broccoli-merge-trees: 4.2.0
       chalk: 4.1.2
-      ember-auto-import: 2.7.4(@glint/template@1.5.2)(webpack@5.94.0)
+      ember-auto-import: 2.10.0(@glint/template@1.5.2)(webpack@5.94.0)
       ember-cli-babel: 8.2.0(@babel/core@7.26.10)
       ember-cli-get-component-path-option: 1.0.0
       ember-cli-is-package-missing: 1.0.0
