@@ -65,7 +65,7 @@
     "@glint/environment-ember-template-imports": "1.5.2",
     "@glint/template": "1.5.2",
     "@rollup/plugin-babel": "6.0.4",
-    "@tsconfig/ember": "3.0.5",
+    "@tsconfig/ember": "3.0.9",
     "@types/ember": "4.0.11",
     "@types/ember__application": "4.0.11",
     "@types/ember__array": "4.0.10",
@@ -91,16 +91,16 @@
     "@typescript-eslint/parser": "7.18.0",
     "babel-plugin-ember-template-compilation": "2.3.0",
     "concurrently": "9.1.2",
-    "ember-template-lint": "6.1.0",
+    "ember-template-lint": "7.0.1",
     "eslint": "8.57.1",
-    "eslint-config-prettier": "9.1.0",
+    "eslint-config-prettier": "10.1.1",
     "eslint-plugin-ember": "12.5.0",
     "eslint-plugin-n": "17.16.2",
     "eslint-plugin-prettier": "5.2.3",
     "prettier": "3.5.3",
     "prettier-plugin-ember-template-tag": "2.0.4",
-    "rollup": "4.35.0",
-    "typescript": "5.4.5"
+    "rollup": "4.36.0",
+    "typescript": "5.8.2"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
