@@ -68,7 +68,7 @@ module('Integration | Modifiers | style', function (hooks) {
 
   {
     interface Context extends TestContext {
-      // eslint-disable-next-line @typescript-eslint/ban-types
+      // eslint-disable-next-line @typescript-eslint/no-wrapper-object-types
       display: String;
     }
 
