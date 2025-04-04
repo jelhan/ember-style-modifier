@@ -91,7 +91,7 @@
     "@typescript-eslint/parser": "7.18.0",
     "babel-plugin-ember-template-compilation": "2.4.1",
     "concurrently": "9.1.2",
-    "ember-template-lint": "7.0.3",
+    "ember-template-lint": "7.0.4",
     "eslint": "8.57.1",
     "eslint-config-prettier": "10.1.1",
     "eslint-plugin-ember": "12.5.0",
