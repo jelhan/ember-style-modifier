@@ -56,7 +56,7 @@
     "ember-modifier": "^3.2.7 || ^4.0.0"
   },
   "devDependencies": {
-    "@babel/core": "7.27.4",
+    "@babel/core": "7.27.7",
     "@babel/plugin-transform-typescript": "7.27.1",
     "@babel/runtime": "7.27.6",
     "@embroider/addon-dev": "8.1.0",
