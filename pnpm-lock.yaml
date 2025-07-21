@@ -49,7 +49,7 @@ importers:
         version: 4.2.2(@babel/core@7.27.4)
       ember-source:
         specifier: ^3.28.0 || ^4.0.0 || >=5.0.0
-        version: 6.4.0(@glimmer/component@2.0.0)(rsvp@4.8.5)
+        version: 6.6.0(@glimmer/component@2.0.0)(rsvp@4.8.5)
     devDependencies:
       '@babel/core':
         specifier: 7.27.4
@@ -314,7 +314,7 @@ importers:
         version: 6.4.0(handlebars@4.7.8)(underscore@1.13.6)
       ember-cli-app-version:
         specifier: 7.0.0
-        version: 7.0.0(ember-source@6.4.0(@glimmer/component@2.0.0)(rsvp@4.8.5))
+        version: 7.0.0(ember-source@6.6.0(@glimmer/component@2.0.0)(rsvp@4.8.5))
       ember-cli-babel:
         specifier: 8.2.0
         version: 8.2.0(@babel/core@7.27.4)
@@ -344,7 +344,7 @@ importers:
         version: 8.1.2(encoding@0.1.13)
       ember-load-initializers:
         specifier: 3.0.1
-        version: 3.0.1(ember-source@6.4.0(@glimmer/component@2.0.0)(rsvp@4.8.5))
+        version: 3.0.1(ember-source@6.6.0(@glimmer/component@2.0.0)(rsvp@4.8.5))
       ember-modifier:
         specifier: 4.2.2
         version: 4.2.2(@babel/core@7.27.4)
@@ -358,8 +358,8 @@ importers:
         specifier: 13.1.1
         version: 13.1.1
       ember-source:
-        specifier: 6.4.0
-        version: 6.4.0(@glimmer/component@2.0.0)(rsvp@4.8.5)
+        specifier: 6.6.0
+        version: 6.6.0(@glimmer/component@2.0.0)(rsvp@4.8.5)
       ember-source-channel-url:
         specifier: 3.0.0
         version: 3.0.0(encoding@0.1.13)
@@ -3647,8 +3647,8 @@ packages:
     engines: {node: 10.* || 12.* || >= 14}
     hasBin: true
 
-  ember-source@6.4.0:
-    resolution: {integrity: sha512-lUzSbCsOQa3vRTv1HL7dj3gLApXXrq91QeAlnOLmwETQFoa6aX8+Z+78vNHIgg0jXCpzX1pWWL/NKpe4KDuCuw==}
+  ember-source@6.6.0:
+    resolution: {integrity: sha512-Tmwt18cqDesjAmmvfshyrF4OZWBRhpRTUk5bpOuflh3qOWPJcASTMcktAx96lbqaL14TNpHGMaD5q3hur6Wj+A==}
     engines: {node: '>= 18.*'}
     peerDependencies:
       '@glimmer/component': '>= 1.1.2'
@@ -11450,10 +11450,10 @@ snapshots:
       - supports-color
       - webpack
 
-  ember-cli-app-version@7.0.0(ember-source@6.4.0(@glimmer/component@2.0.0)(rsvp@4.8.5)):
+  ember-cli-app-version@7.0.0(ember-source@6.6.0(@glimmer/component@2.0.0)(rsvp@4.8.5)):
     dependencies:
       ember-cli-babel: 7.26.11
-      ember-source: 6.4.0(@glimmer/component@2.0.0)(rsvp@4.8.5)
+      ember-source: 6.6.0(@glimmer/component@2.0.0)(rsvp@4.8.5)
       git-repo-info: 2.1.1
     transitivePeerDependencies:
       - supports-color
@@ -11870,9 +11870,9 @@ snapshots:
       - encoding
       - supports-color
 
-  ember-load-initializers@3.0.1(ember-source@6.4.0(@glimmer/component@2.0.0)(rsvp@4.8.5)):
+  ember-load-initializers@3.0.1(ember-source@6.6.0(@glimmer/component@2.0.0)(rsvp@4.8.5)):
     dependencies:
-      ember-source: 6.4.0(@glimmer/component@2.0.0)(rsvp@4.8.5)
+      ember-source: 6.6.0(@glimmer/component@2.0.0)(rsvp@4.8.5)
 
   ember-modifier@4.2.2(@babel/core@7.27.4):
     dependencies:
@@ -11924,7 +11924,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  ember-source@6.4.0(@glimmer/component@2.0.0)(rsvp@4.8.5):
+  ember-source@6.6.0(@glimmer/component@2.0.0)(rsvp@4.8.5):
     dependencies:
       '@babel/core': 7.27.4(supports-color@8.1.1)
       '@ember/edition-utils': 1.2.0
