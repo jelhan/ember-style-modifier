@@ -109,6 +109,7 @@ module('Integration | Modifiers | style', function (hooks) {
       const display = new String('none');
       await render(
         <template>
+          {{!-- {{! @glint-expect-error: String wrapper object is not a valid CSS value type }} re-enable this when https://github.com/typed-ember/glint/issues/930 is fixed --}}
           <p {{style display=display}}></p>
         </template>,
       );
@@ -278,6 +279,7 @@ module('Integration | Modifiers | style', function (hooks) {
 
       await render(
         <template>
+          {{!-- {{! @glint-expect-error: CSS values are (correctly) types as string or undefined }} re-enable this when https://github.com/typed-ember/glint/issues/930 is fixed --}}
           <p {{style padding=1}}></p>
         </template>,
       );
