@@ -80,7 +80,7 @@
     "@glint/tsserver-plugin": "2.0.0-alpha.3",
     "@release-it-plugins/lerna-changelog": "8.0.1",
     "@rollup/plugin-babel": "6.0.4",
-    "@types/qunit": "2.19.12",
+    "@types/qunit": "2.19.13",
     "babel-plugin-ember-template-compilation": "3.0.0",
     "concurrently": "9.2.0",
     "ember-qunit": "9.0.3",
