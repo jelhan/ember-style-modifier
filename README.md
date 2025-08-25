@@ -10,8 +10,7 @@ This allows to set custom CSS of an element without requiring a [Content Securit
 ## Compatibility
 
 * Ember.js v3.28 or above
-* Ember CLI v3.28 or above
-* Node.js v18 or above
+* Embroider or ember-auto-import v2
 
 ## Installation
 
