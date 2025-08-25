@@ -11,6 +11,19 @@
 
 
 
+
+## v4.5.0 (2025-08-25)
+
+#### :house: Internal
+* [#323](https://github.com/jelhan/ember-style-modifier/pull/323) adopt new v2 addon format ([@aklkv](https://github.com/aklkv))
+* [#293](https://github.com/jelhan/ember-style-modifier/pull/293) upgrade test app with Ember CLI v5.12 blueprints ([@jelhan](https://github.com/jelhan))
+* [#292](https://github.com/jelhan/ember-style-modifier/pull/292) run tests against Ember v5.12 in CI ([@jelhan](https://github.com/jelhan))
+* [#284](https://github.com/jelhan/ember-style-modifier/pull/284) pin node and pnpm versions with volta ([@jelhan](https://github.com/jelhan))
+
+#### Committers: 2
+- Alexey Kulakov ([@aklkv](https://github.com/aklkv))
+- Jeldrik Hanschke ([@jelhan](https://github.com/jelhan))
+
 ## v4.4.0 (2024-07-16)
 
 #### :rocket: Enhancement
