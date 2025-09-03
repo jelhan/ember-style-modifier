@@ -77,7 +77,7 @@
     "@glint/environment-ember-loose": "2.0.0-alpha.3",
     "@glint/environment-ember-template-imports": "2.0.0-alpha.3",
     "@glint/template": "1.6.0-alpha.2",
-    "@glint/tsserver-plugin": "2.0.0-alpha.4",
+    "@glint/tsserver-plugin": "2.0.0-alpha.5",
     "@release-it-plugins/lerna-changelog": "8.0.1",
     "@rollup/plugin-babel": "6.0.4",
     "@types/qunit": "2.19.13",
