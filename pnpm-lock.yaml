@@ -59,7 +59,7 @@ importers:
         version: 1.18.3(@glint/template@1.6.1)
       '@embroider/vite':
         specifier: 1.2.3
-        version: 1.2.3(@embroider/core@4.2.3(@glint/template@1.6.1))(@glint/template@1.6.1)(rollup@4.52.3)(vite@7.1.7(@types/node@24.5.2)(jiti@2.6.0)(terser@5.44.0))
+        version: 1.2.3(@embroider/core@4.2.3(@glint/template@1.6.1))(@glint/template@1.6.1)(rollup@4.52.3)(vite@7.1.8(@types/node@24.5.2)(jiti@2.6.0)(terser@5.44.0))
       '@eslint/js':
         specifier: 9.36.0
         version: 9.36.0
@@ -157,8 +157,8 @@ importers:
         specifier: 8.45.0
         version: 8.45.0(eslint@9.36.0(jiti@2.6.0))(typescript@5.9.3)
       vite:
-        specifier: 7.1.7
-        version: 7.1.7(@types/node@24.5.2)(jiti@2.6.0)(terser@5.44.0)
+        specifier: 7.1.8
+        version: 7.1.8(@types/node@24.5.2)(jiti@2.6.0)(terser@5.44.0)
 
 packages:
 
@@ -5895,8 +5895,8 @@ packages:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
 
-  vite@7.1.7:
-    resolution: {integrity: sha512-VbA8ScMvAISJNJVbRDTJdCwqQoAareR/wutevKanhR2/1EkoXVZVkkORaYm/tNVCjP/UDTKtcw3bAkwOUdedmA==}
+  vite@7.1.8:
+    resolution: {integrity: sha512-oBXvfSHEOL8jF+R9Am7h59Up07kVVGH1NrFGFoEG6bPDZP3tGpQhvkBpy5x7U6+E6wZCu9OihsWgJqDbQIm8LQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -7148,7 +7148,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@embroider/vite@1.2.3(@embroider/core@4.2.3(@glint/template@1.6.1))(@glint/template@1.6.1)(rollup@4.52.3)(vite@7.1.7(@types/node@24.5.2)(jiti@2.6.0)(terser@5.44.0))':
+  '@embroider/vite@1.2.3(@embroider/core@4.2.3(@glint/template@1.6.1))(@glint/template@1.6.1)(rollup@4.52.3)(vite@7.1.8(@types/node@24.5.2)(jiti@2.6.0)(terser@5.44.0))':
     dependencies:
       '@babel/core': 7.28.4
       '@embroider/core': 4.2.3(@glint/template@1.6.1)
@@ -7166,7 +7166,7 @@ snapshots:
       send: 0.18.0
       source-map-url: 0.4.1
       terser: 5.44.0
-      vite: 7.1.7(@types/node@24.5.2)(jiti@2.6.0)(terser@5.44.0)
+      vite: 7.1.8(@types/node@24.5.2)(jiti@2.6.0)(terser@5.44.0)
     transitivePeerDependencies:
       - '@glint/template'
       - bufferutil
@@ -13127,7 +13127,7 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite@7.1.7(@types/node@24.5.2)(jiti@2.6.0)(terser@5.44.0):
+  vite@7.1.8(@types/node@24.5.2)(jiti@2.6.0)(terser@5.44.0):
     dependencies:
       esbuild: 0.25.10
       fdir: 6.5.0(picomatch@4.0.3)
