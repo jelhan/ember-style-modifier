@@ -69,7 +69,7 @@
     "@embroider/addon-dev": "8.1.0",
     "@embroider/compat": "4.1.6",
     "@embroider/core": "4.2.3",
-    "@embroider/macros": "1.18.3",
+    "@embroider/macros": "1.19.0",
     "@embroider/vite": "1.2.3",
     "@eslint/js": "9.36.0",
     "@glimmer/component": "2.0.0",

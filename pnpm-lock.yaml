@@ -55,8 +55,8 @@ importers:
         specifier: 4.2.3
         version: 4.2.3(@glint/template@1.6.1)
       '@embroider/macros':
-        specifier: 1.18.3
-        version: 1.18.3(@glint/template@1.6.1)
+        specifier: 1.19.0
+        version: 1.19.0(@glint/template@1.6.1)
       '@embroider/vite':
         specifier: 1.2.3
         version: 1.2.3(@embroider/core@4.2.3(@glint/template@1.6.1))(@glint/template@1.6.1)(rollup@4.52.3)(vite@7.1.8(@types/node@24.5.2)(jiti@2.6.0)(terser@5.44.0))
@@ -813,15 +813,6 @@ packages:
   '@embroider/core@4.2.3':
     resolution: {integrity: sha512-9JD0LPcdjRhkmcfzP7rG0r0kD2xoJ+6+mGVljzd9sCnk243naVriaZc1+AChkprdVMcvX8058PhhQEAD+byVVA==}
     engines: {node: 12.* || 14.* || >= 16}
-
-  '@embroider/macros@1.18.3':
-    resolution: {integrity: sha512-VplyaFQMpDi30pQI4Qmk26GdopX04WpKAzpP2EpQezVondZ1aQL50CkxO8lQz+rKHJo5x7XRpi3nzlZrJf6scw==}
-    engines: {node: 12.* || 14.* || >= 16}
-    peerDependencies:
-      '@glint/template': ^1.0.0
-    peerDependenciesMeta:
-      '@glint/template':
-        optional: true
 
   '@embroider/macros@1.19.0':
     resolution: {integrity: sha512-ZN47FU7oBdaSubbRyLTe3iehoXwmorQafUtMTFHrbyqjGqbz64/k4pYnXbNqs/L4H0pv3DUfv78Zz0vErNzSHg==}
@@ -6960,7 +6951,7 @@ snapshots:
     dependencies:
       '@ember/test-waiters': 4.1.1(@glint/template@1.6.1)
       '@embroider/addon-shim': 1.10.0
-      '@embroider/macros': 1.18.3(@glint/template@1.6.1)
+      '@embroider/macros': 1.19.0(@glint/template@1.6.1)
       '@simple-dom/interface': 1.4.0
       decorator-transforms: 2.3.0(@babel/core@7.28.4)
       dom-element-descriptors: 0.5.1
@@ -6972,7 +6963,7 @@ snapshots:
   '@ember/test-waiters@4.1.1(@glint/template@1.6.1)':
     dependencies:
       '@embroider/addon-shim': 1.10.0
-      '@embroider/macros': 1.18.3(@glint/template@1.6.1)
+      '@embroider/macros': 1.19.0(@glint/template@1.6.1)
     transitivePeerDependencies:
       - '@glint/template'
       - supports-color
@@ -7094,21 +7085,6 @@ snapshots:
       - canvas
       - supports-color
       - utf-8-validate
-
-  '@embroider/macros@1.18.3(@glint/template@1.6.1)':
-    dependencies:
-      '@embroider/shared-internals': 3.0.1
-      assert-never: 1.4.0
-      babel-import-util: 3.0.1
-      ember-cli-babel: 7.26.11
-      find-up: 5.0.0
-      lodash: 4.17.21
-      resolve: 1.22.10
-      semver: 7.7.2
-    optionalDependencies:
-      '@glint/template': 1.6.1
-    transitivePeerDependencies:
-      - supports-color
 
   '@embroider/macros@1.19.0(@glint/template@1.6.1)':
     dependencies:
@@ -9424,7 +9400,7 @@ snapshots:
     dependencies:
       '@ember/test-helpers': 5.3.0(@babel/core@7.28.4)(@glint/template@1.6.1)
       '@embroider/addon-shim': 1.10.0
-      '@embroider/macros': 1.18.3(@glint/template@1.6.1)
+      '@embroider/macros': 1.19.0(@glint/template@1.6.1)
       qunit: 2.24.1
       qunit-theme-ember: 1.0.0
     transitivePeerDependencies:
