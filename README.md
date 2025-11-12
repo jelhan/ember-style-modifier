@@ -26,7 +26,7 @@ spelling. Value must be a string or `undefined`. You may set a priority by
 adding an `"!important"` suffix.
 
 ```gjs
-import { style } from 'ember-style-modifier';
+import style from 'ember-style-modifier';
 
 <p
   {{style
