@@ -100,7 +100,7 @@
     "release-it": "19.2.4",
     "rollup": "4.57.1",
     "testem": "3.17.0",
-    "tracked-built-ins": "4.0.0",
+    "tracked-built-ins": "4.1.0",
     "typescript": "5.9.3",
     "typescript-eslint": "8.46.3",
     "vite": "7.2.7"
