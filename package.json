@@ -1,0 +1,144 @@
+{
+  "name": "ember-style-modifier",
+  "version": "4.5.1",
+  "description": "{{style}} modifier to set an element's style using the CSSStyleDeclaration API.",
+  "keywords": [
+    "ember-addon"
+  ],
+  "repository": "https://github.com/jelhan/ember-style-modifier",
+  "license": "MIT",
+  "author": "",
+  "imports": {
+    "#src/*": "./src/*"
+  },
+  "exports": {
+    ".": {
+      "types": "./declarations/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./*.css": "./dist/*.css",
+    "./*": {
+      "types": "./declarations/*.d.ts",
+      "default": "./dist/*.js"
+    },
+    "./addon-main.js": "./addon-main.cjs"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "declarations/*"
+      ]
+    }
+  },
+  "files": [
+    "addon-main.cjs",
+    "declarations",
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup --config",
+    "format": "prettier . --cache --write",
+    "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\" --prefixColors auto",
+    "lint:fix": "concurrently \"pnpm:lint:*:fix\" --names \"fix:\" --prefixColors auto && pnpm run format",
+    "lint:format": "prettier . --cache --check",
+    "lint:hbs": "ember-template-lint . --no-error-on-unmatched-pattern",
+    "lint:hbs:fix": "ember-template-lint . --fix --no-error-on-unmatched-pattern",
+    "lint:js": "eslint . --cache",
+    "lint:js:fix": "eslint . --fix",
+    "lint:types": "glint",
+    "release": "release-it",
+    "start": "vite dev",
+    "test": "vite build --mode=development --out-dir dist-tests && testem --file testem.cjs ci --port 0"
+  },
+  "dependencies": {
+    "@embroider/addon-shim": "^1.10.0",
+    "csstype": "^3.1.3",
+    "decorator-transforms": "^2.3.0",
+    "ember-modifier": "^3.2.7 || ^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.29.0",
+    "@babel/eslint-parser": "7.28.6",
+    "@babel/plugin-transform-typescript": "7.28.6",
+    "@babel/runtime": "7.28.6",
+    "@ember/app-tsconfig": "2.0.0",
+    "@ember/library-tsconfig": "1.1.3",
+    "@ember/string": "4.0.1",
+    "@ember/test-helpers": "5.4.1",
+    "@embroider/addon-dev": "8.3.0",
+    "@embroider/compat": "4.1.15",
+    "@embroider/core": "4.4.5",
+    "@embroider/macros": "1.20.1",
+    "@embroider/vite": "1.6.1",
+    "@eslint/js": "9.39.4",
+    "@glimmer/component": "2.0.0",
+    "@glint/core": "2.0.0-alpha.11",
+    "@glint/environment-ember-loose": "2.0.0-alpha.3",
+    "@glint/environment-ember-template-imports": "2.0.0-alpha.3",
+    "@glint/template": "1.7.6",
+    "@glint/tsserver-plugin": "2.2.3",
+    "@release-it-plugins/lerna-changelog": "8.0.1",
+    "@rollup/plugin-babel": "6.1.0",
+    "@types/qunit": "2.19.13",
+    "babel-plugin-ember-template-compilation": "3.1.0",
+    "concurrently": "9.2.1",
+    "ember-qunit": "9.0.4",
+    "ember-resolver": "13.2.0",
+    "ember-source": "6.11.0",
+    "ember-template-lint": "7.9.3",
+    "eslint": "9.39.4",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-ember": "12.7.5",
+    "eslint-plugin-import": "2.32.0",
+    "eslint-plugin-n": "17.24.0",
+    "globals": "17.4.0",
+    "prettier": "3.6.2",
+    "prettier-plugin-ember-template-tag": "2.1.0",
+    "qunit": "2.25.0",
+    "qunit-dom": "3.5.0",
+    "release-it": "19.2.4",
+    "rollup": "4.59.0",
+    "testem": "3.18.0",
+    "tracked-built-ins": "4.1.0",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.46.3",
+    "vite": "7.3.1"
+  },
+  "peerDependencies": {
+    "@ember/string": "^3.1.1 || ^4.0.0"
+  },
+  "packageManager": "pnpm@10.32.1+sha512.a706938f0e89ac1456b6563eab4edf1d1faf3368d1191fc5c59790e96dc918e4456ab2e67d613de1043d2e8c81f87303e6b40d4ffeca9df15ef1ad567348f2be",
+  "engines": {
+    "node": "18.* || >= 20",
+    "pnpm": ">= 10.*"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "ember": {
+    "edition": "octane"
+  },
+  "ember-addon": {
+    "version": 2,
+    "type": "addon",
+    "main": "addon-main.cjs",
+    "app-js": {
+      "./modifiers/style.js": "./dist/_app_/modifiers/style.js"
+    }
+  },
+  "release-it": {
+    "plugins": {
+      "@release-it-plugins/lerna-changelog": {
+        "infile": "CHANGELOG.md",
+        "launchEditor": true
+      }
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    }
+  }
+}
