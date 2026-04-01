@@ -19,10 +19,8 @@ function isObject(o: unknown): boolean {
 const DASHERIZE_REGEX = /([a-z\d])([A-Z])/g;
 const DASHERIZE_REPLACEMENT = '$1-$2';
 
-export function dasherize(str: string): string {
-  return str
-    .replace(DASHERIZE_REGEX, DASHERIZE_REPLACEMENT)
-    .toLowerCase();
+function dasherize(str: string): string {
+  return str.replace(DASHERIZE_REGEX, DASHERIZE_REPLACEMENT).toLowerCase();
 }
 
 /**
