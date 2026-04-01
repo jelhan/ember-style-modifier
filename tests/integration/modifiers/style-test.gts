@@ -266,7 +266,6 @@ module('Integration | Modifiers | style', function (hooks) {
 
   module('assertions', function () {
     test('it throws if value is not a string', async function (assert) {
-      // https://github.com/emberjs/ember-test-helpers/blob/master/API.md#setuponerror
       setupOnerror(function ({ message }) {
         assert.step('assertion thrown');
         assert.ok(message.includes('number'), 'message includes type of value');
