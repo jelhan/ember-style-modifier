@@ -1,5 +1,4 @@
 import Modifier from 'ember-modifier';
-import { dasherize } from '@ember/string';
 import { assert } from '@ember/debug';
 import { typeOf } from '@ember/utils';
 import type * as CSS from 'csstype';
@@ -15,6 +14,13 @@ type CSSStyles =
 
 function isObject(o: unknown): boolean {
   return typeof o === 'object' && Boolean(o);
+}
+
+function dasherize(str: string): string {
+  return str
+    .replace(/([a-z\d])([A-Z])/g, '$1-$2')
+    .replace(/_/g, '-')
+    .toLowerCase();
 }
 
 /**
