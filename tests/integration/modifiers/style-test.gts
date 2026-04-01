@@ -1,7 +1,6 @@
-import Ember from 'ember';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render, rerender } from '@ember/test-helpers';
+import { render, rerender, setupOnerror } from '@ember/test-helpers';
 import { hash } from '@ember/helper';
 import { tracked } from '@glimmer/tracking';
 import { TrackedObject } from 'tracked-built-ins';
@@ -265,27 +264,13 @@ module('Integration | Modifiers | style', function (hooks) {
     }
   });
 
-  module('assertions', function (hooks) {
-    // Can't use assert.rejects() to assert that modifier throws
-    // cause render does not reject:
-    // https://github.com/emberjs/ember-test-helpers/issues/310
-    // Using work-a-round recommended by rwjblue instead:
-    // https://discuss.emberjs.com/t/how-to-catch-errors-in-component-rendering-test/14854
-
-    let orgOnError: typeof Ember.onerror;
-    hooks.beforeEach(function () {
-      orgOnError = Ember.onerror;
-    });
-    hooks.afterEach(function () {
-      Ember.onerror = orgOnError;
-    });
-
+  module('assertions', function () {
     test('it throws if value is not a string', async function (assert) {
-      Ember.onerror = function ({ message }) {
+      setupOnerror(function ({ message }) {
         assert.step('assertion thrown');
         assert.ok(message.includes('number'), 'message includes type of value');
         assert.ok(message.includes('1'), 'message includes value');
-      };
+      });
 
       await render(
         <template>
