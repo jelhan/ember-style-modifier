@@ -16,10 +16,12 @@ function isObject(o: unknown): boolean {
   return typeof o === 'object' && Boolean(o);
 }
 
-function dasherize(str: string): string {
+const DASHERIZE_REGEX = /([a-z\d])([A-Z])/g;
+const DASHERIZE_REPLACEMENT = '$1-$2';
+
+export function dasherize(str: string): string {
   return str
-    .replace(/([a-z\d])([A-Z])/g, '$1-$2')
-    .replace(/_/g, '-')
+    .replace(DASHERIZE_REGEX, DASHERIZE_REPLACEMENT)
     .toLowerCase();
 }
 
