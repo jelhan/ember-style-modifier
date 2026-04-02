@@ -39,9 +39,6 @@ importers:
       '@ember/library-tsconfig':
         specifier: 1.1.3
         version: 1.1.3
-      '@ember/string':
-        specifier: 4.0.1
-        version: 4.0.1
       '@ember/test-helpers':
         specifier: 5.4.1
         version: 5.4.1(@babel/core@7.29.0)(@glint/template@1.7.7)
@@ -749,9 +746,6 @@ packages:
 
   '@ember/library-tsconfig@1.1.3':
     resolution: {integrity: sha512-4cKJ38VEcm4mYmontK9BCpQgm5GPLgAeXqd6PqTHD8eKN0GTeegxdX4SsSUN/8emmULq/9H/Oh6fp3vM2mFqkA==}
-
-  '@ember/string@4.0.1':
-    resolution: {integrity: sha512-VWeng8BSWrIsdPfffOQt/bKwNKJL7+37gPFh/6iZZ9bke+S83kKqkS30poo4bTGfRcMnvAE0ie7txom+iDu81Q==}
 
   '@ember/test-helpers@5.4.1':
     resolution: {integrity: sha512-BUdT91ra+QibEWAUwtZmvTGFoDHJCxDU+fkQENA8Zs0FR3pZiICxxP/fgdlNExCjjdm1letut7ENoueBuDdixQ==}
@@ -6489,8 +6483,6 @@ snapshots:
   '@ember/edition-utils@1.2.0': {}
 
   '@ember/library-tsconfig@1.1.3': {}
-
-  '@ember/string@4.0.1': {}
 
   '@ember/test-helpers@5.4.1(@babel/core@7.29.0)(@glint/template@1.7.7)':
     dependencies:
