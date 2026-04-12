@@ -1,0 +1,26 @@
+{
+  "solution": {
+    "ember-style-modifier": {
+      "impact": "minor",
+      "oldVersion": "4.5.1",
+      "newVersion": "4.6.0",
+      "tagName": "latest",
+      "constraints": [
+        {
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :memo: Documentation"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
+        }
+      ],
+      "pkgJSONPath": "./package.json"
+    }
+  },
+  "description": "## Release (2026-04-12)\n\n* ember-style-modifier 4.6.0 (minor)\n\n#### :rocket: Enhancement\n* `ember-style-modifier`\n  * [#351](https://github.com/jelhan/ember-style-modifier/pull/351) Use custom `dasherize` function and drop `@ember/string` peerDependency ([@mkszepp](https://github.com/mkszepp))\n  * [#237](https://github.com/jelhan/ember-style-modifier/pull/237) Ensure modifier supports `math` elements ([@boris-petrov](https://github.com/boris-petrov))\n\n#### :memo: Documentation\n* `ember-style-modifier`\n  * [#334](https://github.com/jelhan/ember-style-modifier/pull/334) Fix import example in readme ([@mkszepp](https://github.com/mkszepp))\n  * [#328](https://github.com/jelhan/ember-style-modifier/pull/328) Docs: Ember CLI and Node version is not relevant anymore ([@jelhan](https://github.com/jelhan))\n\n#### :house: Internal\n* `ember-style-modifier`\n  * [#355](https://github.com/jelhan/ember-style-modifier/pull/355) Migrate from release-it to release-plan ([@jelhan](https://github.com/jelhan))\n  * [#352](https://github.com/jelhan/ember-style-modifier/pull/352) Fix failing tests for Ember 7 ([@mkszepp](https://github.com/mkszepp))\n\n#### Committers: 3\n- Boris Petrov ([@boris-petrov](https://github.com/boris-petrov))\n- Jeldrik Hanschke ([@jelhan](https://github.com/jelhan))\n- Markus Sanin ([@mkszepp](https://github.com/mkszepp))\n"
+}

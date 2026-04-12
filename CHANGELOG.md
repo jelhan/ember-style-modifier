@@ -1,5 +1,29 @@
 # Changelog
 
+## Release (2026-04-12)
+
+* ember-style-modifier 4.6.0 (minor)
+
+#### :rocket: Enhancement
+* `ember-style-modifier`
+  * [#351](https://github.com/jelhan/ember-style-modifier/pull/351) Use custom `dasherize` function and drop `@ember/string` peerDependency ([@mkszepp](https://github.com/mkszepp))
+  * [#237](https://github.com/jelhan/ember-style-modifier/pull/237) Ensure modifier supports `math` elements ([@boris-petrov](https://github.com/boris-petrov))
+
+#### :memo: Documentation
+* `ember-style-modifier`
+  * [#334](https://github.com/jelhan/ember-style-modifier/pull/334) Fix import example in readme ([@mkszepp](https://github.com/mkszepp))
+  * [#328](https://github.com/jelhan/ember-style-modifier/pull/328) Docs: Ember CLI and Node version is not relevant anymore ([@jelhan](https://github.com/jelhan))
+
+#### :house: Internal
+* `ember-style-modifier`
+  * [#355](https://github.com/jelhan/ember-style-modifier/pull/355) Migrate from release-it to release-plan ([@jelhan](https://github.com/jelhan))
+  * [#352](https://github.com/jelhan/ember-style-modifier/pull/352) Fix failing tests for Ember 7 ([@mkszepp](https://github.com/mkszepp))
+
+#### Committers: 3
+- Boris Petrov ([@boris-petrov](https://github.com/boris-petrov))
+- Jeldrik Hanschke ([@jelhan](https://github.com/jelhan))
+- Markus Sanin ([@mkszepp](https://github.com/mkszepp))
+
 
 ## v4.5.1 (2025-08-25)
 
