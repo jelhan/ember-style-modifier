@@ -1,19 +1,6 @@
 # Changelog
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## v4.5.1 (2025-08-25)
 
 v4.5.0 was not released successfully due to configuration issue.
