@@ -121,11 +121,11 @@ importers:
         specifier: 17.5.0
         version: 17.5.0
       prettier:
-        specifier: 3.8.2
-        version: 3.8.2
+        specifier: 3.8.3
+        version: 3.8.3
       prettier-plugin-ember-template-tag:
         specifier: 2.1.4
-        version: 2.1.4(prettier@3.8.2)
+        version: 2.1.4(prettier@3.8.3)
       qunit:
         specifier: 2.25.0
         version: 2.25.0
@@ -4053,8 +4053,8 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
-  prettier@3.8.2:
-    resolution: {integrity: sha512-8c3mgTe0ASwWAJK+78dpviD+A8EqhndQPUBpNUIPt6+xWlIigCwfN01lWr9MAede4uqXGTEKeQWTvzb3vjia0Q==}
+  prettier@3.8.3:
+    resolution: {integrity: sha512-7igPTM53cGHMW8xWuVTydi2KO233VFiTNyF5hLJqpilHfmn8C8gPf+PS7dUT64YcXFbiMGZxS9pCSxL/Dxm/Jw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -9736,17 +9736,17 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-ember-template-tag@2.1.4(prettier@3.8.2):
+  prettier-plugin-ember-template-tag@2.1.4(prettier@3.8.3):
     dependencies:
       '@babel/traverse': 7.29.0
       content-tag: 4.1.1
-      prettier: 3.8.2
+      prettier: 3.8.3
     transitivePeerDependencies:
       - supports-color
 
   prettier@2.8.8: {}
 
-  prettier@3.8.2: {}
+  prettier@3.8.3: {}
 
   pretty-ms@9.3.0:
     dependencies:
