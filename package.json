@@ -66,7 +66,7 @@
     "@ember/library-tsconfig": "2.0.0",
     "@ember/test-helpers": "5.4.2",
     "@embroider/addon-dev": "8.3.0",
-    "@embroider/compat": "4.1.17",
+    "@embroider/compat": "4.1.18",
     "@embroider/core": "4.4.7",
     "@embroider/macros": "1.20.2",
     "@embroider/vite": "1.7.2",
