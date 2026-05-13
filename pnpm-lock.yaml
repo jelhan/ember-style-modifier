@@ -82,8 +82,8 @@ importers:
         specifier: 7.0.0
         version: 7.0.0(@babel/core@7.29.0)(rollup@4.60.3)
       '@types/qunit':
-        specifier: 2.19.13
-        version: 2.19.13
+        specifier: 2.19.14
+        version: 2.19.14
       babel-plugin-ember-template-compilation:
         specifier: 4.0.0
         version: 4.0.0
@@ -1539,8 +1539,8 @@ packages:
   '@types/node@25.6.2':
     resolution: {integrity: sha512-sokuT28dxf9JT5Kady1fsXOvI4HVpjZa95NKT5y9PNTIrs2AsobR4GFAA90ZG8M+nxVRLysCXsVj6eGC7Vbrlw==}
 
-  '@types/qunit@2.19.13':
-    resolution: {integrity: sha512-N4xp3v4s7f0jb2Oij6+6xw5QhH7/IgHCoGIFLCWtbEWoPkGYp8Te4mIwIP21qaurr6ed5JiPMiy2/ZoiGPkLIw==}
+  '@types/qunit@2.19.14':
+    resolution: {integrity: sha512-ou2RMtwyDnW1btrMnDMZeL6V5/yRRbuHKrRC6y8IuzDljjVzw6wPCVFb8p4qJD0NkUkf3BdZeJJIBzjK1BUUDQ==}
 
   '@types/symlink-or-copy@1.2.2':
     resolution: {integrity: sha512-MQ1AnmTLOncwEf9IVU+B2e4Hchrku5N67NkgcAHW0p3sdzPe0FNMANxEm6OJUzPniEQGkeT3OROLlCwZJLWFZA==}
@@ -7011,7 +7011,7 @@ snapshots:
     dependencies:
       undici-types: 7.19.2
 
-  '@types/qunit@2.19.13': {}
+  '@types/qunit@2.19.14': {}
 
   '@types/symlink-or-copy@1.2.2': {}
 
