@@ -76,8 +76,8 @@ importers:
         specifier: 1.7.7
         version: 1.7.7
       '@glint/tsserver-plugin':
-        specifier: 2.4.3
-        version: 2.4.3(ember-source@6.12.0(@glimmer/component@2.1.1)(rsvp@4.8.5))
+        specifier: 2.5.1
+        version: 2.5.1(ember-source@6.12.0(@glimmer/component@2.1.1)(rsvp@4.8.5))
       '@rollup/plugin-babel':
         specifier: 7.0.0
         version: 7.0.0(@babel/core@7.29.0)(rollup@4.60.4)
@@ -878,8 +878,8 @@ packages:
     peerDependencies:
       typescript: '>=5.6.0'
 
-  '@glint/ember-tsc@1.6.2':
-    resolution: {integrity: sha512-9RH0m6eBooBLXm972JNraG56ASPCFyaZlkxdIDtAQ7RVFWbkrJjaaXIk5F55mR497NWdQycgKKvWRFck6CFk2Q==}
+  '@glint/ember-tsc@1.7.1':
+    resolution: {integrity: sha512-85SqNlV7KhWGzWmhcOEn0sma77bwQJRj1GzrdAm8LSXLUTT3Htay0GdNh6bshwuY4/VHd/fbAgIONq7HdwZ97g==}
     hasBin: true
     peerDependencies:
       ember-source: '>=3.28.0'
@@ -915,8 +915,8 @@ packages:
   '@glint/template@1.7.7':
     resolution: {integrity: sha512-jcPdQ3A6cXo5h9RBi0tK4/o5qNn7868Y8xpkwWQNPAd8xQKuRKmG9dGJwUycXvtqISzfrnL1p3MQr3hYN/Ua6Q==}
 
-  '@glint/tsserver-plugin@2.4.3':
-    resolution: {integrity: sha512-uMxXGmmTRQkJCDmNdVQyEaSyJWUXYkbkyjIuybXqp5q/T3bUxgGcbVr8lV6QGx6psXipm8BpyWeYMvxjd/uE0Q==}
+  '@glint/tsserver-plugin@2.5.1':
+    resolution: {integrity: sha512-xOXKWsVfFzhXS+goJ1oniNJtUyNvhL0JrubpDiytDih0tJyl7Pq+a3gsHwPJYBBoAy1bbX/6zammFYy3xdgarw==}
 
   '@handlebars/parser@2.2.2':
     resolution: {integrity: sha512-n/SZW+12rwikx/f8YcSv9JCi5p9vn1Bnts9ZtVvfErG4h0gbjHI1H1ZMhVUnaOC7yzFc6PtsCKIK8XeTnL90Gw==}
@@ -6488,7 +6488,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@glint/ember-tsc@1.6.2(ember-source@6.12.0(@glimmer/component@2.1.1)(rsvp@4.8.5))(typescript@5.9.3)':
+  '@glint/ember-tsc@1.7.1(ember-source@6.12.0(@glimmer/component@2.1.1)(rsvp@4.8.5))(typescript@5.9.3)':
     dependencies:
       '@glimmer/syntax': 0.95.0
       '@glint/template': 1.7.7
@@ -6531,9 +6531,9 @@ snapshots:
 
   '@glint/template@1.7.7': {}
 
-  '@glint/tsserver-plugin@2.4.3(ember-source@6.12.0(@glimmer/component@2.1.1)(rsvp@4.8.5))':
+  '@glint/tsserver-plugin@2.5.1(ember-source@6.12.0(@glimmer/component@2.1.1)(rsvp@4.8.5))':
     dependencies:
-      '@glint/ember-tsc': 1.6.2(ember-source@6.12.0(@glimmer/component@2.1.1)(rsvp@4.8.5))(typescript@5.9.3)
+      '@glint/ember-tsc': 1.7.1(ember-source@6.12.0(@glimmer/component@2.1.1)(rsvp@4.8.5))(typescript@5.9.3)
       '@volar/language-core': 2.4.28
       '@volar/typescript': 2.4.28
       jiti: 2.6.1
