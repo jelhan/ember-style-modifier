@@ -67,7 +67,7 @@
     "@ember/test-helpers": "5.4.2",
     "@embroider/addon-dev": "8.3.0",
     "@embroider/compat": "4.1.19",
-    "@embroider/core": "4.5.0",
+    "@embroider/core": "4.6.0",
     "@embroider/macros": "1.20.3",
     "@embroider/vite": "1.7.4",
     "@eslint/js": "9.39.4",
