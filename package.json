@@ -101,7 +101,7 @@
     "tracked-built-ins": "4.1.2",
     "typescript": "6.0.3",
     "typescript-eslint": "8.46.3",
-    "vite": "8.0.16"
+    "vite": "8.1.0"
   },
   "packageManager": "pnpm@10.34.4+sha512.8768be55200ae3f2226b6527fcca2687e14bc4e5f12d7721a0f25da3df47915177058648db4177baf348120fa0ba2752d8d8d93f6beaf1fe64ae18da8de961af",
   "engines": {
