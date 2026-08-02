@@ -121,5 +121,10 @@
     "app-js": {
       "./modifiers/style.js": "./dist/_app_/modifiers/style.js"
     }
+  },
+  "pnpm": {
+    "overrides": {
+      "brace-expansion": "1.1.16"
+    }
   }
 }
