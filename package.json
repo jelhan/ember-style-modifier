@@ -58,9 +58,9 @@
     "ember-modifier": "^3.2.7 || ^4.0.0"
   },
   "devDependencies": {
-    "@babel/core": "8.0.5",
-    "@babel/eslint-parser": "8.0.5",
-    "@babel/plugin-transform-typescript": "8.0.5",
+    "@babel/core": "8.0.6",
+    "@babel/eslint-parser": "8.0.6",
+    "@babel/plugin-transform-typescript": "8.0.6",
     "@babel/runtime": "8.0.5",
     "@ember/app-tsconfig": "2.0.0",
     "@ember/library-tsconfig": "2.0.0",
