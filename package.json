@@ -81,7 +81,7 @@
     "@types/qunit": "2.19.14",
     "babel-plugin-ember-template-compilation": "4.0.0",
     "concurrently": "10.0.5",
-    "ember-qunit": "9.1.0",
+    "ember-qunit": "9.2.0",
     "ember-resolver": "13.2.0",
     "ember-source": "7.3.0",
     "ember-template-lint": "7.9.3",
