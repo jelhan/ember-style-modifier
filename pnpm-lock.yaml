@@ -34,8 +34,8 @@ importers:
         specifier: 8.0.5
         version: 8.0.5
       '@ember/app-tsconfig':
-        specifier: 2.0.0
-        version: 2.0.0
+        specifier: 2.1.0
+        version: 2.1.0
       '@ember/library-tsconfig':
         specifier: 2.0.0
         version: 2.0.0
@@ -844,8 +844,8 @@ packages:
   '@ember-data/rfc395-data@0.0.4':
     resolution: {integrity: sha512-tGRdvgC9/QMQSuSuJV45xoyhI0Pzjm7A9o/MVVA3HakXIImJbbzx/k/6dO9CUEQXIyS2y0fW6C1XaYOG7rY0FQ==}
 
-  '@ember/app-tsconfig@2.0.0':
-    resolution: {integrity: sha512-NmD1OZFtCF49k4WDaPdhGP4OKoRbPaXpTBO3AsJe0okIJeCVUiEiC8YUpfTJmld9EJOEa9mW/p0tJQS70GktOA==}
+  '@ember/app-tsconfig@2.1.0':
+    resolution: {integrity: sha512-s44smHIQVM2Ews1+bIAwqibVF6OHsw3/G14xV0DA0/GchVolqTG/Kfzqn/jZnU4zlXPEndJdTpn+PFEsuFs7mg==}
 
   '@ember/library-tsconfig@2.0.0':
     resolution: {integrity: sha512-DTGt9TYZ3bhObUviQXx4C0v46oWM7HsRrUTbgONw2QBhJVHlmXA89uXenlvuqVrCQkA0g5kz7wwyOlcjIZ8h0w==}
@@ -6956,7 +6956,7 @@ snapshots:
 
   '@ember-data/rfc395-data@0.0.4': {}
 
-  '@ember/app-tsconfig@2.0.0': {}
+  '@ember/app-tsconfig@2.1.0': {}
 
   '@ember/library-tsconfig@2.0.0': {}
 
