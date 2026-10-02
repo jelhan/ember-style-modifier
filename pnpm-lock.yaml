@@ -109,8 +109,8 @@ importers:
         specifier: 10.1.8
         version: 10.1.8(eslint@9.39.5(jiti@2.7.0))
       eslint-plugin-ember:
-        specifier: 13.5.0
-        version: 13.5.0(@babel/eslint-parser@8.0.6(@babel/core@8.0.6)(eslint@9.39.5(jiti@2.7.0)))(@typescript-eslint/parser@8.46.3(eslint@9.39.5(jiti@2.7.0))(typescript@6.0.3))(eslint@9.39.5(jiti@2.7.0))(typescript@6.0.3)
+        specifier: 13.6.0
+        version: 13.6.0(@babel/eslint-parser@8.0.6(@babel/core@8.0.6)(eslint@9.39.5(jiti@2.7.0)))(@typescript-eslint/parser@8.46.3(eslint@9.39.5(jiti@2.7.0))(typescript@6.0.3))(eslint@9.39.5(jiti@2.7.0))(typescript@6.0.3)
       eslint-plugin-import:
         specifier: 2.32.0
         version: 2.32.0(@typescript-eslint/parser@8.46.3(eslint@9.39.5(jiti@2.7.0))(typescript@6.0.3))(eslint@9.39.5(jiti@2.7.0))
@@ -2860,8 +2860,8 @@ packages:
       eslint-import-resolver-webpack:
         optional: true
 
-  eslint-plugin-ember@13.5.0:
-    resolution: {integrity: sha512-q1s/irrc2l1KeE1l5S1UiO7ZrvGF5aYm903CMQ7lHFc09F/78/uvgzvA4wPZ9TFMl07r2ttoIINrEOFy05RtGg==}
+  eslint-plugin-ember@13.6.0:
+    resolution: {integrity: sha512-JW6DCgJHRIh+S0KbXnDZYp+N0VgDQaDsm6ZGmarQrAKt/+aqna6AIClc/mCD6b16KNctgigdRlaqAGwK/g37EQ==}
     engines: {node: '>= 20.19'}
     peerDependencies:
       '@typescript-eslint/parser': '*'
@@ -9309,7 +9309,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-ember@13.5.0(@babel/eslint-parser@8.0.6(@babel/core@8.0.6)(eslint@9.39.5(jiti@2.7.0)))(@typescript-eslint/parser@8.46.3(eslint@9.39.5(jiti@2.7.0))(typescript@6.0.3))(eslint@9.39.5(jiti@2.7.0))(typescript@6.0.3):
+  eslint-plugin-ember@13.6.0(@babel/eslint-parser@8.0.6(@babel/core@8.0.6)(eslint@9.39.5(jiti@2.7.0)))(@typescript-eslint/parser@8.46.3(eslint@9.39.5(jiti@2.7.0))(typescript@6.0.3))(eslint@9.39.5(jiti@2.7.0))(typescript@6.0.3):
     dependencies:
       '@ember-data/rfc395-data': 0.0.4
       aria-query: 5.3.2
