@@ -37,8 +37,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0
       '@ember/library-tsconfig':
-        specifier: 2.0.0
-        version: 2.0.0
+        specifier: 3.0.0
+        version: 3.0.0
       '@ember/test-helpers':
         specifier: 5.7.0
         version: 5.7.0(@babel/core@8.0.6)
@@ -847,8 +847,8 @@ packages:
   '@ember/app-tsconfig@2.1.0':
     resolution: {integrity: sha512-s44smHIQVM2Ews1+bIAwqibVF6OHsw3/G14xV0DA0/GchVolqTG/Kfzqn/jZnU4zlXPEndJdTpn+PFEsuFs7mg==}
 
-  '@ember/library-tsconfig@2.0.0':
-    resolution: {integrity: sha512-DTGt9TYZ3bhObUviQXx4C0v46oWM7HsRrUTbgONw2QBhJVHlmXA89uXenlvuqVrCQkA0g5kz7wwyOlcjIZ8h0w==}
+  '@ember/library-tsconfig@3.0.0':
+    resolution: {integrity: sha512-2o4D+YB0efPe8HJJlaC303qx8dWH2khcKe5ctp4fMCfqP9EibNnyWScNb2MkaFjEqrdRXqTVK+lGHXOoM70omw==}
 
   '@ember/test-helpers@5.7.0':
     resolution: {integrity: sha512-h77kAJpFQ9fffuLc9+XhoYsk7URDLd7jTLnq7Yk9gGvQ41JupxrGMHoRjyboytSbwngSy+0yXyMhNYfH8ng4xg==}
@@ -6958,7 +6958,7 @@ snapshots:
 
   '@ember/app-tsconfig@2.1.0': {}
 
-  '@ember/library-tsconfig@2.0.0': {}
+  '@ember/library-tsconfig@3.0.0': {}
 
   '@ember/test-helpers@5.7.0(@babel/core@8.0.6)':
     dependencies:
