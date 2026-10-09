@@ -100,8 +100,8 @@ importers:
         specifier: 7.3.0
         version: 7.3.0(@glimmer/component@2.1.1)
       ember-template-lint:
-        specifier: 7.9.3
-        version: 7.9.3
+        specifier: 7.9.4
+        version: 7.9.4
       eslint:
         specifier: 9.39.5
         version: 9.39.5(jiti@2.7.0)
@@ -2729,8 +2729,8 @@ packages:
     peerDependencies:
       '@glimmer/component': '>= 1.1.2'
 
-  ember-template-lint@7.9.3:
-    resolution: {integrity: sha512-iqC4rv/oVlXViGuf7hlOA/bC550ZqacZKAc8WvQV0ueeCtIYPkYYK+Tc7FwpM8qGx3jiwu/ZsTuNfPInI5pL7Q==}
+  ember-template-lint@7.9.4:
+    resolution: {integrity: sha512-yj/LIvtBv9zL7RJ8Fz+RURxZeYa1d+rCTnWSAjUFho74ywq55uht71+Nu8Svr5SL4eQXCdXmS7hWl+LCVPJvqg==}
     engines: {node: ^18.18.0 || >= 20.9.0}
     hasBin: true
 
@@ -9141,7 +9141,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  ember-template-lint@7.9.3:
+  ember-template-lint@7.9.4:
     dependencies:
       '@lint-todo/utils': 13.1.1
       content-tag: 3.1.3
