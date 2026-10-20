@@ -44,19 +44,19 @@ importers:
         version: 5.7.0(@babel/core@8.0.7)
       '@embroider/addon-dev':
         specifier: 8.4.2
-        version: 8.4.2(@glint/template@1.9.0)(rollup@4.64.10)
+        version: 8.4.2(@glint/template@1.9.1)(rollup@4.64.10)
       '@embroider/compat':
         specifier: 4.1.27
-        version: 4.1.27(@embroider/core@4.6.9(@glint/template@1.9.0))(@glint/template@1.9.0)
+        version: 4.1.27(@embroider/core@4.6.9(@glint/template@1.9.1))(@glint/template@1.9.1)
       '@embroider/core':
         specifier: 4.6.9
-        version: 4.6.9(@glint/template@1.9.0)
+        version: 4.6.9(@glint/template@1.9.1)
       '@embroider/macros':
         specifier: 1.21.3
-        version: 1.21.3(@babel/core@8.0.7)(@glint/template@1.9.0)
+        version: 1.21.3(@babel/core@8.0.7)(@glint/template@1.9.1)
       '@embroider/vite':
         specifier: 1.7.15
-        version: 1.7.15(@babel/core@8.0.7)(@embroider/core@4.6.9(@glint/template@1.9.0))(@glint/template@1.9.0)(vite@8.3.4(@types/node@26.6.5)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
+        version: 1.7.15(@babel/core@8.0.7)(@embroider/core@4.6.9(@glint/template@1.9.1))(@glint/template@1.9.1)(vite@8.3.4(@types/node@26.6.5)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
       '@eslint/js':
         specifier: 9.39.5
         version: 9.39.5
@@ -68,13 +68,13 @@ importers:
         version: 2.0.0-alpha.11(typescript@6.0.3)
       '@glint/environment-ember-loose':
         specifier: 2.0.0-alpha.3
-        version: 2.0.0-alpha.3(@glimmer/component@2.1.1)(@glint/core@2.0.0-alpha.11(typescript@6.0.3))(@glint/template@1.9.0)(ember-modifier@4.3.0(@babel/core@8.0.7))
+        version: 2.0.0-alpha.3(@glimmer/component@2.1.1)(@glint/core@2.0.0-alpha.11(typescript@6.0.3))(@glint/template@1.9.1)(ember-modifier@4.3.0(@babel/core@8.0.7))
       '@glint/environment-ember-template-imports':
         specifier: 2.0.0-alpha.3
-        version: 2.0.0-alpha.3(@glint/core@2.0.0-alpha.11(typescript@6.0.3))(@glint/environment-ember-loose@2.0.0-alpha.3(@glimmer/component@2.1.1)(@glint/core@2.0.0-alpha.11(typescript@6.0.3))(@glint/template@1.9.0)(ember-modifier@4.3.0(@babel/core@8.0.7)))(@glint/template@1.9.0)
+        version: 2.0.0-alpha.3(@glint/core@2.0.0-alpha.11(typescript@6.0.3))(@glint/environment-ember-loose@2.0.0-alpha.3(@glimmer/component@2.1.1)(@glint/core@2.0.0-alpha.11(typescript@6.0.3))(@glint/template@1.9.1)(ember-modifier@4.3.0(@babel/core@8.0.7)))(@glint/template@1.9.1)
       '@glint/template':
-        specifier: 1.9.0
-        version: 1.9.0
+        specifier: 1.9.1
+        version: 1.9.1
       '@glint/tsserver-plugin':
         specifier: 2.7.9
         version: 2.7.9(ember-source@7.3.1(@glimmer/component@2.1.1))
@@ -1019,6 +1019,9 @@ packages:
 
   '@glint/template@1.9.0':
     resolution: {integrity: sha512-AoLE/VeDcCI3vroIwP3uTjc33+44JYJbARbswRxe8/Jz7P+dWlhO+ycmigsT2WdVI051+HF9jZLsSwUXv0JxwQ==}
+
+  '@glint/template@1.9.1':
+    resolution: {integrity: sha512-4A0ZEGCP6YQ7grW1Im2fS6FoTRMpkwbRNesKnotUEwDixnRXEpgjqEb4aBDzc+DLjZXJipcha3HZxWHXw4mFRQ==}
 
   '@glint/tsserver-plugin@2.7.9':
     resolution: {integrity: sha512-W8J8ild0o1WV6Fy4SaZzhKOVYr3u0D5hKoTIonNOh3ixKMASzlz+xwNZ6YH30jY7N7GCt6pB4jYD7nUrxjiZxQ==}
@@ -6980,9 +6983,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@embroider/addon-dev@8.4.2(@glint/template@1.9.0)(rollup@4.64.10)':
+  '@embroider/addon-dev@8.4.2(@glint/template@1.9.1)(rollup@4.64.10)':
     dependencies:
-      '@embroider/core': 4.6.9(@glint/template@1.9.0)
+      '@embroider/core': 4.6.9(@glint/template@1.9.1)
       '@rollup/pluginutils': 5.4.0(rollup@4.64.10)
       content-tag: 4.2.1
       execa: 5.1.1
@@ -7010,7 +7013,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@embroider/compat@4.1.27(@embroider/core@4.6.9(@glint/template@1.9.0))(@glint/template@1.9.0)':
+  '@embroider/compat@4.1.27(@embroider/core@4.6.9(@glint/template@1.9.1))(@glint/template@1.9.1)':
     dependencies:
       '@babel/code-frame': 7.29.7
       '@babel/core': 7.29.7
@@ -7021,8 +7024,8 @@ snapshots:
       '@babel/preset-env': 7.29.7(@babel/core@7.29.7)
       '@babel/runtime': 7.29.10
       '@babel/traverse': 7.29.10
-      '@embroider/core': 4.6.9(@glint/template@1.9.0)
-      '@embroider/macros': 1.21.3(@babel/core@7.29.7)(@glint/template@1.9.0)
+      '@embroider/core': 4.6.9(@glint/template@1.9.1)
+      '@embroider/macros': 1.21.3(@babel/core@7.29.7)(@glint/template@1.9.1)
       '@types/babel__code-frame': 7.27.0
       assert-never: 1.4.0
       babel-import-util: 3.0.1
@@ -7063,12 +7066,12 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@embroider/core@4.6.9(@glint/template@1.9.0)':
+  '@embroider/core@4.6.9(@glint/template@1.9.1)':
     dependencies:
       '@babel/core': 7.29.7
       '@babel/parser': 7.29.9
       '@babel/traverse': 7.29.10
-      '@embroider/macros': 1.21.3(@babel/core@7.29.7)(@glint/template@1.9.0)
+      '@embroider/macros': 1.21.3(@babel/core@7.29.7)(@glint/template@1.9.1)
       '@embroider/reverse-exports': 0.2.0
       '@embroider/shared-internals': 3.2.0
       assert-never: 1.4.0
@@ -7099,7 +7102,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@embroider/macros@1.21.3(@babel/core@7.29.7)(@glint/template@1.9.0)':
+  '@embroider/macros@1.21.3(@babel/core@7.29.7)(@glint/template@1.9.1)':
     dependencies:
       '@embroider/shared-internals': 3.2.0
       assert-never: 1.4.0
@@ -7110,12 +7113,12 @@ snapshots:
       resolve: 1.22.13
       semver: 7.8.5
     optionalDependencies:
-      '@glint/template': 1.9.0
+      '@glint/template': 1.9.1
     transitivePeerDependencies:
       - '@babel/core'
       - supports-color
 
-  '@embroider/macros@1.21.3(@babel/core@8.0.7)(@glint/template@1.9.0)':
+  '@embroider/macros@1.21.3(@babel/core@8.0.7)(@glint/template@1.9.1)':
     dependencies:
       '@embroider/shared-internals': 3.2.0
       assert-never: 1.4.0
@@ -7126,7 +7129,7 @@ snapshots:
       resolve: 1.22.13
       semver: 7.8.5
     optionalDependencies:
-      '@glint/template': 1.9.0
+      '@glint/template': 1.9.1
     transitivePeerDependencies:
       - '@babel/core'
       - supports-color
@@ -7154,10 +7157,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@embroider/vite@1.7.15(@babel/core@8.0.7)(@embroider/core@4.6.9(@glint/template@1.9.0))(@glint/template@1.9.0)(vite@8.3.4(@types/node@26.6.5)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))':
+  '@embroider/vite@1.7.15(@babel/core@8.0.7)(@embroider/core@4.6.9(@glint/template@1.9.1))(@glint/template@1.9.1)(vite@8.3.4(@types/node@26.6.5)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))':
     dependencies:
-      '@embroider/core': 4.6.9(@glint/template@1.9.0)
-      '@embroider/macros': 1.21.3(@babel/core@8.0.7)(@glint/template@1.9.0)
+      '@embroider/core': 4.6.9(@glint/template@1.9.1)
+      '@embroider/macros': 1.21.3(@babel/core@8.0.7)(@glint/template@1.9.1)
       '@embroider/reverse-exports': 0.2.0
       assert-never: 1.4.0
       browserslist: 4.29.3
@@ -7327,24 +7330,26 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@glint/environment-ember-loose@2.0.0-alpha.3(@glimmer/component@2.1.1)(@glint/core@2.0.0-alpha.11(typescript@6.0.3))(@glint/template@1.9.0)(ember-modifier@4.3.0(@babel/core@8.0.7))':
+  '@glint/environment-ember-loose@2.0.0-alpha.3(@glimmer/component@2.1.1)(@glint/core@2.0.0-alpha.11(typescript@6.0.3))(@glint/template@1.9.1)(ember-modifier@4.3.0(@babel/core@8.0.7))':
     dependencies:
       '@glimmer/component': 2.1.1
       '@glint/core': 2.0.0-alpha.11(typescript@6.0.3)
-      '@glint/template': 1.9.0
+      '@glint/template': 1.9.1
     optionalDependencies:
       ember-modifier: 4.3.0(@babel/core@8.0.7)
 
-  '@glint/environment-ember-template-imports@2.0.0-alpha.3(@glint/core@2.0.0-alpha.11(typescript@6.0.3))(@glint/environment-ember-loose@2.0.0-alpha.3(@glimmer/component@2.1.1)(@glint/core@2.0.0-alpha.11(typescript@6.0.3))(@glint/template@1.9.0)(ember-modifier@4.3.0(@babel/core@8.0.7)))(@glint/template@1.9.0)':
+  '@glint/environment-ember-template-imports@2.0.0-alpha.3(@glint/core@2.0.0-alpha.11(typescript@6.0.3))(@glint/environment-ember-loose@2.0.0-alpha.3(@glimmer/component@2.1.1)(@glint/core@2.0.0-alpha.11(typescript@6.0.3))(@glint/template@1.9.1)(ember-modifier@4.3.0(@babel/core@8.0.7)))(@glint/template@1.9.1)':
     dependencies:
       '@glint/core': 2.0.0-alpha.11(typescript@6.0.3)
-      '@glint/environment-ember-loose': 2.0.0-alpha.3(@glimmer/component@2.1.1)(@glint/core@2.0.0-alpha.11(typescript@6.0.3))(@glint/template@1.9.0)(ember-modifier@4.3.0(@babel/core@8.0.7))
-      '@glint/template': 1.9.0
+      '@glint/environment-ember-loose': 2.0.0-alpha.3(@glimmer/component@2.1.1)(@glint/core@2.0.0-alpha.11(typescript@6.0.3))(@glint/template@1.9.1)(ember-modifier@4.3.0(@babel/core@8.0.7))
+      '@glint/template': 1.9.1
       content-tag: 3.1.3
 
   '@glint/template@1.6.0-alpha.3': {}
 
   '@glint/template@1.9.0': {}
+
+  '@glint/template@1.9.1': {}
 
   '@glint/tsserver-plugin@2.7.9(ember-source@7.3.1(@glimmer/component@2.1.1))':
     dependencies:
