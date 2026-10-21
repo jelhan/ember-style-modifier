@@ -56,7 +56,7 @@ importers:
         version: 1.21.3(@babel/core@8.0.7)(@glint/template@1.11.0)
       '@embroider/vite':
         specifier: 1.7.15
-        version: 1.7.15(@babel/core@8.0.7)(@embroider/core@4.6.9(@glint/template@1.11.0))(@glint/template@1.11.0)(vite@8.3.4(@types/node@26.6.5)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
+        version: 1.7.15(@babel/core@8.0.7)(@embroider/core@4.6.9(@glint/template@1.11.0))(@glint/template@1.11.0)(vite@8.3.5(@types/node@26.6.5)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
       '@eslint/js':
         specifier: 9.39.5
         version: 9.39.5
@@ -151,8 +151,8 @@ importers:
         specifier: 8.46.3
         version: 8.46.3(eslint@9.39.5(jiti@2.7.0))(typescript@6.0.3)
       vite:
-        specifier: 8.3.4
-        version: 8.3.4(@types/node@26.6.5)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1)
+        specifier: 8.3.5
+        version: 8.3.5(@types/node@26.6.5)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1)
 
 packages:
 
@@ -5192,13 +5192,13 @@ packages:
     resolution: {integrity: sha512-u4J1hr6Y+C/hit34GwL3eIcUf3wngT8TlYUjK7tk0jxydKLAq3sYvifjdTDA6U3KCKRcQCQDGf/srjxfZF3l7g==}
     engines: {node: '>=18.12.0'}
 
-  vite@8.3.4:
-    resolution: {integrity: sha512-IftLE8phJhdNRIGNEV4JCCvfNScoZQVfcXaN8TQropWGJtOHcu+iAB9pHcuGvmEb/kddw0LBe/jS8ztdC6xdiQ==}
+  vite@8.3.5:
+    resolution: {integrity: sha512-z1YpjieJ9g0ebTmQpLBv/oq9E3F9EIlOe+7LahW8SrE3LTiG3udBRUXQOlYXP9b+IC2q2phHeVxj9xGlw34OEQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
       '@types/node': ^20.19.0 || >=22.12.0
-      '@vitejs/devtools': ^0.7.1
+      '@vitejs/devtools': ^0.7.1 || ^0.8.0
       esbuild: ^0.27.0 || ^0.28.0
       jiti: '>=1.21.0'
       less: ^4.0.0
@@ -7154,7 +7154,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@embroider/vite@1.7.15(@babel/core@8.0.7)(@embroider/core@4.6.9(@glint/template@1.11.0))(@glint/template@1.11.0)(vite@8.3.4(@types/node@26.6.5)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))':
+  '@embroider/vite@1.7.15(@babel/core@8.0.7)(@embroider/core@4.6.9(@glint/template@1.11.0))(@glint/template@1.11.0)(vite@8.3.5(@types/node@26.6.5)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))':
     dependencies:
       '@embroider/core': 4.6.9(@glint/template@1.11.0)
       '@embroider/macros': 1.21.3(@babel/core@8.0.7)(@glint/template@1.11.0)
@@ -7171,7 +7171,7 @@ snapshots:
       send: 1.2.1
       source-map-url: 0.4.1
       terser: 5.51.2
-      vite: 8.3.4(@types/node@26.6.5)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1)
+      vite: 8.3.5(@types/node@26.6.5)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1)
     optionalDependencies:
       '@babel/core': 8.0.7
     transitivePeerDependencies:
@@ -12015,7 +12015,7 @@ snapshots:
 
   verkit@0.5.0: {}
 
-  vite@8.3.4(@types/node@26.6.5)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1):
+  vite@8.3.5(@types/node@26.6.5)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1):
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.7
