@@ -69,7 +69,7 @@
     "@embroider/compat": "4.1.27",
     "@embroider/core": "4.6.9",
     "@embroider/macros": "1.21.3",
-    "@embroider/vite": "1.7.15",
+    "@embroider/vite": "1.8.0",
     "@eslint/js": "9.39.5",
     "@glimmer/component": "2.2.0",
     "@glint/core": "2.0.0-alpha.11",
