@@ -100,7 +100,7 @@
     "testem": "3.21.3",
     "tracked-built-ins": "4.1.2",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.46.3",
+    "typescript-eslint": "8.46.4",
     "vite": "8.3.5"
   },
   "packageManager": "pnpm@10.34.8+sha512.f627a8e971343afe49dfd0f63d028234201dfa831d5cb588733e1e5f8db26bf16989a32161ab5c1b4db3b1fdbc373160606b5b89e002df6dd19a85adf91fc5a8",
