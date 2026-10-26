@@ -139,8 +139,8 @@ importers:
         specifier: 4.65.1
         version: 4.65.1
       testem:
-        specifier: 3.21.3
-        version: 3.21.3(@babel/core@8.0.9)(handlebars@4.7.10)(underscore@1.13.8)
+        specifier: 3.21.5
+        version: 3.21.5(@babel/core@8.0.9)(handlebars@4.7.10)(underscore@1.13.8)
       tracked-built-ins:
         specifier: 4.1.2
         version: 4.1.2(@babel/core@8.0.9)
@@ -4942,8 +4942,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  testem@3.21.3:
-    resolution: {integrity: sha512-vZTaZajvrWjRnImBGGrkdFlGNqM9Llg9xdvYL7Yrb2BSzIjlZjV+7pc3FJTgagNgJaNsatp4s/Wtam5MSQrFvg==}
+  testem@3.21.5:
+    resolution: {integrity: sha512-HvQM6RYYBGNmg+PSrK6x/SKeJVpp8z6zgEdi9VkBA9kfE7M7XSbF9h16QLycA3TntWr/bDS1iuasZdtz1qh9+g==}
     engines: {node: ^20.19.0 || ^22.12.0 || ^24.0.0 || >= 26.0.0}
     hasBin: true
 
@@ -11652,7 +11652,7 @@ snapshots:
       commander: 2.20.3
       source-map-support: 0.5.21
 
-  testem@3.21.3(@babel/core@8.0.9)(handlebars@4.7.10)(underscore@1.13.8):
+  testem@3.21.5(@babel/core@8.0.9)(handlebars@4.7.10)(underscore@1.13.8):
     dependencies:
       '@xmldom/xmldom': 0.9.12
       backbone: 1.6.1
