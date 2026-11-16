@@ -40,8 +40,8 @@ importers:
         specifier: 3.0.0
         version: 3.0.0
       '@ember/test-helpers':
-        specifier: 5.7.0
-        version: 5.7.0(@babel/core@8.1.2)
+        specifier: 5.8.0
+        version: 5.8.0(@babel/core@8.1.2)
       '@embroider/addon-dev':
         specifier: 8.4.2
         version: 8.4.2(@glint/template@1.11.1)(rollup@4.67.5)
@@ -92,7 +92,7 @@ importers:
         version: 10.0.7
       ember-qunit:
         specifier: 9.2.0
-        version: 9.2.0(@ember/test-helpers@5.7.0(@babel/core@8.1.2))(qunit@3.0.0)
+        version: 9.2.0(@ember/test-helpers@5.8.0(@babel/core@8.1.2))(qunit@3.0.0)
       ember-resolver:
         specifier: 13.2.0
         version: 13.2.0
@@ -850,8 +850,8 @@ packages:
   '@ember/library-tsconfig@3.0.0':
     resolution: {integrity: sha512-2o4D+YB0efPe8HJJlaC303qx8dWH2khcKe5ctp4fMCfqP9EibNnyWScNb2MkaFjEqrdRXqTVK+lGHXOoM70omw==}
 
-  '@ember/test-helpers@5.7.0':
-    resolution: {integrity: sha512-h77kAJpFQ9fffuLc9+XhoYsk7URDLd7jTLnq7Yk9gGvQ41JupxrGMHoRjyboytSbwngSy+0yXyMhNYfH8ng4xg==}
+  '@ember/test-helpers@5.8.0':
+    resolution: {integrity: sha512-JvQr0F8f5YfhshcG9gpOhZyuCPHFGMnWYaMH0rPf33W2R+CocSdp/aHr7D5wUg9Tl7aBiMJW6yz80MpTPVpTWQ==}
 
   '@ember/test-waiters@4.1.2':
     resolution: {integrity: sha512-zJwFaHLHjJn6mKoXYVM1SEyMT+U1JpaaSKg3JBmxHJwiIoJRI5djJ/CE33Z7N09mk5JfXd2xdhbd9LBWdlvAzg==}
@@ -6967,7 +6967,7 @@ snapshots:
 
   '@ember/library-tsconfig@3.0.0': {}
 
-  '@ember/test-helpers@5.7.0(@babel/core@8.1.2)':
+  '@ember/test-helpers@5.8.0(@babel/core@8.1.2)':
     dependencies:
       '@ember/test-waiters': 4.1.2
       '@embroider/addon-shim': 1.11.0
@@ -9092,9 +9092,9 @@ snapshots:
     transitivePeerDependencies:
       - '@babel/core'
 
-  ember-qunit@9.2.0(@ember/test-helpers@5.7.0(@babel/core@8.1.2))(qunit@3.0.0):
+  ember-qunit@9.2.0(@ember/test-helpers@5.8.0(@babel/core@8.1.2))(qunit@3.0.0):
     dependencies:
-      '@ember/test-helpers': 5.7.0(@babel/core@8.1.2)
+      '@ember/test-helpers': 5.8.0(@babel/core@8.1.2)
       '@embroider/addon-shim': 1.11.0
       qunit: 3.0.0
       qunit-theme-ember: 1.0.0
