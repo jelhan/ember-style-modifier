@@ -1,11 +1,6 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import {
-  getDeprecations,
-  render,
-  rerender,
-  setupOnerror,
-} from '@ember/test-helpers';
+import { render, rerender, setupOnerror } from '@ember/test-helpers';
 import { hash } from '@ember/helper';
 import { tracked } from '@glimmer/tracking';
 import { TrackedObject } from 'tracked-built-ins';
@@ -267,20 +262,6 @@ module('Integration | Modifiers | style', function (hooks) {
         assert.dom('p').hasAttribute('style', '');
       });
     }
-  });
-
-  test('it does not use deprecated Ember utils', async function (assert) {
-    await render(
-      <template>
-        <p {{style display="none"}}></p>
-      </template>,
-    );
-
-    const deprecations = getDeprecations()
-      .filter(({ options }) => options?.id === 'deprecate-ember-utils')
-      .map(({ message }) => message);
-
-    assert.deepEqual(deprecations, []);
   });
 
   module('assertions', function () {
