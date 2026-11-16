@@ -1,6 +1,5 @@
 import Modifier from 'ember-modifier';
 import { assert } from '@ember/debug';
-import { typeOf } from '@ember/utils';
 import type * as CSS from 'csstype';
 
 // Cannot be typed as `Partial<CSSStyleDeclaration>` because `CSSStyleDeclaration`
@@ -72,11 +71,10 @@ export default class StyleModifier extends Modifier<StyleModifierSignature> {
 
     newStyles.forEach(([property, value]) => {
       assert(
-        `Your given value for property '${property}' is ${value} (${typeOf(
-          value,
-        )}). ` +
+        `Your given value for property '${property}' is ${value} (${typeof value}). ` +
           'Accepted types are string and undefined. Please change accordingly.',
-        typeof value === 'undefined' || typeOf(value) === 'string',
+        typeof value === 'undefined' ||
+          Object.prototype.toString.call(value) === '[object String]',
       );
 
       // priority must be specified as separate argument
