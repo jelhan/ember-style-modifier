@@ -91,8 +91,8 @@ importers:
         specifier: 10.0.7
         version: 10.0.7
       ember-qunit:
-        specifier: 9.2.0
-        version: 9.2.0(@ember/test-helpers@5.8.0(@babel/core@8.1.2))(qunit@3.0.0)
+        specifier: 9.2.1
+        version: 9.2.1(@ember/test-helpers@5.8.0(@babel/core@8.1.2))(qunit@3.0.0)
       ember-resolver:
         specifier: 13.2.0
         version: 13.2.0
@@ -2714,8 +2714,8 @@ packages:
   ember-modifier@4.3.0:
     resolution: {integrity: sha512-O0rirSLQbGg0VJ/NqoQ4uN1bh2iAekZC/Ykma+FkjCM2ofrO38u+d8n3+AK6uVWeMJmogGX2KL+Is5fofoInJg==}
 
-  ember-qunit@9.2.0:
-    resolution: {integrity: sha512-y/v9D7/wfH9fWh6p6NPNZ4KMJ97ZdowoASNmLvLrrzDYSVHJDbbbOfFMKLfdvHF942PHMlf6NulKVezO4yNfmw==}
+  ember-qunit@9.2.1:
+    resolution: {integrity: sha512-aZfX6A6092b1bTL6g+dj4gQT0a75YPli3/HBcTaS7AcGCqj/j2CU3FfPIz/ZZkeAe8oVGedttR1FB3Bs6LTEGw==}
     peerDependencies:
       '@ember/test-helpers': '>=3.0.3'
       qunit: ^2.13.0 || ^3.0.0
@@ -9096,7 +9096,7 @@ snapshots:
     transitivePeerDependencies:
       - '@babel/core'
 
-  ember-qunit@9.2.0(@ember/test-helpers@5.8.0(@babel/core@8.1.2))(qunit@3.0.0):
+  ember-qunit@9.2.1(@ember/test-helpers@5.8.0(@babel/core@8.1.2))(qunit@3.0.0):
     dependencies:
       '@ember/test-helpers': 5.8.0(@babel/core@8.1.2)
       '@embroider/addon-shim': 1.11.0
