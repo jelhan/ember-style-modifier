@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2026-11-18)
+
+* ember-style-modifier 4.7.0 (minor)
+
+#### :rocket: Enhancement
+* `ember-style-modifier`
+  * [#379](https://github.com/jelhan/ember-style-modifier/pull/379) Replace deprecated typeOf from @ember/utils with native typeof ([@aklkv](https://github.com/aklkv))
+
+#### Committers: 1
+- Alexey Kulakov ([@aklkv](https://github.com/aklkv))
+
 ## Release (2026-04-12)
 
 * ember-style-modifier 4.6.0 (minor)
