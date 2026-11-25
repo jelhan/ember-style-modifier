@@ -89,7 +89,7 @@
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-ember": "13.11.5",
     "eslint-plugin-import": "2.32.0",
-    "eslint-plugin-n": "18.5.0",
+    "eslint-plugin-n": "18.6.0",
     "globals": "17.14.0",
     "prettier": "3.10.1",
     "prettier-plugin-ember-template-tag": "2.1.8",
