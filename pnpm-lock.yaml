@@ -106,8 +106,8 @@ importers:
         specifier: 9.39.5
         version: 9.39.5(jiti@2.7.0)
       eslint-config-prettier:
-        specifier: 10.1.8
-        version: 10.1.8(eslint@9.39.5(jiti@2.7.0))
+        specifier: 10.1.9
+        version: 10.1.9(eslint@9.39.5(jiti@2.7.0))
       eslint-plugin-ember:
         specifier: 13.11.6
         version: 13.11.6(@babel/eslint-parser@8.1.2(@babel/core@8.1.3)(eslint@9.39.5(jiti@2.7.0)))(@typescript-eslint/parser@8.46.3(eslint@9.39.5(jiti@2.7.0))(typescript@6.0.3))(eslint@9.39.5(jiti@2.7.0))(typescript@6.0.3)
@@ -2854,8 +2854,8 @@ packages:
     peerDependencies:
       eslint: '>=6.0.0'
 
-  eslint-config-prettier@10.1.8:
-    resolution: {integrity: sha512-82GZUjRS0p/jganf6q1rEO25VSoHH0hKPCTrgillPjdI/3bgBhAE1QzHrHTizjpRvy6pGAvKjDJtk2pF9NDq8w==}
+  eslint-config-prettier@10.1.9:
+    resolution: {integrity: sha512-JnOR0K4u67CWOiSS3vaduGlLUWS32lGiyglMIV6AyvK9DBRpS+QhR2ESKaUe2eWGRsdVmrxy77yaOk2hzDa4Bg==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
@@ -9325,7 +9325,7 @@ snapshots:
       eslint: 9.39.5(jiti@2.7.0)
       semver: 7.8.6
 
-  eslint-config-prettier@10.1.8(eslint@9.39.5(jiti@2.7.0)):
+  eslint-config-prettier@10.1.9(eslint@9.39.5(jiti@2.7.0)):
     dependencies:
       eslint: 9.39.5(jiti@2.7.0)
 
