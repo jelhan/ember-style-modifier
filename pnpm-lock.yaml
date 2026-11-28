@@ -43,8 +43,8 @@ importers:
         specifier: 5.8.0
         version: 5.8.0(@babel/core@8.1.4)
       '@embroider/addon-dev':
-        specifier: 8.5.2
-        version: 8.5.2(@glint/template@1.11.1)(rollup@4.68.9)
+        specifier: 8.5.3
+        version: 8.5.3(@glint/template@1.11.1)(rollup@4.68.9)
       '@embroider/compat':
         specifier: 4.1.30
         version: 4.1.30(@embroider/core@4.6.10(@glint/template@1.11.1))(@glint/template@1.11.1)
@@ -856,8 +856,8 @@ packages:
   '@ember/test-waiters@4.1.2':
     resolution: {integrity: sha512-zJwFaHLHjJn6mKoXYVM1SEyMT+U1JpaaSKg3JBmxHJwiIoJRI5djJ/CE33Z7N09mk5JfXd2xdhbd9LBWdlvAzg==}
 
-  '@embroider/addon-dev@8.5.2':
-    resolution: {integrity: sha512-mpUUcwpR8l93CjQrO7c4zSrZFBK9RQYj2/hZwc185OZEOvZOtea3m4AoF/pHCDppuHZItic4EHUm37vDAbrPZA==}
+  '@embroider/addon-dev@8.5.3':
+    resolution: {integrity: sha512-bO+urR7P7fKvAaStNCj7HXJHyHSx55ISWm+8zofbvDumD2dppah256dYCo3NIugW1Bqh+hXu2Iv+e8Yp7TJOQg==}
     engines: {node: 12.* || 14.* || >= 16}
     hasBin: true
     peerDependencies:
@@ -7002,7 +7002,7 @@ snapshots:
     dependencies:
       '@embroider/addon-shim': 1.11.0
 
-  '@embroider/addon-dev@8.5.2(@glint/template@1.11.1)(rollup@4.68.9)':
+  '@embroider/addon-dev@8.5.3(@glint/template@1.11.1)(rollup@4.68.9)':
     dependencies:
       '@embroider/core': 4.6.10(@glint/template@1.11.1)
       '@rollup/pluginutils': 5.5.1(rollup@4.68.9)
