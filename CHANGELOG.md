@@ -1,5 +1,10 @@
 # Changelog
 
+
+
+
+
+
 ## Release (2026-11-18)
 
 * ember-style-modifier 4.7.0 (minor)
