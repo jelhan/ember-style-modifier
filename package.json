@@ -64,7 +64,7 @@
     "@babel/runtime": "8.1.4",
     "@ember/app-tsconfig": "2.1.0",
     "@ember/library-tsconfig": "3.0.0",
-    "@ember/test-helpers": "5.8.0",
+    "@ember/test-helpers": "5.8.1",
     "@embroider/addon-dev": "8.5.2",
     "@embroider/compat": "4.1.30",
     "@embroider/core": "4.6.10",
