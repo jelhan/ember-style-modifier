@@ -77,7 +77,7 @@
     "@glint/environment-ember-template-imports": "2.0.0-alpha.3",
     "@glint/template": "1.11.1",
     "@glint/tsserver-plugin": "2.7.17",
-    "@rollup/plugin-babel": "7.1.0",
+    "@rollup/plugin-babel": "7.2.0",
     "@types/qunit": "2.19.14",
     "babel-plugin-ember-template-compilation": "4.0.2",
     "concurrently": "10.0.7",
